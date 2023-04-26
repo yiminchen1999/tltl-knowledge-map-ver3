@@ -1,6 +1,7 @@
 
 
 * You can view the finished app on (https://tltl-knowledge-map-ver3.herokuapp.com/).
+* https://stackoverflow.com/questions/65404309/heroku-error-during-git-push-deployment-the-same-version-of-this-code-has-alr
 
 ### Additional Reading
 * Plotly’s [Dash deployment guide](https://dash.plotly.com/deployment)
