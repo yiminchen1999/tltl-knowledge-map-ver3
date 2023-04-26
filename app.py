@@ -2192,4 +2192,4 @@ def update_output(yeardropdown2,myslider5):
         return open('assets/class_negative_map_2023_5.html', 'r').read()
 
 if __name__ == "__main__":
-    app.run_server(port=8072)
+    app.run_server(port=8073)
