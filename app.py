@@ -209,7 +209,7 @@ sidebar = html.Div(
                                     className='text-black'), ],
                       className='p-4')],
             # Add padding to the div
-            style={'height': '64vh', 'margin': '10px', 'display': 'flex'},
+            style={'height': '73vh', 'margin': '10px', 'display': 'flex'},
             className='bg-white rounded shadow-sm' # Add a white background, rounded corners, and shadow
         ),
 
@@ -259,7 +259,10 @@ html_graphs = html.Div(
                     dbc.Col(
                         [
                             html.P('Individual Key Concepts (weekly)', className='fs-5 text-center font-weight-bold',
-                                   style={'fontWeight': 'bold'}),
+                                   style={"font-size": "2.5rem","font-weight": "bold"}),
+                            html.P('Identify which concepts I’ve applied this week',
+                             className='fs-6 text-center',
+                        style={"font-size": "1.0rem"}),
                             html.Iframe(id='html-iframe', srcDoc=initial_html, width='100%', height='600',
                                         style={'height': '55vh'}),
 
@@ -279,7 +282,7 @@ html_graphs = html.Div(
                                 #dbc.Button("Click me!", id="button-1", color="primary", className="ml-2"),
                                 dbc.Label("Week", className="text-center w-100 mb-0", width='10%'),
                             ], style={'width': '85%', 'margin': '20px', 'margin-top': '20px',
-                                      # 'color': '#000000',
+                                      'color': '#000000',
                                       'fontSize': '15px',
                                       'padding': '5px'})
                             ])]),
@@ -289,7 +292,10 @@ html_graphs = html.Div(
                     dbc.Col(
                         [
                             html.P('Individual Key Concepts (aggregated)', className='fs-5 text-center font-weight-bold',
-                                   style={"font-size": "2.5rem","font-weight": "bold"}),
+                                   style={"font-size": "2.5rem", "font-weight": "bold"}),
+                            html.P('Examine how my knowledge concepts evolve over time',
+                                   className='fs-6 text-center',
+                                   style={"font-size": "1.0rem"}),
                             html.Iframe(id='html-iframe-2', srcDoc=initial_html_aggregate, width='100%', height='600',
                                         style={'height': '55vh'}),
 
@@ -351,10 +357,36 @@ dbc.Modal(
                         [
                             html.Div(
                                 html.P('Collective Knowledge in the Class (weekly)',
-                                       className='text-nowrap bd-highlight', style={'fontWeight': 'bold'}),
+                                       className='text-nowrap bd-highlight',
+                                       style={'fontWeight': 'bold'}),
+
                                 className='d-flex justify-content-end',
                                 style={'text-align': 'right', 'margin-right': '-70px'}
                             ),
+html.Div(
+                                html.P('See what concepts other students have applied,',
+                                       className='text-nowrap bd-highlight',
+                                       style={'fontWeight': 'bold'}),
+
+                                className='fs-6 d-flex justify-content-end',
+                                style={'text-align': 'right', 'margin-right': '-50px'}
+                            ),
+html.Div(
+                                html.P('Compare with my own concept map to see what else I can apply',
+                                       className='text-nowrap bd-highlight',
+                                       style={'fontWeight': 'bold'}),
+
+                                className='fs-6 d-flex justify-content-end',
+                                style={'text-align': 'right', 'margin-right': '-50px'}
+                            ),
+html.Div(
+                                html.P('Collaborate or communicate with students who apply the same concepts',
+                                       className='text-nowrap bd-highlight',
+                                       style={'fontWeight': 'bold'}),
+                                className='fs-6 d-flex justify-content-end',
+                                style={ 'margin-right': '-50px'}
+                            ),
+
                             html.Iframe(id='html-iframe-4', srcDoc=initial_html_aggregate, width='170%', height='800',
                                         style={'height': '75vh'}),
 
