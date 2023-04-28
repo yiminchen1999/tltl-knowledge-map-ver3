@@ -250,19 +250,6 @@ html.Hr(),
 )
 
 
-button_style = {
-    'background-color': '#d90429',
-    'border': 'none',
-    'border-radius': '50%',
-    'color': 'white',
-    'cursor': 'pointer',
-    'font-size': '24px',
-    'height': '60px',
-    'width': '60px',
-    'display': 'flex',
-    'align-items': 'center',
-    'justify-content': 'center'
-}
 
 html_graphs = html.Div(
     [
@@ -347,7 +334,7 @@ dbc.Modal(
     id="gif-modal",
     centered=True,
     size="lg",
-    style={"max-width": "100%", "max-height": "100vh"}
+    style={"max-width": "100%", "max-height": "90vh"}
 ),
     ]
 )
