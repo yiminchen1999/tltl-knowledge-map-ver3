@@ -327,26 +327,28 @@ dbc.Container(
             [
                 dbc.Col(),
                 dbc.Col(
-                    dbc.Button("Click me!", id="button-1", color="light", className="ml-2"),
+                    dbc.Button("Click me to see the animation!", id="button-1", color="light", className="ml-2"),
                     width="auto",
                     style={"display": "flex", "justify-content": "center"}
                 ),
                 dbc.Col()
             ]
         ),
-        dbc.Modal(
-            [
-                dbc.ModalHeader("Animated GIF"),
-                dbc.ModalBody(
-                    html.Img(id="gif-player", src="")
-                ),
-                dbc.ModalFooter(
-                    dbc.Button("Close", id="close-button", className="ml-auto")
-                )
-            ],
-            id="gif-modal",
-            centered=True
+dbc.Modal(
+    [
+        dbc.ModalHeader("Animated GIF"),
+        dbc.ModalBody(
+            html.Img(id="gif-player", src="")
+        ),
+        dbc.ModalFooter(
+            dbc.Button("Close", id="close-button", className="ml-auto")
         )
+    ],
+    id="gif-modal",
+    centered=True,
+    size="lg",
+    style={"max-width": "100%", "max-height": "100vh"}
+),
     ]
 )
 
@@ -405,22 +407,25 @@ dbc.Container(
 # Set the path to the GIF file relative to the base directory
 #gif_path = os.path.join(base_dir, "assets/animation_1.gif")
 
-@app.callback(Output("gif-modal", "is_open"), [Input("button-1", "n_clicks"), Input("close-button", "n_clicks")], [State("gif-modal", "is_open")])
+@app.callback(
+    Output("gif-modal", "is_open"),
+    [Input("button-1", "n_clicks"), Input("close-button", "n_clicks")],
+    [State("gif-modal", "is_open")]
+)
 def toggle_modal(n1, n2, is_open):
     if n1 or n2:
         return not is_open
     return is_open
 
-@app.callback(Output("gif-player", "src"), [Input("button-1", "n_clicks")])
+@app.callback(
+    Output("gif-player", "src"),
+    [Input("button-1", "n_clicks")]
+)
 def play_gif(n_clicks):
     if n_clicks is not None:
-        # Load the GIF file from disk
-        with open("/assets/animation_1.gif", "rb") as f:
+        with open("assets/animation_1.gif", "rb") as f:
             gif_data = f.read()
-        # Encode the GIF data as a base64 string and embed it in an HTML img tag
-        #img_tag = f"<img src='data:image/gif;base64,{base64.b64encode(gif_data).decode()}' />"
-        # Return the HTML img tag as the src of the Image component
-        return base64.b64encode(gif_data).decode('utf-8')
+        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
     else:
         return ""
 
