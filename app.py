@@ -14,6 +14,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import os
 
+
 #import plotly.express as px
 import plotly.tools as tls
 
@@ -1080,19 +1081,21 @@ page_3_layout  =  dbc.Container([
 ], className="my-5")
 
 
+
 # Define the callback
 @app.callback(
     Output('output-container', 'children'),
     Input('submit-button', 'n_clicks'),
-    State('feedback-input', 'value')
+    Input('feedback-input', 'value')
 )
 def update_output(n_clicks, value):
-    if n_clicks is not None:
-        with open('assets/feedback.txt', 'a') as f:
-            f.write(value + '\n')
-        return dbc.Alert('Thank you for your feedback!', color='success')
+    if n_clicks > 0:
+        # Write feedback to file
+        feedback_file = os.path.join(os.getcwd(), 'feedback1.txt')
+        with open(feedback_file, 'a') as f:
+            f.write(f'{value}\n')
 
-
+        return dbc.Alert(f'Thank you for your feedback!', color='success')
 
 
 
