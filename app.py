@@ -206,7 +206,7 @@ sidebar = html.Div(
                            * Color corresponds to the specific knowledge category 
                        ''', style={'margin-bottom': '2px', 'display': 'flex'}
                         ,
-                                    className='text-black'), ],
+                                    className='fs-6 text-black'), ],
                       className='p-4')],
             # Add padding to the div
             style={'height': '73vh', 'margin': '10px', 'display': 'flex'},
@@ -237,7 +237,7 @@ html.Hr(),
                            * Size of the node reflects the amount of students
                        ''', style={'margin-bottom': '2px', 'display': 'flex'}
                         ,
-                                    className='text-black'),
+                                    className='fs-6 text-black'),
                        ],
                           className='p-4') # Add padding to the div
             ],
@@ -249,6 +249,15 @@ html.Hr(),
     style={'padding-top': '20px', 'padding-bottom': '20px', 'background-color': '#f8f9fa'} # adding and background color to the sidebar
 )
 
+# Define the hidden div element for the popup window
+popup_div = html.Div(id='popup-div', style={'display': 'none'})
+
+# Define the callback function to update the state of the hidden div element
+@app.callback(Output('popup-div', 'children'), [Input('info-button', 'n_clicks')])
+def update_popup_div(n_clicks):
+    if n_clicks:
+        # Replace this with the information to be displayed in the popup window
+        return html.P('This is some information that will be displayed in the popup window.')
 
 
 html_graphs = html.Div(
@@ -258,8 +267,38 @@ html_graphs = html.Div(
                 [
                     dbc.Col(
                         [
-                            html.P('Individual Key Concepts (weekly)', className='fs-5 text-center font-weight-bold',
-                                   style={"font-size": "2.5rem","font-weight": "bold"}),
+                            #html.P('Individual Key Concepts (weekly)', className='d-flex justify-content-between align-items-center',#className='fs-5 text-center font-weight-bold',
+                                   #style={"font-size": "2.5rem","font-weight": "bold"}),
+
+html.Div(
+    [
+        html.P(
+            'Individual Key Concepts (weekly)',
+            className='fs-5 text-center font-weight-bold',
+            style={"font-size": "2.5rem", "font-weight": "bold", "margin-right": "-40px", "flex": "1"}
+        ),
+        html.Button(
+            'i',
+            id='info-button',
+            className='badge rounded-pill bg-primary',
+            style={ 'font-size': '0.95rem',"margin-left": "10px"}
+        ),
+    ],
+    className='d-flex align-items-center',
+    style={'display': 'flex'}
+),
+                            dbc.Modal(
+                                [
+                                    dbc.ModalHeader("Information about Individual Key Concepts (weekly)"),
+                                    dbc.ModalBody(
+                                        " Knowledge keywords mentioned in reflection for a particular week, Each node represents a knowledge keyword with name underneath, Color corresponds to the specific knowledge category"),
+                                    dbc.ModalFooter(
+                                        html.Button('Close', id='close-button', className='btn btn-secondary'))
+                                ],
+                                id="info-modal",
+                                centered=True
+                            ),
+                            #html.Button('i', id='info-button', className='badge rounded-pill bg-primary', style={'vertical-align': 'top'}),
                             html.P('Identify which concepts I’ve applied this week',
                              className='fs-6 text-center',
                         style={"font-size": "1.0rem"}),
@@ -291,8 +330,38 @@ html_graphs = html.Div(
 
                     dbc.Col(
                         [
-                            html.P('Individual Key Concepts (aggregated)', className='fs-5 text-center font-weight-bold',
-                                   style={"font-size": "2.5rem", "font-weight": "bold"}),
+
+
+
+html.Div(
+    [
+        html.P(
+            'Individual Key Concepts (aggregated)',
+            className='fs-5 text-center font-weight-bold',
+            style={"font-size": "2.5rem", "font-weight": "bold", "margin-right": "-40px", "flex": "1"}
+        ),
+        html.Button(
+            'i',
+            id='info-button2',
+            className='badge rounded-pill bg-primary',
+            style={ 'font-size': '0.95rem',"margin-left": "10px"}
+        ),
+    ],
+    className='d-flex align-items-center',
+    style={'display': 'flex'}
+),
+
+                            dbc.Modal(
+                                [
+                                    dbc.ModalHeader("Information about Individual Key Concepts (aggregated)"),
+                                    dbc.ModalBody(
+                                        "Knowledge keywords mentioned in reflections up to a certain week;The color of the node corresponds to a specific knowledge category;Within the same category, darker shades indicate their earlier occurrence;Clicking on a node reveals the week in which the keyword was first mentioned;Size of the node reflects the frequency of its occurrence"),
+                                    dbc.ModalFooter(
+                                        html.Button('Close', id='close-button2', className='btn btn-secondary'))
+                                ],
+                                id="info-modal2",
+                                centered=True
+                            ),
                             html.P('Examine how my knowledge concepts evolve over time',
                                    className='fs-6 text-center',
                                    style={"font-size": "1.0rem"}),
@@ -334,7 +403,7 @@ dbc.Modal(
             html.Img(id="gif-player", src="")
         ),
         dbc.ModalFooter(
-            dbc.Button("Close", id="close-button", className="ml-auto")
+            dbc.Button("Close", id="close-button3", className="ml-auto")
         )
     ],
     id="gif-modal",
@@ -346,47 +415,75 @@ dbc.Modal(
 )
 
 
-                            ], style={'width': '85%', 'margin': '20px', 'margin-top': '20px',
-                                       'color': '#000000',
+                            ], style={'width': '95%', 'margin': '20px', 'margin-top': '20px',
+                                      'color': '#000000',
                                       'fontSize': '15px',
                                       'padding': '5px'})
                             ])]),
 
                         ], width={"size": 5}),
-                    dbc.Col(
-                        [
-                            html.Div(
-                                html.P('Collective Knowledge in the Class (weekly)',
-                                       className='text-nowrap bd-highlight',
-                                       style={'fontWeight': 'bold'}),
+                    #dbc.Col(
+                        #[
+                           # html.Div(
+                                #html.P('Collective Knowledge in the Class (weekly)',
+                                       #className='text-nowrap bd-highlight',
+                                       #style={'fontWeight': 'bold'}),
 
-                                className='d-flex justify-content-end',
-                                style={'text-align': 'right', 'margin-right': '-70px'}
+                               # className='d-flex justify-content-end',
+                               # style={'text-align': 'right', 'margin-right': '-70px'}
+                            #),
+
+dbc.Col(
+                        [  html.Div(
+    [
+        html.P(
+            'Collective Knowledge in the Class (weekly)',
+            className='text-nowrap bd-highlight',
+            style={
+                'fontWeight': 'bold',
+                'padding-right': '10px',
+                'padding-left': '10px',
+                'display': 'inline-block',
+                'margin': '0'
+            }
+        ),
+        html.Button(
+            'i',
+            id='info-button4',
+            className='badge rounded-pill bg-primary',
+            style={
+                'vertical-align': 'middle',
+                'font-size': '0.95rem',
+                'display': 'inline-block',
+                'margin': '0'
+            }
+        ),
+    ],
+    className='d-flex justify-content-end align-items-center',
+    style={'text-align': 'right', 'margin-right': '-90px'}
+),
+
+
+                            dbc.Modal(
+                                [
+                                    dbc.ModalHeader("Collective Knowledge in the Class (weekly)"),
+                                    dbc.ModalBody(
+                                        "All knowledge keywords mentioned by all students in a class in their reflections for a particular week;The color of the node corresponds to a specific knowledge category ;Clicking on a node reveals the names of the students who mentioned the keyword;Size of the node reflects the number of students who mentioned it"),
+                                    dbc.ModalFooter(
+                                        html.Button('Close', id='close-button4', className='btn btn-secondary'))
+                                ],
+                                id="info-modal4",
+                                centered=True
                             ),
+
 html.Div(
-                                html.P('See what concepts other students have applied,',
+                                html.P('See what concepts other students have applied',
                                        className='text-nowrap bd-highlight',
                                        style={'fontWeight': 'bold'}),
 
                                 className='fs-6 d-flex justify-content-end',
                                 style={'text-align': 'right', 'margin-right': '-50px'}
                             ),
-html.Div(
-                                html.P('Compare with my own concept map to see what else I can apply',
-                                       className='text-nowrap bd-highlight',
-                                       style={'fontWeight': 'bold'}),
-
-                                className='fs-6 d-flex justify-content-end',
-                                style={'text-align': 'right', 'margin-right': '-50px'}
-                            ),
-html.Div(
-                                html.P('Collaborate or communicate with students who apply the same concepts',
-                                       className='text-nowrap bd-highlight',
-                                       style={'fontWeight': 'bold'}),
-                                className='fs-6 d-flex justify-content-end',
-                                style={ 'margin-right': '-50px'}
-                            ),
-
                             html.Iframe(id='html-iframe-4', srcDoc=initial_html_aggregate, width='170%', height='800',
                                         style={'height': '75vh'}),
 
@@ -420,6 +517,36 @@ html.Div(
         )
     ])
 
+@app.callback(
+    Output("info-modal", "is_open"),
+    [Input("info-button", "n_clicks"), Input("close-button", "n_clicks")],
+    [State("info-modal", "is_open")],
+)
+def toggle_modal(n1, n2, is_open):
+    if n1 or n2:
+        return not is_open
+    return is_open
+
+@app.callback(
+    Output("info-modal2", "is_open"),
+    [Input("info-button2", "n_clicks"), Input("close-button2", "n_clicks")],
+    [State("info-modal2", "is_open")],
+)
+def toggle_modal(n1, n2, is_open):
+    if n1 or n2:
+        return not is_open
+    return is_open
+
+@app.callback(
+    Output("info-modal4", "is_open"),
+    [Input("info-button4", "n_clicks"), Input("close-button4", "n_clicks")],
+    [State("info-modal4", "is_open")],
+)
+def toggle_modal(n1, n2, is_open):
+    if n1 or n2:
+        return not is_open
+    return is_open
+
 # Get the absolute path of the current working directory
 #base_dir = os.path.abspath(os.getcwd())
 
@@ -428,7 +555,7 @@ html.Div(
 
 @app.callback(
     Output("gif-modal", "is_open"),
-    [Input("button-1", "n_clicks"), Input("close-button", "n_clicks")],
+    [Input("button-1", "n_clicks"), Input("close-button3", "n_clicks")],
     [State("gif-modal", "is_open")]
 )
 def toggle_modal(n1, n2, is_open):
@@ -447,6 +574,9 @@ def play_gif(n_clicks):
         return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
     else:
         return ""
+
+
+
 
 # Define the App Layout
 page_1_layout = html.Div(
@@ -478,96 +608,7 @@ page_1_layout = html.Div(
     style={'background': '#f8f9fa'}
 )
 
-image1 = html.Img(src='/assets/samplepic3.jpg', alt='10projects of one student', style={'width': '160%', 'margin': '20px', 'margin-top': '20px',
-                                      # 'color': '#000000',
-                                      'fontSize': '15px',
-                                      'padding': '5px'})
-image2 = html.Img(src='/assets/samplepic4.jpg', alt='10projects of one student', style={'height': '50%', 'width': '50%'})
 # define the layout for the second page
-
-# Define the Sidebar
-sidebarpage2ver1 = html.Div(
-    [
-        dbc.Row(
-            [
-                html.H5('Class collective sentiment analysis map',
-                        style={'margin-top': '12px', 'margin-left': '14px'})
-            ],
-            style={"height": "5vh"},
-            className='bg-light text-white'
-        ),
-
-        dbc.Row(
-            [
-                html.Div([html.Hr(),
-                          html.P('Select a year first',
-                                 style={'margin-top': '8px', 'margin-bottom': '4px'},
-                                 className='bg-dark text-white'),
-                          dcc.Dropdown(id='yeardropdown2', options=[{'label': '2021', 'value': '2021'},
-                                                                    {'label': '2022', 'value': '2022'},
-                                                                    {'label': '2023', 'value': '2023'}],
-                                       multi=False,
-                                       style={'width': '220px', 'color': '#000000'}
-                                       ),
-
-
-
-                          #html.P('Find your name to see your individual aggregated keywords',
-
-                          ])
-
-            ],
-
-
-
-            style={'height': '40vh', 'margin': '10px', 'display': 'flex'}),
-
-                          html.Hr(style={ 'margin': '70px 0'}),
-
-
-
-        dbc.Row(
-            [
-                html.H5('Sentiment Analysis comparison between students and projects',
-                        style={'margin-top': '12px', 'margin-left': '14px'})
-            ],
-            style={"height": "5vh"},
-            className='bg-light text-white'
-        ),
-dbc.Row(
-            [
-                html.Div([html.Hr(),
-                          html.P('Select a year first',
-                                 style={'margin-top': '8px', 'margin-bottom': '4px'},
-                                 className='bg-dark text-white'),
-                          dcc.Dropdown(id='yeardropdown1', options=[{'label': '2021', 'value': '2021'},
-                                                                    {'label': '2022', 'value': '2022'},
-                                                                    {'label': '2023', 'value': '2023'}],
-                                       multi=False,
-                                       style={'width': '220px', 'color': '#000000'}
-                                       ),
-                html.P('Find your name to see ',
-                                 style={'margin-top': '8px', 'margin-bottom': '4px'},
-                                 className='bg-dark text-white'),
-                          dcc.Dropdown(id='mydropdown',  # options=[{'label': 'student 1', 'value': 'optionA'},
-                                       #  {'label': 'student 2', 'value': 'optionB'},
-                                       # {'label': 'student 3', 'value': 'optionC'}],
-                                       multi=False,
-                                       style={'width': '220px', 'color': '#000000'}
-                                       ),
-
-
-                          ])
-            ],
-
-
-
-            style={'height': '80vh', 'margin': '10px', 'display': 'flex'}),
-html.Hr(style={ 'margin': '20px 0'}),
-
-    ],
-)
-
 
 
 sidebarpage2 = html.Div(
@@ -588,44 +629,59 @@ sidebarpage2 = html.Div(
                                        multi=False,
                                        style={'width': '220px', 'color': '#000000'}
                                        ),
-                       dcc.Markdown('''
-                                                  * All knowledge keywords all students mentioned with positive sentiment in reflection
-
-                                                  * 
-                                                  * 
-                                                  * 
-                                              ''', style={'margin-bottom': '2px', 'display': 'flex'}
-                                    ,
-                                    className='text-black'),
                        ],
                           className='p-4')], # Add padding to the div
-            style={'height': '40vh', 'margin': '10px', 'display': 'flex'},
+            style={'height': '50vh', 'margin': '10px', 'display': 'flex'},
             className='bg-white rounded shadow-sm' # Add a white background, rounded corners, and shadow
         ),
-        html.Hr(style={ 'margin': '70px 0'}),
+        html.Hr(style={ 'margin': '60px 0'}),
         dbc.Row(
-            [html.H5('Sentiment Analysis comparison between students and projects',style={'margin-top': '12px', 'margin-left': '14px'})],
-            style={"height": "10vh"},
+            [html.H5('Sentiment Analysis comparison between students on different projects',style={'margin-top': '12px', 'margin-left': '14px'})],
+            style={"height": "15vh"},
             className='bg-light text-white'
         ),
         dbc.Row(
             [html.Div([html.Hr(),html.P('Select a year first',
                                  style={'margin-top': '8px', 'margin-bottom': '4px'},
                                  className='text-black'),
-                          dcc.Dropdown(id='yeardropdown1', options=[{'label': '2021', 'value': '2021'},
+                          dcc.Dropdown(id='yeardropdown4', options=[{'label': '2021', 'value': '2021'},
                                                                     {'label': '2022', 'value': '2022'},
                                                                     {'label': '2023', 'value': '2023'}],
                                        multi=False,
                                        style={'width': '220px', 'color': '#000000'}),],
                           className='p-4') # Add padding to the div
             ],
-            style={'height': '80vh', 'margin': '10px', 'display': 'flex'},
+            style={'height': '60vh', 'margin': '10px', 'display': 'flex'},
+            className='bg-white rounded shadow-sm' #  white background, rounded corners, and shadow
+        ),
+html.Hr(style={ 'margin': '40px 0'}),
+dbc.Row(
+            [html.H5('Sentiment Analysis comparison between projects on different students',style={'margin-top': '12px', 'margin-left': '14px'})],
+            style={"height": "15vh"},
+            className='bg-light text-white'
+        ),
+        dbc.Row(
+            [html.Div([html.Hr(),html.P('Select a year first',
+                                 style={'margin-top': '8px', 'margin-bottom': '4px'},
+                                 className='text-black'),
+                          dcc.Dropdown(id='yeardropdown5', options=[{'label': '2021', 'value': '2021'},
+                                                                    {'label': '2022', 'value': '2022'},
+                                                                    {'label': '2023', 'value': '2023'}],
+                                       multi=False,
+                                       style={'width': '220px', 'color': '#000000'}),],
+                          className='p-4') # Add padding to the div
+            ],
+            style={'height': '70vh', 'margin': '10px', 'display': 'flex'},
             className='bg-white rounded shadow-sm' #  white background, rounded corners, and shadow
         ),
         html.Hr(style={ 'margin': '20px 0'}),
     ],
     style={'padding-top': '20px', 'padding-bottom': '20px', 'background-color': '#f8f9fa'} # adding and background color to the sidebar
 )
+
+
+
+
 
 
 html_graphs2 = html.Div(
@@ -635,8 +691,41 @@ html_graphs2 = html.Div(
                 [
                     dbc.Col(
                         [
-                            html.P('Maps for positive sentiment analysis score', className='fs-5 text-center font-weight-bold',
-                                   style={'fontWeight': 'bold'}),
+
+                            html.Div(
+                                [
+                                    html.P(
+                                        'Maps for positive sentiment analysis score',
+                                        className='fs-5 text-center font-weight-bold',
+                                        style={"font-size": "2.5rem", "font-weight": "bold", "margin-right": "-40px",
+                                               "flex": "1"}
+                                    ),
+                                    html.Button(
+                                        'i',
+                                        id='info-button6',
+                                        className='badge rounded-pill bg-primary',
+                                        style={'display': 'inline-block','font-size': '0.95rem', "margin-left": "10px"}
+                                    ),
+                                ],
+                                className='d-flex align-items-center',
+                                style={'display': 'flex'}
+                            ),
+                            dbc.Modal(
+                                [
+                                    dbc.ModalHeader("Info about Class Positive Sentiment Collective Map"),
+                                    dbc.ModalBody(
+                                        " All knowledge keywords mentioned by all students in a class in their reflections with a positive sentiment for a particular week;The color of the node corresponds to a specific knowledge category ;Clicking on a node reveals the names of the students who mentioned the keyword ;Size of the node reflects the number of students who mentioned it"),
+                                    dbc.ModalFooter(
+                                        html.Button('Close', id='close-button6', className='btn btn-secondary'))
+                                ],
+                                id="info-modal6",
+                                centered=True
+                            ),
+                            # html.Button('i', id='info-button', className='badge rounded-pill bg-primary', style={'vertical-align': 'top'}),
+                            html.P(
+                                'Identify the knowledge categories and specific keywords that have elicited positive sentiment from students',
+                                className='fs-6 text-center',
+                                style={"font-size": "1.0rem"}),
                             html.Iframe(id='html-iframe-5', srcDoc=initial_html_posi, width='100%', height='600',
                                         style={'height': '50vh'}),
 
@@ -664,13 +753,44 @@ html_graphs2 = html.Div(
 
                     dbc.Col(
                         [
-                            html.P('Maps for negative sentiment analysis score', className='fs-5 text-center font-weight-bold',
-                                   style={'fontWeight': 'bold'}),
+                            html.Div(
+                                [
+                                    html.P(
+                                        'Maps for negative sentiment analysis score',
+                                        className='fs-5 text-center font-weight-bold',
+                                        style={"font-size": "2.5rem", "font-weight": "bold", "margin-right": "-40px",
+                                               "flex": "1"}
+                                    ),
+                                    html.Button(
+                                        'i',
+                                        id='info-button7',
+                                        className='badge rounded-pill bg-primary',
+                                        style={'display': 'inline-block','font-size': '0.95rem', "margin-left": "10px"}
+                                    ),
+                                ],
+                                className='d-flex align-items-center',
+                                style={'display': 'flex'}
+                            ),
+                            dbc.Modal(
+                                [
+                                    dbc.ModalHeader("Info about Class Negative Sentiment Collective Map"),
+                                    dbc.ModalBody(
+                                        " All knowledge keywords mentioned by all students in a class in their reflections with a negative sentiment for a particular week;The color of the node corresponds to a specific knowledge category ;Clicking on a node reveals the names of the students who mentioned the keyword ;Size of the node reflects the number of students who mentioned it"),
+                                    dbc.ModalFooter(
+                                        html.Button('Close', id='close-button7', className='btn btn-secondary'))
+                                ],
+                                id="info-modal7",
+                                centered=True
+                            ),
+                            # html.Button('i', id='info-button', className='badge rounded-pill bg-primary', style={'vertical-align': 'top'}),
+                            html.P(
+                                'Identify the knowledge categories and specific keywords that have elicited negative sentiment from students',
+                                className='fs-6 text-center',
+                                style={"font-size": "1.0rem"}),
                             html.Iframe(id='html-iframe-6', src=initial_html_nega, width='100%', height='600',
                                         style={'height': '50vh'}),
 
                             dbc.Row([dbc.Col([html.Div([
-                                # html.Label('Select a week:', style={'fontSize': '20px'}),
                                 dcc.Slider(
                                     id='myslider5',
                                     min=1,
@@ -693,13 +813,46 @@ html_graphs2 = html.Div(
 #p-2 align-items-stretch text-end fs-6 font-weight-bold
                     dbc.Col(
                         [
+                            #html.Div([
+                                #html.Div('Sentiment Analysis of one student on all projects',
+                                         #id='title',
+                                         #className='fs-5 text-center font-weight-bold',
+                                         #style={'fontWeight': 'bold', 'cursor': 'pointer'}),
+                               # html.Div(id='text-box-container')
+                            #]),
+
+ html.Div([
+                                html.Div([html.Div('Sentiment Analysis of one student on all projects', id='title',
+                                                   className='fs-4 text-center font-weight-bold title-text',
+                                                   style={'fontWeight': 'bold', 'cursor': 'pointer'}),
+                                          html.Button('i', id='info-button9', className='badge rounded-pill bg-primary',
+                                                      style={ 'font-size': '0.8rem',
+                                                             'display': 'inline-block', 'margin': '10px'})],
+                                         className='d-flex text-center justify-content-center align-items-center'),
+ dbc.Modal(
+                                [
+                                    dbc.ModalHeader("Info about Sentiment Analysis of one student on all projects"),
+                                    dbc.ModalBody(
+                                        "Display sentiment analysis of one student on all projects in a class;Each dot on the map represents a sentence that contains knowledge keyword(s);Red indicates negative sentiment;Green indicates positive sentiment;Grey indicates neutral sentiment"),
+                                    dbc.ModalFooter(
+                                        html.Button('Close', id='close-button9', className='btn btn-secondary'))
+                                ],
+                                id="info-modal9",
+                                centered=True
+                            ),
+
+html.Div(
+                                html.P('Red indicates negative sentiment;Green indicates positive sentiment;Grey indicates neutral sentiment',
+                                       className='text-nowrap bd-highlight',
+                                       style={'fontWeight': 'bold'}),
+
+                                className='fs-6 d-flex justify-content-center',
+                                style={'text-align': 'center', 'margin-right': '-50px'}
+                            ),
+                                html.Div(id='text-box-container',
+                                         style={'display': 'flex', 'justify-content': 'space-between'})
+                            ]),
                             html.Div([
-                                html.Div('Sentiment Analysis of one student on all projects',
-                                         id='title',
-                                         className='fs-5 text-center font-weight-bold',
-                                         style={'fontWeight': 'bold', 'cursor': 'pointer'}),
-                                html.Div(id='text-box-container')
-                            ]),html.Div([
     dcc.Graph(
         figure={
             'data': [
@@ -730,83 +883,148 @@ html_graphs2 = html.Div(
                                            8: '8', 9: '9', 10: '10'},
                                     tooltip={"placement": "bottom", "always_visible": True}, included=False
                                 ),
-                                dbc.Label("Week", className="text-center w-100 mb-0", width='10%'),
-                            ], style={'width': '85%', 'margin': '20px', 'margin-top': '20px',
+                                dbc.Label("Student Name", className="text-center w-100 mb-0", width='10%'),
+                            ], style={'width': '90%', 'margin': '20px', 'margin-top': '20px',
                                       # 'color': '#000000',
                                       'fontSize': '15px',
                                       'padding': '5px'})
                             ])]),
 
-                        ], width={"size": 5}),#
+                        ], width={"size": 10}),#
+
                     dbc.Col(
                         [
                             html.Div([
-                                html.Div('Sentiment Analysis of all student on one projects',
-                                         id='title',
-                                         className='fs-5 text-center font-weight-bold',
-                                         style={'fontWeight': 'bold', 'cursor': 'pointer'}),
+                                html.Div([html.Div('Sentiment Analysis of all student on one projects', id='title',
+                                                   className='fs-4 text-center font-weight-bold title-text',
+                                                   style={'fontWeight': 'bold', 'cursor': 'pointer'}),
+                                          html.Button('i', id='info-button8', className='badge rounded-pill bg-primary',
+                                                      style={ 'font-size': '0.8rem',
+                                                             'display': 'inline-block', 'margin': '10px'})],
+                                         className='d-flex text-center justify-content-center align-items-center'),
+ dbc.Modal(
+                                [
+                                    dbc.ModalHeader("Info about Sentiment Analysis of all student on one projects"),
+                                    dbc.ModalBody(
+                                        "Display sentiment analysis of a project for all students in a class;Each dot on the map represents a sentence that contains knowledge keyword(s);Red indicates negative sentiment;Green indicates positive sentiment;Grey indicates neutral sentiment"),
+                                    dbc.ModalFooter(
+                                        html.Button('Close', id='close-button8', className='btn btn-secondary'))
+                                ],
+                                id="info-modal8",
+                                centered=True
+                            ),
+
+html.Div(
+                                html.P('Red indicates negative sentiment;Green indicates positive sentiment;Grey indicates neutral sentiment',
+                                       className='text-nowrap bd-highlight',
+                                       style={'fontWeight': 'bold'}),
+
+                                className='fs-6 d-flex justify-content-center',
+                                style={'text-align': 'center', 'margin-right': '-50px'}
+                            ),
                                 html.Div(id='text-box-container',
                                          style={'display': 'flex', 'justify-content': 'space-between'})
                             ]),
-                            #html.Iframe(id='html-iframe-8', src='assets/samplepic3.png', width='100%', height='600',
-                                        #$style={'height': '65vh'}),
-html.Div([
-    dcc.Graph(
-        id='sentiment-analysis-graph',
-        figure={
-            'data': [
-                {
-                    'x': data1['file_number'],
-                    'y': data1['score'],
-                    'type': 'scatter',
-                    'mode': 'markers',
-                    'marker': {'color': data1['color']}
-                }
-            ],
-            'layout': {
-                'title': 'Sentiment Analysis Results',
-                'xaxis': {
-                    'title': 'File Number',
-                    'tickvals': list(range(1, 13)),
-                    'ticktext': list(range(1, 13))
-                },
-                'yaxis': {'title': 'Score'},
-                'legend': {'orientation': 'h', 'x': 0, 'y': 1.1},
-                'margin': {'l': 50, 'b': 50, 't': 50, 'r': 50}
-            }
-        }
-    )
-]),
+                            html.Div([
+                                dcc.Graph(
+                                    id='sentiment-analysis-graph',
+                                    figure={
+                                        'data': [
+                                            {
+                                                'x': data1['file_number'],
+                                                'y': data1['score'],
+                                                'type': 'scatter',
+                                                'mode': 'markers',
+                                                'marker': {'color': data1['color']}
+                                            }
+                                        ],
+                                        'layout': {
+                                            #'title': 'Sentiment Analysis Results',
+                                            'xaxis': {
+                                                'title': 'File Number',
+                                                'tickvals': list(range(1, 13)),
+                                                'ticktext': list(range(1, 13))
+                                            },
+                                            'yaxis': {'title': 'Score'},
+                                            'legend': {'orientation': 'h', 'x': 0, 'y': 1.1},
+                                            'margin': {'l': 50, 'b': 50, 't': 50, 'r': 50}
+                                        }
+                                    }
+                                )
+                            ]),
+
 
                             dbc.Row([dbc.Col([html.Div([
                                 # html.Label('Select a week:', style={'fontSize': '20px'}),
                                 dcc.Slider(
                                     id='myslider7',
                                     min=1,
-                                    max=10,
+                                    max=9,
                                     value=1,
                                     step=1,
                                     updatemode='drag',
-                                    marks={1: {'label': '1'}, 2: {'label': '2'}, 3: '3', 4: '4', 5: '5', 6: '6', 7: '7',
-                                           8: '8', 9: '9', 10: '10'},
-                                    tooltip={"placement": "bottom", "always_visible": True}, included=False
+                                    marks={1: {'label': 'dream1'}, 2: {'label': 'dream2'}, 3: {'label': 'dream3'},
+                                           4: {'label': 'frank'}, 5: {'label': 'lofi'}, 6: {'label': 'omni'},
+                                           7: {'label': 'remix'},
+                                           8: {'label': 'rube'}, 9: {'label': 'testing'}},
+                                     included=False
                                 ),
-                                dbc.Label("Week", className="text-center w-100 mb-0", width='10%'),
-                            ], style={'width': '85%', 'margin': '20px', 'margin-top': '20px',
+                                dbc.Label("Project Name", className="text-center w-100 mb-0", width='10%'),
+                            ], style={'width': '90%', 'margin': '20px', 'margin-top': '20px',
                                       # 'color': '#000000',
                                       'fontSize': '15px',
                                       'padding': '5px'})
                             ])]),
 
-                        ], width={"size": 5})
+                        ], width={"size": 10})
 
-                ], style={"height": "100vh"}
+                ], style={"height": "240vh"}
             )
 
             ],
             fluid=True
         )
     ])
+
+@app.callback(
+    Output("info-modal6", "is_open"),
+    [Input("info-button6", "n_clicks"), Input("close-button6", "n_clicks")],
+    [State("info-modal6", "is_open")],
+)
+def toggle_modal(n1, n2, is_open):
+    if n1 or n2:
+        return not is_open
+    return is_open
+
+@app.callback(
+    Output("info-modal7", "is_open"),
+    [Input("info-button7", "n_clicks"), Input("close-button7", "n_clicks")],
+    [State("info-modal7", "is_open")],
+)
+def toggle_modal(n1, n2, is_open):
+    if n1 or n2:
+        return not is_open
+    return is_open
+
+@app.callback(
+    Output("info-modal8", "is_open"),
+    [Input("info-button8", "n_clicks"), Input("close-button8", "n_clicks")],
+    [State("info-modal8", "is_open")],
+)
+def toggle_modal(n1, n2, is_open):
+    if n1 or n2:
+        return not is_open
+    return is_open
+
+@app.callback(
+    Output("info-modal9", "is_open"),
+    [Input("info-button9", "n_clicks"), Input("close-button9", "n_clicks")],
+    [State("info-modal9", "is_open")],
+)
+def toggle_modal(n1, n2, is_open):
+    if n1 or n2:
+        return not is_open
+    return is_open
 
 # Define the App Layout
 
@@ -1001,23 +1219,7 @@ def update_students(year):
     return options
 
 
-@app.callback(
-    Output('text-box-container', 'children'),
-    [Input('title', 'n_clicks')],
-    [State('text-box-container', 'children')]
-)
-def show_hide_textbox(n_clicks, children):
-    if n_clicks is None:
-        return ''
-    elif children:
-        return ''
-    else:
-        return dcc.Input(
-            id='text-box',
-            type='text',
-            value='Sentiment analysis is the process of analyzing digital text to determine if the emotional tone of the message is positive, negative, or neutral. ',
 
-        )
 
 
 
