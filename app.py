@@ -13,7 +13,8 @@ import plotly.graph_objs as go
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
-
+import sendgrid
+from sendgrid.helpers.mail import Mail
 
 #import plotly.express as px
 import plotly.tools as tls
@@ -1062,7 +1063,6 @@ page_2_layout = html.Div(
 
 
 
-
 page_3_layout  =  dbc.Container([
     dbc.Row([
         dbc.Col(html.H1('Feedback Page'), className="mt-3 mb-5")
@@ -1082,7 +1082,13 @@ page_3_layout  =  dbc.Container([
 
 
 
-# Define the callback
+# Configure SendGrid settings
+sg = sendgrid.SendGridAPIClient(api_key=os.environ.get('SENDGRID_API_KEY'))
+from_email = 'yc4195@cumc.columbia.edu'
+to_email = 'yc4195@cumc.columbia.edu'
+
+
+# Define the callback to send email
 @app.callback(
     Output('output-container', 'children'),
     Input('submit-button', 'n_clicks'),
@@ -1090,17 +1096,28 @@ page_3_layout  =  dbc.Container([
 )
 def update_output(n_clicks, value):
     if n_clicks > 0:
-        # Write feedback to file
-        feedback_file = os.path.join(os.getcwd(), 'feedback1.txt')
-        with open(feedback_file, 'a') as f:
-            f.write(f'{value}\n')
+        # Create email message
+        message = Mail(
+            from_email=from_email,
+            to_emails=to_email,
+            subject='New Feedback Received',
+            html_content=f'<p>{value}</p>'
+        )
+        # Send email message
+        try:
+            response = sg.send(message)
+            print(response.status_code)
+            print(response.body)
+            print(response.headers)
+            return dbc.Alert(f'Thank you for your feedback. It has been sent to {to_email}.', color='success')
+        except Exception as e:
+            print(e.message)
+            return dbc.Alert('Oops! Something went wrong. Please try again later.', color='danger')
 
-        return dbc.Alert(f'Thank you for your feedback!', color='success')
 
 
 
-
-# create the callback for rendering the different pages
+        # create the callback for rendering the different pages
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
     if pathname == "/page-1":
