@@ -1088,7 +1088,7 @@ page_3_layout  =  dbc.Container([
 )
 def update_output(n_clicks, value):
     if n_clicks is not None:
-        with open('feedback.txt', 'a') as f:
+        with open('assets/feedback.txt', 'a') as f:
             f.write(value + '\n')
         return dbc.Alert('Thank you for your feedback!', color='success')
 
