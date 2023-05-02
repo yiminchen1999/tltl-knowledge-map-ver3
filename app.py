@@ -13,12 +13,13 @@ import plotly.graph_objs as go
 import seaborn as sns
 import matplotlib.pyplot as plt
 import os
-import sendgrid
-from sendgrid.helpers.mail import Mail
+import smtplib
 
 #import plotly.express as px
 import plotly.tools as tls
-
+# Define your email and password
+EMAIL = 'yc4195@cumc.columbia.edu'
+PASSWORD = 'SZcym@991019'
 df = pd.read_csv('assets/week_keyword_table_s01_2021.csv',index_col=0)
 animated_title_style = {
     "font-size": "2rem",
@@ -1082,37 +1083,28 @@ page_3_layout  =  dbc.Container([
 
 
 
-# Configure SendGrid settings
-sg = sendgrid.SendGridAPIClient(api_key=os.environ.get('SENDGRID_API_KEY'))
-from_email = 'yc4195@cumc.columbia.edu'
-to_email = 'yc4195@cumc.columbia.edu'
 
-
-# Define the callback to send email
+# Define the callback
+# Define the callback
 @app.callback(
     Output('output-container', 'children'),
     Input('submit-button', 'n_clicks'),
     Input('feedback-input', 'value')
 )
 def update_output(n_clicks, value):
-    if n_clicks > 0:
-        # Create email message
-        message = Mail(
-            from_email=from_email,
-            to_emails=to_email,
-            subject='New Feedback Received',
-            html_content=f'<p>{value}</p>'
-        )
-        # Send email message
+    if n_clicks is None:
+        return None
+    elif n_clicks > 0:
+        # Send the email
         try:
-            response = sg.send(message)
-            print(response.status_code)
-            print(response.body)
-            print(response.headers)
-            return dbc.Alert(f'Thank you for your feedback. It has been sent to {to_email}.', color='success')
-        except Exception as e:
-            print(e.message)
-            return dbc.Alert('Oops! Something went wrong. Please try again later.', color='danger')
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(EMAIL, PASSWORD)
+            server.sendmail(EMAIL, EMAIL, f'Subject: New Feedback\n\n{value}')
+            server.quit()
+            return dbc.Alert(f'Thank you for your feedback! Your feedback has been sent to {EMAIL}', color='success')
+        except:
+            return dbc.Alert(f'There was an error sending your feedback. Please try again later.', color='danger')
 
 
 
