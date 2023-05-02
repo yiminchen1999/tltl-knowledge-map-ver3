@@ -1062,88 +1062,37 @@ page_2_layout = html.Div(
 
 
 
-message_board = html.Div(
-    [
-        html.H1("We need your feedback!", className="display-8 "),
-        html.Hr(),
-        dbc.Row(
-            [
-                dbc.Col(
-                    html.Div(
-                        [
-                            html.H5("Post a message:"),
-                            dcc.Textarea(id="message-input", value="", placeholder="Enter your message...", rows=3),
-                            dbc.Button("Submit", id="submit-button", color="primary", className="mt-2"),
-                        ]
-                    ),
-                    width=6
-                ),
-                dbc.Col(
-                    html.Div(
-                        [
-                            html.H5("Messages:"),
-                            html.Ul(id="message-list", style={"list-style-type": "none"}),
-                        ]
-                    ),
-                    width=6
-                ),
-            ]
-        ),
-        html.Hr(),
-        dbc.Row(
-            [
-                dbc.Col(
-                    html.Div(
-                        [
-                            html.H5("Message Statistics:"),
-                            html.Div(
-                                [
-                                    html.P("Total Messages: "),
-                                    html.Span(id="total-messages"),
-                                ]
-                            ),
-                            html.Div(
-                                [
-                                    html.P("Most Common Words: "),
-                                    html.Span(id="most-common-words"),
-                                ]
-                            ),
-                        ]
-                    ),
-                    width=6
-                ),
-                dbc.Col(
-                    html.Div(
-                        [
-                            html.H5("Message Sentiment:"),
-                            dcc.Graph(id="sentiment-graph"),
-                        ]
-                    ),
-                    width=6
-                ),
-            ]
-        ),
-    ],
-    className='message-board-style'
-)
+page_3_layout  =  dbc.Container([
+    dbc.Row([
+        dbc.Col(html.H1('Feedback Page'), className="mt-3 mb-5")
+    ]),
+    dbc.Row([
+        dbc.Col([
+            html.P('Please provide your feedback below:', className="mb-2"),
+            dcc.Textarea(id='feedback-input', value='', placeholder='Type your feedback here...',
+                         style={'width': '100%', 'height': 200, 'resize': 'vertical'}, className="mb-3"),
+            dbc.Button('Submit', id='submit-button', color='primary', className="mb-3")
+        ], width=6, className="mx-auto")
+    ]),
+    dbc.Row([
+        dbc.Col(html.Div(id='output-container', children=''), className="text-center")
+    ])
+], className="my-5")
 
-# Define the layout
-page_3_layout = html.Div(
-    [
-        dbc.Container(
-            [
-                dbc.Row(
-                    [
-                        dbc.Col(message_board, width=9),
-                    ],
-                    className="main-row",
-                ),
-            ],
-            fluid=True,
-        ),
-    ],
-    className='page-style'
+
+# Define the callback
+@app.callback(
+    Output('output-container', 'children'),
+    Input('submit-button', 'n_clicks'),
+    State('feedback-input', 'value')
 )
+def update_output(n_clicks, value):
+    if n_clicks is not None:
+        with open('feedback.txt', 'a') as f:
+            f.write(value + '\n')
+        return dbc.Alert('Thank you for your feedback!', color='success')
+
+
 
 
 
