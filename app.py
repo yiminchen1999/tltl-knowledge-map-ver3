@@ -1064,76 +1064,34 @@ page_2_layout = html.Div(
 
 from email.message import EmailMessage
 
-page_3_layout  =  html.Div([
-    dbc.Container([
-        dbc.Row([
-            dbc.Col([
-                html.H1("Feedback Form"),
-                html.Hr(),
-                html.P("Please provide your feedback below:")
-            ])
-        ]),
-        dbc.Row([
-            dbc.Col([
-                dcc.Textarea(id='feedback-input', placeholder='Enter feedback here...', style={'width': '100%'})
-            ])
-        ]),
-        dbc.Row([
-            dbc.Col([
-                dbc.Button('Submit', id='submit-button', color='primary', className='mt-3')
-            ])
-        ]),
-        dbc.Row([
-            dbc.Col([
-                html.Div(id='output-container', children='')
-            ])
-        ])
+page_3_layout  =  dbc.Container([
+    dbc.Row([
+        dbc.Col(html.H1('Feedback Page'), className="mt-3 mb-5")
+    ]),
+    dbc.Row([
+        dbc.Col([
+            html.P('Please provide your feedback below:', className="mb-2"),
+            dcc.Textarea(id='feedback-input', value='', placeholder='Type your feedback here...',
+                         style={'width': '100%', 'height': 200, 'resize': 'vertical'}, className="mb-3"),
+            dbc.Button('Submit', id='submit-button', color='primary', className="mb-3")
+        ], width=6, className="mx-auto")
+    ]),
+    dbc.Row([
+        dbc.Col(html.Div(id='output-container', children=''), className="text-center")
     ])
-])
+], className="my-5")
 
-
-
-def send_email(feedback):
-    smtp_server = 'smtp.gmail.com'
-    smtp_port = 587
-    smtp_username = os.environ.get('SMTP_USERNAME')
-    smtp_password = os.environ.get('SMTP_PASSWORD')
-    to_email = os.environ.get('TO_EMAIL')
-
-    if smtp_server and smtp_port and smtp_username and smtp_password and to_email:
-        try:
-            # Create email message
-            msg = EmailMessage()
-            msg['From'] = smtp_username
-            msg['To'] = to_email
-            msg['Subject'] = 'New feedback received'
-            msg.set_content(feedback)
-
-            # Send email
-            with smtplib.SMTP(smtp_server, smtp_port) as server:
-                server.starttls()
-                server.login(smtp_username, smtp_password)
-                server.send_message(msg)
-
-            return True
-        except:
-            return False
-    else:
-        return False
-
+# Define the callback
 @app.callback(
     Output('output-container', 'children'),
     Input('submit-button', 'n_clicks'),
-    State('feedback-input', 'value')
+    Input('feedback-input', 'value')
 )
-def update_output(n_clicks, feedback):
-    if n_clicks is not None and n_clicks > 0 and feedback:
-        if send_email(feedback):
-            return dbc.Alert('Thank you for your feedback!', color='success')
-        else:
-            return dbc.Alert('Failed to send feedback. Please try again later.', color='danger')
-    else:
-        return ''
+def update_output(n_clicks, value):
+    if n_clicks > 0:
+        return dbc.Alert(f'Thank you for your feedback!', color='success')
+
+
 
 
         # create the callback for rendering the different pages
