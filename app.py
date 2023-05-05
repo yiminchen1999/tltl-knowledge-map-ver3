@@ -19,8 +19,6 @@ from email.message import EmailMessage
 #import plotly.express as px
 import plotly.tools as tls
 # Define your email and password
-EMAIL = 'yc4195@cumc.columbia.edu'
-PASSWORD = 'SZcym@991019'
 df = pd.read_csv('assets/week_keyword_table_s01_2021.csv',index_col=0)
 animated_title_style = {
     "font-size": "2rem",
@@ -145,10 +143,6 @@ with open('assets/2021_s2_weekly_1.html', 'r') as f:
 
 with open('assets/2021_s2_weekly_1.html', 'r') as f:
     third_html = f.read()
-# Individual Aggregate Graph
-div4 = html.Div([html.Iframe(src=app.get_asset_url("assets/2021_s1_aggregate_1.html"), id="graph1")] ) #width='90%', height='600', , style={"background":"transparent", "height":"700px"})
-div5 = html.Div([html.Iframe(src=app.get_asset_url("assets/2021_s1_aggregate_1.html"), id="graph2")] ) #width='90%', height='600', , style={"background":"transparent", "height":"700px"})
-div6 = html.Div([html.Iframe(src=app.get_asset_url("assets/2021_s1_aggregate_1.html"), id="graph3")] ) #width='90%', height='600', , style={"background":"transparent", "height":"700px"})
 content = html.Div(id="page-content")
 # Define the initial HTML content to display in the Iframe component
 initial_html_aggregate = open('assets/2021_s1_aggregate_1.html', 'r').read()
@@ -162,20 +156,24 @@ with open('assets/2021_s2_aggregate_1.html', 'r') as f:
 with open('assets/2021_s3_aggregate_1.html', 'r') as f:
     third_html_aggregate = f.read()
 
-# Class Collective Graph
-div7 = html.Div([html.Iframe(src=app.get_asset_url("assets/2021_class_1.html"), id="graph1")] ) #width='90%', height='600', , style={"background":"transparent", "height":"700px"})
-div8 = html.Div([html.Iframe(src=app.get_asset_url("assets/2021_class_1.html"), id="graph2")] ) #width='90%', height='600', , style={"background":"transparent", "height":"700px"})
-div9 = html.Div([html.Iframe(src=app.get_asset_url("assets/2021_class_1.html"), id="graph3")] ) #width='90%', height='600', , style={"background":"transparent", "height":"700px"})
-#content = html.Div(id="page-content")
+
 # Define the initial HTML content to display in the Iframe component
 initial_html_class = open('assets/2021_class_1.html', 'r').read()
 
-with open('assets/2022_class_1.html', 'r') as f:
-    second_html_class = f.read()
+category_colors = {
+    "dig fab": '#e3342f',
+    "electronic": '#f6993f',
+    "math/physics": '#ffed4a',
+    "programming": '#38c172',
+    "think/design": '#4dc0b5',
+    "materials": '#9561e2',
+    "handtools": '#f66d9b',
+}
 
-with open('assets/2023_class_1.html', 'r') as f:
-    third_html_class = f.read()
 
+
+# create the button component
+button = html.Button('Toggle Legend', id='toggle-button', className='btn btn-secondary')
 # Define the Sidebar
 sidebar = html.Div(
     [
@@ -203,19 +201,38 @@ sidebar = html.Div(
                                        multi=False,
                                        style={'width': '220px', 'color': '#000000'}
                                        ),
-                        html.Hr(),
-                       dcc.Markdown('''
-                           * Knowledge keywords mentioned in reflection for a particular week
-                           * Each node represents a knowledge keyword with name underneath
-                           * Color corresponds to the specific knowledge category 
-                       ''', style={'margin-bottom': '2px', 'display': 'flex'}
-                        ,
-                                    className='fs-6 text-black'), ],
+html.Hr(),
+
+dbc.Card([
+    dbc.CardHeader("Keywords Categories", className="bg-primary text-white text-center"),
+    dbc.Row([
+        dbc.Col([
+            dbc.ListGroup([
+                html.Li(category.capitalize(),
+                        className="list-group-item",
+                        style={"list-style-type": "none", "background-color": category_colors[category], "font-size": "14px"})
+                for category in list(category_colors)[:4]
+            ], flush=True, className="border-0 shadow-sm list-group-flush")
+        ], md=6.5),
+        dbc.Col([
+            dbc.ListGroup([
+                html.Li(category.capitalize(),
+                        className="list-group-item",
+                        style={"list-style-type": "none", "background-color": category_colors[category], "font-size": "14px"})
+                for category in list(category_colors)[4:]
+            ], flush=True, className="border-0 shadow-sm list-group-flush")
+        ], md=6.5),
+    ],justify="around")
+], className="border-0 shadow-sm mb-4", style={"background-color": "#F0F0F0"}),
+
+
+                        html.Hr() ],
                       className='p-4')],
             # Add padding to the div
             style={'height': '73vh', 'margin': '10px', 'display': 'flex'},
-            className='bg-white rounded shadow-sm' # Add a white background, rounded corners, and shadow
+            className='bg-white rounded shadow-sm mb-3' # Add a white background, rounded corners, and shadow
         ),
+
 
 
         html.Hr(style={ 'margin': '30px 0'}),
@@ -233,15 +250,7 @@ sidebar = html.Div(
                                                                     {'label': '2023', 'value': '2023'}],
                                        multi=False,
                                        style={'width': '220px', 'color': '#000000'}),
-html.Hr(),
-                       dcc.Markdown('''
-                           * All knowledge keywords all students mentioned in reflection for a particular week
-                           * Color corresponds to the specific knowledge category 
-                           * When clicking a node, text shows students who have mentioned this knowledge 
-                           * Size of the node reflects the amount of students
-                       ''', style={'margin-bottom': '2px', 'display': 'flex'}
-                        ,
-                                    className='fs-6 text-black'),
+html.Hr()
                        ],
                           className='p-4') # Add padding to the div
             ],
@@ -253,15 +262,6 @@ html.Hr(),
     style={'padding-top': '20px', 'padding-bottom': '20px', 'background-color': '#f8f9fa'} # adding and background color to the sidebar
 )
 
-# Define the hidden div element for the popup window
-popup_div = html.Div(id='popup-div', style={'display': 'none'})
-
-# Define the callback function to update the state of the hidden div element
-@app.callback(Output('popup-div', 'children'), [Input('info-button', 'n_clicks')])
-def update_popup_div(n_clicks):
-    if n_clicks:
-        # Replace this with the information to be displayed in the popup window
-        return html.P('This is some information that will be displayed in the popup window.')
 
 
 html_graphs = html.Div(
@@ -291,17 +291,29 @@ html.Div(
     className='d-flex align-items-center',
     style={'display': 'flex'}
 ),
-                            dbc.Modal(
-                                [
-                                    dbc.ModalHeader("Information about Individual Key Concepts (weekly)"),
-                                    dbc.ModalBody(
-                                        " Knowledge keywords mentioned in reflection for a particular week, Each node represents a knowledge keyword with name underneath, Color corresponds to the specific knowledge category"),
-                                    dbc.ModalFooter(
-                                        html.Button('Close', id='close-button', className='btn btn-secondary'))
-                                ],
-                                id="info-modal",
-                                centered=True
-                            ),
+dbc.Modal(
+    [
+        dbc.ModalHeader("Information about Individual Key Concepts (weekly)"),
+        dbc.ModalBody(
+            [
+                html.Ul(
+                    [
+                        html.Li("Knowledge keywords mentioned in reflection for a particular week.", style={'color': 'darkgrey'}),
+                        html.Li("Each node represents a knowledge keyword with name underneath", style={'color': 'darkgrey'}),
+                        html.Li("Color corresponds to the specific knowledge category", style={'color': 'darkgrey'}),
+                    ]
+                ),
+                #html.Br(),
+                html.P("What can I do with the weekly knowledge map?"),
+                html.P("1.Identify the specific concepts that you have applied during the week.",style={'color': 'darkgrey'}),
+                html.P("2.By reviewing the nodes and categories on the map, you can reflect on the knowledge areas that you have engaged with and assess your level of understanding and application.", style={'color': 'darkgrey'})
+            ]
+        ),
+        dbc.ModalFooter(html.Button('Close', id='close-button', className='btn btn-secondary'))
+    ],
+    id="info-modal",
+    centered=True
+),
                             #html.Button('i', id='info-button', className='badge rounded-pill bg-primary', style={'vertical-align': 'top'}),
                             html.P('Identify which concepts I’ve applied this week',
                              className='fs-6 text-center',
@@ -359,7 +371,11 @@ html.Div(
                                 [
                                     dbc.ModalHeader("Information about Individual Key Concepts (aggregated)"),
                                     dbc.ModalBody(
-                                        "Knowledge keywords mentioned in reflections up to a certain week;The color of the node corresponds to a specific knowledge category;Within the same category, darker shades indicate their earlier occurrence;Clicking on a node reveals the week in which the keyword was first mentioned;Size of the node reflects the frequency of its occurrence"),
+                                        "1.Knowledge keywords mentioned in reflections up to a certain week;"),
+                                    dbc.ModalBody(" 2.Within the same category, darker shades indicate their earlier occurrence;"),
+                                    dbc.ModalBody(" 3.The color of the node corresponds to a specific knowledge category;"),
+                                    dbc.ModalBody("4.Clicking on a node reveals the week in which the keyword was first mentioned;"),
+                                    dbc.ModalBody("5.Size of the node reflects the frequency of its occurrence;"),
                                     dbc.ModalFooter(
                                         html.Button('Close', id='close-button2', className='btn btn-secondary'))
                                 ],
@@ -389,17 +405,37 @@ html.Div(
 
 dbc.Container(
     [
-        dbc.Row(
-            [
-                dbc.Col(),
-                dbc.Col(
-                    dbc.Button("Click me to see the animation!", id="button-1", color="light", className="ml-2"),
-                    width="auto",
-                    style={"display": "flex", "justify-content": "center"}
+dbc.Row(
+    [
+        dbc.Col(),
+        dbc.Col(
+            dbc.Button(
+                html.Span(
+                    [html.I(className="bi bi-play"), html.Span(" Play", className="ms-2")],
+                    className="d-flex align-items-center"
                 ),
-                dbc.Col()
-            ]
+                id="button-1",
+                color="primary",
+                className="btn-lg px-4 py-2  border-0",
+                style={
+                    "font-size": "16px",
+                    "font-weight": "bold",
+                    "letter-spacing": "1px",
+                    "text-transform": "uppercase",
+                    "box-shadow": "none",
+                    "background-color": "#F8F9FA",
+                    "color": "#212529"
+                }
+            ),
+
+            width="auto",
+            style={"display": "flex", "justify-content": "center"},
         ),
+        dbc.Col(),
+    ],
+    className="mb-3",
+)
+        ,
 dbc.Modal(
     [
         dbc.ModalHeader("Animated GIF"),
@@ -718,7 +754,10 @@ html_graphs2 = html.Div(
                                 [
                                     dbc.ModalHeader("Info about Class Positive Sentiment Collective Map"),
                                     dbc.ModalBody(
-                                        " All knowledge keywords mentioned by all students in a class in their reflections with a positive sentiment for a particular week;The color of the node corresponds to a specific knowledge category ;Clicking on a node reveals the names of the students who mentioned the keyword ;Size of the node reflects the number of students who mentioned it"),
+                                        " * All knowledge keywords mentioned by all students in a class in their reflections with a positive sentiment for a particular week;"
+                                        "* The color of the node corresponds to a specific knowledge category ;Clicking on a node reveals the names of the students who mentioned the keyword ;Size of the node reflects the number of students who mentioned it"),
+                                    dbc.ModalBody("* Clicking on a node reveals the names of the students who mentioned the keyword"),
+                                    dbc.ModalBody("* Size of the node reflects the number of students who mentioned it"),
                                     dbc.ModalFooter(
                                         html.Button('Close', id='close-button6', className='btn btn-secondary'))
                                 ],
@@ -1064,11 +1103,34 @@ page_2_layout = html.Div(
 
 from email.message import EmailMessage
 
-page_3_layout  =  dbc.Container([
+page_3_layout = dbc.Container([
     dbc.Row([
         dbc.Col(html.H1('Feedback Page'), className="mt-3 mb-5")
     ]),
     dbc.Row([
+        dbc.Col([
+            dbc.Label("Select who you are"),
+            dcc.Dropdown(
+                id='student-dropdown',
+                options=[
+                    {'label': 'Eury', 'value': 'Eury'},
+                    {'label': 'Sadia', 'value': 'Sadia'},
+                    {'label': 'Helen', 'value': 'Helen'},
+                    {'label': 'Xichen', 'value': 'Xichen'},
+                    {'label': 'Zhanlan', 'value': 'Zhanlan'},
+                    {'label': 'Katie', 'value': 'Katie'},
+                    {'label': 'Andrea', 'value': 'Andrea'},
+                    {'label': 'Ana Maria', 'value': 'Ana Maria'},
+                    {'label': 'Heidi', 'value': 'Heidi'},
+                    {'label': 'Mariana', 'value': 'Mariana'},
+                    {'label': 'Inara', 'value': 'Inara'},
+                    {'label': 'Kiki', 'value': 'Kiki'}
+                ],
+                style={'width': '100%'}
+            ),
+            html.Br(),
+            html.Div(id='teacher-letter-text', className="mt-3")
+        ], width=6, className="mx-auto"),
         dbc.Col([
             html.P('Please provide your feedback below:', className="mb-2"),
             dcc.Textarea(id='feedback-input', value='', placeholder='Type your feedback here...',
@@ -1081,20 +1143,45 @@ page_3_layout  =  dbc.Container([
     ])
 ], className="my-5")
 
-# Define the callback
+
+import os
+
+
+
+
+@app.callback(
+    Output('teacher-letter-text', 'children'),
+    Input('student-dropdown', 'value'))
+def display_student_feedback(name):
+    if name:
+        file_path = f"{name}.txt"
+        if os.path.exists(file_path):
+            with open(file_path, 'r') as f:
+                feedback = f.read()
+        else:
+            feedback = f"No feedback found for {name}."
+    else:
+        feedback = "Select a student to view their feedback."
+    return html.P(feedback)
+
 @app.callback(
     Output('output-container', 'children'),
     Input('submit-button', 'n_clicks'),
-    Input('feedback-input', 'value')
-)
-def update_output(n_clicks, value):
-    if n_clicks > 0:
-        return dbc.Alert(f'Thank you for your feedback!', color='success')
+    State('student-dropdown', 'value'),
+    State('feedback-input', 'value'))
+def save_feedback(n_clicks, student_name, feedback_text):
+    if n_clicks:
+        if not student_name:
+            return html.Div('Please select a student name.', style={'color': 'red'})
+        if not feedback_text:
+            return html.Div('Feedback cannot be empty.', style={'color': 'red'})
 
+        file_path = f"feedback.txt"
+        with open(file_path, 'w') as f:
+            f.write(feedback_text)
 
-
-
-        # create the callback for rendering the different pages
+        return html.Div('Feedback submitted successfully!', style={'color': 'green'})
+    # create the callback for rendering the different pages
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
     if pathname == "/page-1":

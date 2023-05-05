@@ -72,7 +72,7 @@ keywords = list(year2021_df[0].head())
 
 # the number shows which category the keyword belongs to
 keywords_group = keyword_category.iloc[:, 0].to_numpy()
-
+keywords_group
 
 def aggregate_individual_knowledge_map(student_df, color_plate):
     nets = []
