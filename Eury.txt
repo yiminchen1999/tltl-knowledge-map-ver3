@@ -1,1 +1,19 @@
-xasasx
+Dear Eury,
+
+It's great to see your exploration of the concept of "repairing" and how it connects with the idea of "aftermath." In your project, you've used a phone slider and a movable monitor stand as instructional materials to represent the base 2 and base 3 number systems in an embodied manner. This approach is inspired by Wilensky's work on concretizing abstract concepts.
+
+You've faced some challenges in learning the base 2 (binary) system and found that using other representations, such as a slider made from coils, wire, and plastic, helped you better understand the logic of the number system. Additionally, you've employed the affordances of an old Dell monitor and its stand to create a two-player game that also helps teach these number systems.
+
+Throughout the process, you've encountered some challenges and inquiries, such as understanding the mechanics behind the monitor stand's rotation and the properties that allow an object to stay in place versus moving up. You've also experimented with gluing colored buttons on magnets to attach them to the monitor stand, allowing for more diverse representations of the number systems.
+
+Overall, your project showcases a creative approach to exploring number systems through embodied design and encourages further inquiry into the materials and mechanics involved./
+
+Great job this week on focusing on casting, debugging, and trial-and-error! You've shown an interest in these areas and it's essential to have a strong foundation in these skills.
+
+Comparing your knowledge matrix to other students who mentioned the same knowledge, such as Sadia and Helen, it's noticeable that they also touched upon areas like brainstorming and iterating. To improve your understanding, you might consider exploring these concepts further in future projects. Engaging in brainstorming sessions and iterative design processes can help you develop more creative and effective solutions.
+
+Looking at the students who mentioned different knowledge, such as Xichen and Zhanlan, they focused on computational thinking, electronics, and disassembling. Diversifying your skillset by working on projects that involve these areas can improve your overall competence and make you a more well-rounded learner. For example, you could try working on a project that involves both electronic components and casting techniques.
+
+Finally, when comparing students who mentioned both similar and different knowledge like Ana Maria and Mariana, it is crucial to strike a balance between strengthening existing skills and acquiring new ones. In your case, keep working on your current areas of expertise, but also explore new concepts like electronics, computational thinking, and iterating. This approach will help you become a more versatile and adaptive learner, ready to tackle a wide range of projects.
+
+In conclusion, continue focusing on your areas of interest, but don't forget to expand your horizons by exploring new concepts and learning from your classmates. Collaborate with your peers and share your experiences to enhance your learning process. Keep up the great work, Eury!
