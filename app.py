@@ -271,9 +271,6 @@ html_graphs = html.Div(
                 [
                     dbc.Col(
                         [
-                            #html.P('Individual Key Concepts (weekly)', className='d-flex justify-content-between align-items-center',#className='fs-5 text-center font-weight-bold',
-                                   #style={"font-size": "2.5rem","font-weight": "bold"}),
-
 html.Div(
     [
         html.P(
@@ -318,8 +315,8 @@ dbc.Modal(
                             html.P('Identify which concepts I’ve applied this week',
                              className='fs-6 text-center',
                         style={"font-size": "1.0rem"}),
-                            html.Iframe(id='html-iframe', srcDoc=initial_html, width='100%', height='600',
-                                        style={'height': '55vh'}),
+                            html.Iframe(id='html-iframe', srcDoc=initial_html, width='100%', height='1400',
+                                        style={'height': '60vh'}),
 
                             dbc.Row([dbc.Col([html.Div([
                                 # html.Label('Select a week:', style={'fontSize': '20px'}),
@@ -348,7 +345,7 @@ dbc.Modal(
                         [
 
 
-
+#, style={'width': '95%', 'margin': '30px', 'margin-top': '20px','color': '#000000','fontSize': '15px','padding': '5px'}
 html.Div(
     [
         html.P(
@@ -385,8 +382,8 @@ html.Div(
                             html.P('Examine how my knowledge concepts evolve over time',
                                    className='fs-6 text-center',
                                    style={"font-size": "1.0rem"}),
-                            html.Iframe(id='html-iframe-2', srcDoc=initial_html_aggregate, width='100%', height='600',
-                                        style={'height': '55vh'}),
+                            html.Iframe(id='html-iframe-2', srcDoc=initial_html_aggregate, width='110%', height='600',
+                                        style={'height': '60vh'}),
 
                             dbc.Row([dbc.Col([html.Div([
                                 # html.Label('Select a week:', style={'fontSize': '20px'}),
@@ -449,13 +446,13 @@ dbc.Modal(
     id="gif-modal",
     centered=True,
     size="lg",
-    style={"max-width": "100%", "max-height": "90vh"}
+    style={"max-width": "200%", "max-height": "200vh"}
 ),
     ]
 )
 
 
-                            ], style={'width': '95%', 'margin': '20px', 'margin-top': '20px',
+                            ], style={'width': '85%', 'margin': '20px', 'margin-top': '20px',
                                       'color': '#000000',
                                       'fontSize': '15px',
                                       'padding': '5px'})
@@ -605,13 +602,58 @@ def toggle_modal(n1, n2, is_open):
 
 @app.callback(
     Output("gif-player", "src"),
-    [Input("button-1", "n_clicks")]
+    [Input("button-1", "n_clicks"),Input('yeardropdown', 'value'),Input('mydropdown', 'value')]
 )
-def play_gif(n_clicks):
-    if n_clicks is not None:
-        with open("assets/animation_1.gif", "rb") as f:
+def play_gif(n_clicks,yeardropdown,mydropdown):
+    if n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Eury':
+        with open("assets/2023_s1_animation_2.0.gif", "rb") as f:
             gif_data = f.read()
         return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Sadia':
+        with open("assets/2023_s2_animation_2.0.gif", "rb") as f:
+            gif_data = f.read()
+        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Helen':
+        with open("assets/2023_s3_animation_2.0.gif", "rb") as f:
+            gif_data = f.read()
+        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Xichen':
+        with open("assets/2023_s4_animation_2.0.gif", "rb") as f:
+            gif_data = f.read()
+        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Zhanlan':
+        with open("assets/2023_s5_animation_2.0.gif", "rb") as f:
+            gif_data = f.read()
+        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Katie':
+        with open("assets/2023_s6_animation_2.0.gif", "rb") as f:
+            gif_data = f.read()
+        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Andrea':
+        with open("assets/2023_s7_animation_2.0.gif", "rb") as f:
+            gif_data = f.read()
+        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Ana Maria':
+        with open("assets/2023_s8_animation_2.0.gif", "rb") as f:
+            gif_data = f.read()
+        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Heidi':
+        with open("assets/2023_s9_animation_2.0.gif", "rb") as f:
+            gif_data = f.read()
+        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Mariana':
+        with open("assets/2023_s10_animation_2.0.gif", "rb") as f:
+            gif_data = f.read()
+        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Inara':
+        with open("assets/2023_s11_animation_2.0.gif", "rb") as f:
+            gif_data = f.read()
+        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Kiki':
+        with open("assets/2023_s12_animation_2.0.gif", "rb") as f:
+            gif_data = f.read()
+        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+
     else:
         return ""
 
@@ -632,11 +674,11 @@ page_1_layout = html.Div(
                             className='bg-dark p-4',
                             style={'border-radius': '20px', 'box-shadow': '4px 4px 8px 0 rgba(0,0,0,0.2)'}
                         ),
-                        dbc.Col(
-                            html_graphs,
-                            className='p-4',
-                            style={'border-radius': '20px', 'box-shadow': '4px 4px 8px 0 rgba(0,0,0,0.2)'}
-                        ),
+dbc.Col(
+    html_graphs,
+    className='p-4',
+    style={'border-radius': '30px', 'box-shadow': '4px 4px 8px 0 rgba(0,0,0,0.2)', 'margin-right': '-130px'}
+),
                     ],
                     className='mt-4'
                 )
