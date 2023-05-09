@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([]);
-                  edges = new vis.DataSet([]);
+                  nodes = new vis.DataSet([{"color": "#f6993f", "id": 14, "label": "button", "shape": "dot", "size": 6, "title": "electronic"}, {"color": "#f6993f", "id": 19, "label": "circuit", "shape": "dot", "size": 6, "title": "electronic"}, {"color": "#38c172", "id": 20, "label": "code", "shape": "dot", "size": 6, "title": "programming"}, {"color": "#f6993f", "id": 30, "label": "electronics", "shape": "dot", "size": 6, "title": "electronic"}, {"color": "#4dc0b5", "id": 34, "label": "fitting", "shape": "dot", "size": 6, "title": "think/design"}, {"color": "#38c172", "id": 38, "label": "graphics", "shape": "dot", "size": 6, "title": "programming"}, {"color": "#ffed4a", "id": 53, "label": "measure", "shape": "dot", "size": 6, "title": "math/physics"}, {"color": "#4dc0b5", "id": 66, "label": "prototype", "shape": "dot", "size": 6, "title": "think/design"}, {"color": "#4dc0b5", "id": 92, "label": "test", "shape": "dot", "size": 6, "title": "think/design"}, {"color": "#4dc0b5", "id": 94, "label": "trial-and-error", "shape": "dot", "size": 6, "title": "think/design"}]);
+                  edges = new vis.DataSet([{"from": 14, "to": 19}, {"from": 14, "to": 30}, {"from": 19, "to": 30}, {"from": 20, "to": 38}, {"from": 34, "to": 66}, {"from": 34, "to": 92}, {"from": 34, "to": 94}, {"from": 66, "to": 92}, {"from": 66, "to": 94}, {"from": 92, "to": 94}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });

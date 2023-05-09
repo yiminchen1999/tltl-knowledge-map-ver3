@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([]);
-                  edges = new vis.DataSet([]);
+                  nodes = new vis.DataSet([{"color": "#38c172", "id": 20, "label": "code", "shape": "dot", "size": 6, "title": "programming"}, {"color": "#38c172", "id": 22, "label": "compute", "shape": "dot", "size": 6, "title": "programming"}, {"color": "#4dc0b5", "id": 45, "label": "iterate", "shape": "dot", "size": 6, "title": "think/design"}, {"color": "#38c172", "id": 51, "label": "logic gate", "shape": "dot", "size": 6, "title": "programming"}, {"color": "#38c172", "id": 62, "label": "p5js", "shape": "dot", "size": 6, "title": "programming"}, {"color": "#38c172", "id": 68, "label": "pseudocode", "shape": "dot", "size": 6, "title": "programming"}, {"color": "#38c172", "id": 74, "label": "remix", "shape": "dot", "size": 6, "title": "programming"}, {"color": "#4dc0b5", "id": 94, "label": "trial-and-error", "shape": "dot", "size": 6, "title": "think/design"}]);
+                  edges = new vis.DataSet([{"from": 20, "to": 22}, {"from": 20, "to": 51}, {"from": 20, "to": 62}, {"from": 20, "to": 68}, {"from": 20, "to": 74}, {"from": 22, "to": 51}, {"from": 22, "to": 62}, {"from": 22, "to": 68}, {"from": 22, "to": 74}, {"from": 45, "to": 94}, {"from": 51, "to": 62}, {"from": 51, "to": 68}, {"from": 51, "to": 74}, {"from": 62, "to": 68}, {"from": 62, "to": 74}, {"from": 68, "to": 74}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });

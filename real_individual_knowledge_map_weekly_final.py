@@ -140,6 +140,6 @@ for s in range(1, 13):
     for i, indi_weekly in enumerate(globals()[f"indi_weekly_s{s}_2022"]):
         indi_weekly.show(f"assets/2022_s{s}_weekly_{i+1}.html")
 for s in range(1, 8):
-    for i, indi_weeklye in enumerate(globals()[f"indi_weekly_s{s}_2021"]):
+    for i, indi_weekly in enumerate(globals()[f"indi_weekly_s{s}_2021"]):
         indi_weekly.show(f"assets/2021_s{s}_weekly_{i+1}.html")
 

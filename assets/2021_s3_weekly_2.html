@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([]);
-                  edges = new vis.DataSet([]);
+                  nodes = new vis.DataSet([{"color": "#e3342f", "id": 4, "label": "3d print", "shape": "dot", "size": 6, "title": "dig fab"}, {"color": "#e3342f", "id": 9, "label": "TinkerCAD - 3d design", "shape": "dot", "size": 6, "title": "dig fab"}, {"color": "#f6993f", "id": 19, "label": "circuit", "shape": "dot", "size": 6, "title": "electronic"}, {"color": "#38c172", "id": 20, "label": "code", "shape": "dot", "size": 6, "title": "programming"}, {"color": "#38c172", "id": 38, "label": "graphics", "shape": "dot", "size": 6, "title": "programming"}, {"color": "#4dc0b5", "id": 66, "label": "prototype", "shape": "dot", "size": 6, "title": "think/design"}, {"color": "#4dc0b5", "id": 89, "label": "stuck point", "shape": "dot", "size": 6, "title": "think/design"}, {"color": "#4dc0b5", "id": 94, "label": "trial-and-error", "shape": "dot", "size": 6, "title": "think/design"}]);
+                  edges = new vis.DataSet([{"from": 4, "to": 9}, {"from": 20, "to": 38}, {"from": 66, "to": 89}, {"from": 66, "to": 94}, {"from": 89, "to": 94}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
