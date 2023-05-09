@@ -1,0 +1,20 @@
+inspiration
+
+Dogs and birds are omni-creatures to me. Me and my boyfriend share the love of these two kinds of animals --- we both have a dog back home in China, and we share so much bird pictures with each other that I end up installing a bird feeder for him. Me and my family's been calling and talking much frequently to update status on my dog (whose name is chestnut / 栗子Li-Zi). 
+
+They both bring me joy and calmness intrinsically. But they also represents family and connection.
+
+Sketches and prototypes
+
+A new skill I learnt: How to make a hinge/connecting parts: Make sure the slot that's cut open has the same width as the thickness of the material I'm gonna use
+
+V1-- creating a 3-D dog
+V2-- calculating to create the connecting pieces
+V3-- fine tuning...
+The evolution of the connecting pieces:
+
+Dogbird!
+
+Reflection Card:
+
+I encountered the biggest difficulty designing the connecting pieces. What should the diameter of the slots be? Where should I place them? What should the shape be? How can I design the slots for the middle piece so I can fit the wings in there securely? My first sketch for the slot kept me up until 4am that day since I was determined to calculate all the length and then turn them into ovals. More detailed record of this is in my process document under v2. But later on, I realized that instead of subtracting to find the distance of the slots to the perimeter of the dog I can just create lines connecting the slot and the perimeter and easily see the length of it in illustrator --- I learnt more about the affordances and methods of the tool. I also learnt about the differences in materials --- my pieces were fitting together when printed on cardboard, but not mdf. Wood is way less flexible so it allows less error. Although it is structurally much more stable. My final adjustments were done by trail and error --- cutting and fitting and adjusting and go through the process again. It was definitely frustrating but I was very invested because of how personally meaning this piece was to me.

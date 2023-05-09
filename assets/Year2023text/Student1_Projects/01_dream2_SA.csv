@@ -1,0 +1,7 @@
+sentence,label,score
+We added circuit playground to the saddle of the horse and enabled Koko to play with it when you put another stuffed animal on top of the horse by pressing a button. ,neutral,0.5681748986244202
+We built two options no control the motor of the carriage: use of a switch or remote control. ,neutral,0.778372585773468
+"B) Carriage Option 1 : Control the carriage with a switch in Gogo 6 Option 2 : Control the carriage with a remote control in Gogo 5  While creating the carriage and making the motor work, we observed that the wheels turned in different directions. ",neutral,0.7599920630455017
+Akio explained us that the reason of this situation was the polarity: the cables of each wheel were different and we had to introduce some changes in the code the Gogo 5 (one wheel turns clockwise and the other one counter-clockwise). ,neutral,0.6831264495849609
+"In Gogo 6, the polarity of cables didn't affect the code and the carriage goes forward turning clockwise. ",neutral,0.6867532730102539
+"Test of the prototype (2nd Interview with Koko)  General Setup Prototype markers/paper >> let Koko to express freely Extra gogoboard Horse Diagram  Koko expressed interest on buttons/functions of gogo board; she showed that those are what her dad/brother are good at, so hopefully, this toy can empower her (woman) STEM identity. ",neutral,0.520557701587677

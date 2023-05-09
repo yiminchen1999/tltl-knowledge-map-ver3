@@ -1,0 +1,18 @@
+Tools: Carvey and Laser Cutter + Circuits
+
+Description:  We designed a lamp with circuits and woodwork using the carvey and laser cutter.  The arches fit into the carved wooden base, which also has the wires and LED light installed.  The lamp is active by inserting the wooden stick which is painted in conductive spray paint.  This was the inspiration piece:
+
+Instructions:
+Here we had to make sure that measurements were accurate in a few ways -- the pieces had to fit into the slots on both sides of the board, so the width and distance had to be precise. We experimented with multiple prototypes before we got the final version. Also, the heights of each piece we staggered from the tallest in the middle to the shortest in front, so we had to lower the height but keep the width the same.
+
+Final Design:
+
+Instructions:
+Precise measurements were also important here when we designed the layout for the Carvey - we had to measure the correct depth and width for the wires, battery and LED to fit into
+
+Instructions:
+The soldering process - making sure that the wires are connected correctly to the battery and LED.
+
+Description:
+A stick will be used to trigger the circuits - it was painted with conductive paint to activate the LED light once it is placed onto the board.
+

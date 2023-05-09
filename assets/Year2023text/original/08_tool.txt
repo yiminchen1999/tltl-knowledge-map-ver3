@@ -1,0 +1,31 @@
+Tool: 3D Printer
+
+First Ideas
+
+At the beginning, both of us exchanged the curiosity in diving into the 3D printer machine. We could have split into two groups, but we started sharing ideas and the work was so productive and challenging that we decided to stay together. We discussed the idea of experimenting the combination of 3D printings with LEDs and we found some ideas on the internet: a flower and a skeleton. We decided to focus on the flower as the skeleton had 19 pieces and 17 LEDs, and this was the first experience with the 3D printer for half of the members on the team.
+
+We remembered hearing about lithophanes, but we have never tried this type of design. Therefore, we decided to try to make a small one with a flower background to match our first idea.
+
+Design Process
+
+We started prototyping the idea of the flower we found on the internet, but we decided it would more interesting to have a switch to turn on and off the light. The first idea was to attach a switch. After doing some research, we found out that we can print flexible materials with the 3D printer and make a button. We found a lantern on the internet and adapted the model to fit our design. Later, we found the petals on the internet and resized them. Finally, we designed a stand so the flower could stand with the necessity of holding it. We did our designs on Tinkercad. We used PLA material to 3D print. We had some issues with the machine and needed to pause frequently the design because the filament was messing around and some designs started to dettach even if we glued the surface in advance. We learnt that it was better to print each element separatetly, to not ruin all our designs. Later, we printed the petals and stand each one at a time. The lantern turned out well. Link to Tinkercad design.
+
+Later, we decided to print the first flower we found on the internet and tried to do some improvements. We learnt that we can add supports to print things that above, to ensure that designs are well sticked to the surface and don't mess the edges of the design. We enjoyed playing with different colors and this amazing purple flower. In this case, the original design doesn't have a switch and we tried to add a regular one. We tried some circuits and options, but it felt a big challenge we would like to try in the future.
+
+We explored a motorcycle design. Although the motorcycle came with a detachable circle, it did not have the flexible button style we had tried above, so it was difficult to turn the light on and off. We tried to make a switch of our own with different recycled materials such as tape, and plastics. We used shrink tubing as an insulator so the LED wasn't in contact with the battery at all times, only when pressed, inspired by the flexible design above. The design doesn't look so appealing, and we decided to keep the one with a transparent plastic to see the inside mechanism that in hidden in our first design. We keep this motorcycle as a prototype. Link to Tinkercad design.
+
+We also explored how to use the 3D printer to make a lithophane. We first used this website to create the front panel of the box. After uploading our image, we then downloaded it as a .stl file so we could bring it into TinkerCad and make any necessary size adjustments. Once we had the flower scene top panel in TinkerCad we then quickly made a box, which had ledges for the top and back panel to sit on. For the back panel we added a little hole for the wires to escape in order to attached to the battery, which for this example was outside of the box. After we 3D printed the three pieces, we then had to solder two wires to the battery and then stick the LED lights around the inside of the box. (note: our battery holder had an on/off switch on it, if yours did not you would have to incorporate a space for a switch.) Lastly, assemble the pieces! Push the top and bottom to snap into their places.
+
+Final products
+
+We finally put our designs together and the flower
+ turns on and off. We added a battery. We added a little bit of super glue to attach the petals and the stem. The mechanism works well and we are glad the design  looks nice.
+
+We created a very small version of the lithophane, which can easily be scaled to make bigger. However, we wonder how thick one could actually make the top with the design before it would be too thick for the light to shine through? We made the top only .15" thick to play it safe.
+
+Reflection
+
+The Deep Dive  assignment was enriching in many ways:
+We faced the challenges of working in a big group, making decisions, negotiate agreements, and building a cohesive work. We exchanged ideas, knowledge, and supported each other during the process.
+Some members of the group had a first approach to the 3D printer machine. Together we learnt crucial aspects (print objects separately, add supports, chose the nozzle at Barnard Center -0.4 or 0.6), change the color of the filament) and more advanced skills (design lithophanes, add a switch with PLA material).
+Creativity has no limits and there is always something new to explore, design and learn. The process is getting a little bit more easier and creativity is coming faster.

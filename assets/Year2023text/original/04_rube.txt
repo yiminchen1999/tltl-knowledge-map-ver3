@@ -1,0 +1,35 @@
+Idea 1: Gears
+Our input is the humidity sensor and output is the tilt/shake sensor. Initially we wanted to make a wall of gears that rotate
+
+A lot of gears work in vertical ways are very beautiful! And the noise is powerful!
+
+We planned to laser cut the gears and found ready-made, free design online
+
+We also prepared other directions in case the gears don't work out.
+
+The making
+
+Unfortunately, the gears idea did not work out. The tilt/shake sensor can only send out signal when its face is turned 90 degrees.
+
+Since my teammate, Mariana was available to work in the morning and I was only available in the afternoon. I continued in her direction and completed the see-saw.
+
+Gear connect with a fan?
+
+I searched wooden toy online before, and had the idea of adding fan blades to one of the gear to create wind, as a way to "shake" things. So I decided to add a fan decoration to our design.
+
+Besides, I have always liked the design of bamboo dragonflies (竹蜻蜓 in Chinese) and wonder if I can actually make it and make it fly
+
+I went through a lot of trials and errors to finally understand how to "do 3D design" on the wood in order to draw the right angles and form the curves
+
+Understanding is not enough, wood cut skill is also required. I tried to make the plane as thin as possible so it can create wind and potentially fly and failed many times.
+
+Final design
+
+Mariana is familiar with Gogoboard coding and I have some understanding of knowledge as well. So we completed this simple coding task very quickly.
+
+I added my dragonflies to the top of the fan, make it like Dora-A-mon's flying tool. I also add a cloud  to add a dreamy feel
+
+This is the final design. It succeeded almost at the first try~
+
+
+

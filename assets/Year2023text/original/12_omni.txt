@@ -1,0 +1,9 @@
+1. My conception is a group of dophins leaping through a circle. I conceived the dophin piece as a hamburger made up of three layers, with the outer layers acting as the decorative part.
+
+2. I imported a dolphin image from online. I first turned the vector image into bitcamp, then into lines. This allowed me to remove the fill and keep the outline
+
+3. Prototyping and end result!
+
+Reflection Card:
+There seems so many possibilities in the conception stage, but difficulties emerge in realizing them. Length, combinations, positions...... A lot of calculations are involved. What I learned from this process is don't expect the result to strictly align with your conceptions because whether a design works in reality can only be know after trial. Then, you have to adjust your design accordingly. For instance, I specify all the size of each part in the construct. However, it turns out that the elaborate veins on the outer layer will make the whole prices fall apart if the size is too small, because the laser will burn the edge of the material and shrink the actual size. Also, after I combine all the part, I found that I need to move the hangers to the end a bit. I will definitely do that if I have more time.
+

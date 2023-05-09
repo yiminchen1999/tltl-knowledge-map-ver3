@@ -1,0 +1,45 @@
+Designing and creating the final product 
+
+Scenario
+
+We created the different shapes for the scenario. We focused in a city where N. can play with  different kinds of houses, buildings, tress, vehicles, etc.
+
+Incorporating led into the scenario fabric
+
+We used the 3d printer to create the windows for the different buildings
+
+The different details in each building was carefully thought to expand her imagination and possibilities. Such as, there is a lamp that she can turn of and off and a bell.
+
+Troubleshooting the Sewing Machine
+
+It was changing the sewing machine needle that had broken. The machine was  intuitive and had the appropriate tool design for this purpose.
+
+We created a button using to sheets of conductive paper and a felter with a whole in the middle. You can see how it works watching the video. 
+
+Purse
+
+The purse design had three parts:
+- Part 1: the weft
+- Part II: inside fabric
+- Part 3: bottom fabric.
+
+We didn't have enough fabric for the purse. So we decided to create a weft of felt to be possible to have a purse to carry the toy.
+
+The purse was sewed first part I connected to part II, without closing the lateral edge. Second, sewing the bottom (part III) to the part I + II horizontal edge.
+
+Final Product
+
+As we were sitting in the CMTLD suite we had different talks with people that was just walking around. Some ideas that arouse: 
+- how nice it would be if she could play in both sides? 
+ - how can we relate the scenario of a make-believe game with VR scenarios? 
+- how great it is to come back to ours childhood and remember how was to play with materials that are out of screen? And with things like fabric that we have at home and don't need to buy a ready made yoy at amazon?
+
+Take-Aways
+ This assignment was a big challenge for us for two reasons. First, it was our first time designing exclusively for a 4-year-old child, and second, the design choice using fabric as the primary material demanded sewing skills or some adaptations that we did know we would face in the first place.
+ Design for a child required new expertise from us: pay attention beyond the demand verbally presented by N. After our re-design pos prototype testing, we took this as principal for the dream toy affordances. For instance, the toy resulted from her playing time in the first and second interviews. During these moments, her interactions were embedded in make-believe play practices, so we intended to offer an artifact that could scaffold her playing and exploring daily activities with open-ended possibilities. Another crucial decision was to relate the toy material to N.'s culture. She is a Brazilian girl who moved to NYC six months ago with her family. One of the family's concerns is to offer her toys and experiences that collaborate with her identification with her ancestrality and culture. In this sense, in Brazil, it is tradition, especially in popular fairs, to have toys made of fabric, wood, and clay produced in an artisanal crafting process. Adding to this tradition, we introduced  e-textile interactions, sound, and 3D print formats to expand her make-believe world. In this decision, the idea was to give a flat shape (2D format) the possibility to modify its environment, such as some objects getting out of the scenario, stimulating other senses, and scaffolding N.'s storytelling-creating learning process. 
+ Also, the family asked for a versatile toy, easy to assemble, carry, and store, as they have to storage the toy on N's. wardrobe. In response to this request, we designed a purse. And, for versatility, we used velcro and snap buttons, so N. arranged and modified the scenario composition as she wished without depending on a third party.
+
+Reflection Card:
+About our learning process with this assignment, surprisedly, it was many troubleshooting challenges to sew all together. First, none of the group members had used a sewing machine before, so we had many questions before starting, such as how to sew a straight line sheath on almost 2x2 meters of fabric. Where to start sewing? How does stitching mold? How to manage the excess material while sewing the lines? How can we estimate the time of work in materials and techniques that were not familiar to us? For all these questions and others, we relied on social media (Instagram Reel, TikTok, and Youtube) instructional videos to address this problem. Also, we resort to ThinkSpace Lab Team's expertise at the Arts Department at TC to ask for more complex challenges related to sewing techniques. 
+Lastly, due to the fabric size and to keep it out of the dust, we worked at the CMLTD suite table. Although we missed the direct interaction with our classmates inside the lab, we had department participation during the toy construction. This relocation enhanced our creativity and learning process. Each time a new person asked about what we were doing, we explained and immediately discussed learning possibilities. We heard about people's playing experiences, or they talked about their children, and they suggested reading for us, which made this complex work fun into pleasurable hard learning. 
+In conclusion, the assignment was an immersive learning design challenge that added immensely to our learning, taking us from our familiar place as teachers to a learning design role. We have high expectations for N.'s reaction to the toy, but mostly on observing how she will interact with the new toy, what stories she will build, and how she and the toy will grow together as N. gets older.

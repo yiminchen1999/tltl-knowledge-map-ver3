@@ -1,0 +1,17 @@
+Original Code
+It was a grey canva where the user were able to draw with a white brush.
+
+https://locrian-romantic-existence.glitch.me/
+
+My idea was to transform in a tool where you could change the color of the brush and be able to erase or reset. 
+
+First I created a rectangle to put inside the buttons. I didn't know how to do the buttons, but with the help of Akio and the references I was able to create. I also had to research to understand how to change the color. 
+
+Play the video to see the code working!
+
+I didn't understand how to clear my canvas, so I decided to create an erase by giving the same color of the canvas to the brush. But after I was able to create the reset button :)
+
+Along with my code is possible to read my pseudocode where I explain my choices.
+
+The activity was initially challenging for me, but Akio's patience made all the difference. I wanted to add a button but didn't know how, so I looked for references and even sought help from ChatGPT. With Akio's help and my own research, I was able to find a simple code that I felt comfortable with. I dedicated a significant amount of time to styling the code and making it look good. This project was especially meaningful to me as my daughter had asked me to draw on my computer using paint, so finding a suitable code was a fun challenge. I am proud of my accomplishment.
+

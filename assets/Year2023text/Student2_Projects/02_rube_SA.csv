@@ -1,0 +1,24 @@
+sentence,label,score
+"Sketch: Input is the light sensor, which will trigger the motor. ",neutral,0.8186506032943726
+Input: Light Output: Temperature  Our initial sketch of the overall design. ,neutral,0.8962299227714539
+"We wish to create a pulley system as well as a ramp that that would enable the ice/ice bag to drop, which  would eventually trigger the temperature sensor! ",neutral,0.47711026668548584
+We drilled into the base to  secure the post for the pulley using a handheld drill and the drill machine. ,neutral,0.7301950454711914
+We needed to drill a square that would fit the size of the post. ,neutral,0.5982892513275146
+We also cut wooden barriers to keep the ice on slide and prevent it from falling off the sides. ,neutral,0.47426244616508484
+"Took us hours to figure out how to properly connected each pieces together, and using the drill to dig through the wood. ",neutral,0.7046896815299988
+"Test 1, although the ramp is working properly with the motor, the direction of the falling ice-bag is out of expected. ",negative,0.6171219944953918
+"However, it kept get stuck on the wood ramp and having a difficult time to fall into the box. ",negative,0.7780331373214722
+We then suspect is because of the wood ramp doesn’t offer much fraction for the ice-bag to fall. ,negative,0.6526439189910889
+"Test 3, we then tried different plastic bag to help the ice cause we suspect is the weight and the size of the bag that interferes with the falling process. ",neutral,0.6031838655471802
+"However, after testing, we exclude that is not the case. ",neutral,0.671895444393158
+"At the end, we added a tape to the ramp so it will provide some smoothnesses and less fraction  to the falling process. ",neutral,0.5409970879554749
+"Further, instead of putting ice into the bag, we changed to put the sensor into the bag and let the ice falls freely. ",neutral,0.635350227355957
+We decided to use ice to trigger the temperature sensor in the final step. ,neutral,0.5849370956420898
+We sketched a few steps to include a pulley and seesaw as our simple machines. ,neutral,0.7624620795249939
+The idea was to begin with the light sensor triggering the motor to start winding the cord attached to the pulley. ,neutral,0.7645629644393921
+The cord then lifts the seesaw holding the ice and it slides down into the container with the temperature sensor. ,neutral,0.7090110778808594
+"We realized that the pulley was not able to lift the weight of the seesaw holding the ice, and also the friction of the wood was preventing the ice from sliding all the way down. ",negative,0.7801285982131958
+"We added metallic tape to create a slide effect on the seesaw, which allowed the ice to slide much faster. ",positive,0.485380619764328
+"We then found that the motor was better able to support the weight of the seesaw if we  secured it above the seesaw, rather than at the same level, so we taped it to the wooden post. ",neutral,0.5404602289199829
+"For instance, when we want to make sure that the motor steadily stays on the wood stick and above the ground, we need to find a way to dig a hole in the vertical stick since hot glue and wood glue are neither strong enough to hold the motor in place. ",neutral,0.6066817045211792
+"With Akio's help, we tried four different drills/tools/woodcutters before we found the right one we needed! ",positive,0.574980616569519

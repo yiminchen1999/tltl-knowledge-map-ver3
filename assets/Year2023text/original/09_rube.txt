@@ -1,0 +1,37 @@
+Rube Goldberg
+input: Wifi receive
+output:  Light
+
+IDEATE:
+Helen noticed that after making her phone stand in class that it did not function properly, so we decided to repurpose it into our project
+After meeting we discussed various ideas, but landed on the concept that we wanted the phone to fall from the stand to cover the light sensor...so then we worked backwards to decide how to get the phone stand to stay up and then when released fall over
+We utilized the simple machines website to help us develop various ideas of how to incorporate an incline plane and a pulley system
+
+This image shows our sketching process after discussing our ideas
+
+PROTOTYPE:
+We broke the project into sections:
+
+Incline Plane:
+
+Pulley:
+
+Light Box:
+
+The incline plane involved some adjustments as we added in the servo to "open the door" for the marbles and therefore had to cut a slit in the wall. Also, we retroactively deiced to add a distance sensor which involved late drilling a hole in order get the sensor to fit in. If we had planned this out better then we could have put the slit and holes in before creating the stand
+
+The pulley was quick to make by making a base and to walls and I was able to repurpose a wire spool to allow the string to rotate through. We definitely had to play around with the weight and getting the cup to weigh enough to hold the phone stand with the phone on it.
+
+Super simple - we just created a box, but we had to measure out where to place the box so the phone lands on it without tipping over, and with that had to weight the box down so that it stayed still when the phone fell on it.
+
+Code
+
+When receive a message -- servo moves 90 degrees to open the door, which releases the marble down the incline plane. When the marble passes the distance sensor on the plane it triggers LED lights (ADD CODE IMAGES/TALK ABOUT CODING IT)
+
+Reflect 
+
+	•	We could have planned out our incline better about creating holes for the "door" and the distance sensor before putting it together
+	•	We could have created a more secure way to use the pulley to hold down the phone case...it takes some moving around to get it aka is not quick/consistent to set up
+	•	We saw that GoGoBoard 6 have a port called rgblight so we wanted to try to connect neo pixel to it. Akio sent us a very nice tutorial and we experimented with the Arduino blocks to code the neo pixel. However, the experiments were unsuccessful but we had a back up plan of using normal string lights and still achieved what we set out to do.
+
+Test

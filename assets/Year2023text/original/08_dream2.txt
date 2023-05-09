@@ -1,0 +1,29 @@
+DinoQuake
+
+Changes to Design:
+- Now a storytelling kit, with background and moveable parts
+- Added a recorder/repeater to add sounds to the dino
+
+Prototype Progress:
+- Legs only worked occasionally on a cardboard prototype (not brought to interview)
+- 3D-printed body based on a design we found online
+- Background for storytelling kit built with Quake embroidered and red LEDs sewn in ‘
+
+Observations From Interview:
+- Colt said “it doesn’t talk” but didn’t mention much about the moving
+-Question: what does Quake walk on?
+Response: Quake walks on rocks
+- Question: What if Quake moves with the rocks?
+Response: he started playing with the box and putting Quake on top of it
+
+Reflection Card: We had big dreams for this assignment, and we felt there was a lot of pressure of having a kiddo that already had something in mind. However, testing a prototype with none of the features we had originally planned, the kid still really enjoyed the toy. I think this has alleviated a lot of the pressure we were feeling. We also really struggled with the distinction between a toy and an educational toy. However, after talks with Akio and Megan, we learned that even something as simple as being able to recreate and build on the stories his dad tells makes this more than just a dino toy without the moving parts.
+
+Learning Goals
+- connection with dad by leaving him stories in the recorder
+- explore creativity by re-enacting and building his own stories with the dinosaur
+
+Final Design
+- green 3D-printed dinosaur
+- rides on top of a rock with wheels that is remote controlled
+- fabric background with sown in LED lights for red lava and green treetops
+- other 3D-printed props for storytelling

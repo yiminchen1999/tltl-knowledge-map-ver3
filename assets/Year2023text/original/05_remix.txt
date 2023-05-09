@@ -1,0 +1,30 @@
+Link to Original Code:
+https://editor.p5js.org/reajmorais/sketches/8UxKOWank
+
+Video of what the original project looks like
+
+Original Code of the Project
+
+For me, the most challenging part of dissecting the original code was first, determining which object was actually moving, was the background that was moving? Or the train, or both? My answer to that question came from "messing around" with different parts of the code in order to figure out each code's purpose.
+
+Another challenging part for me was identifying where all the objects came from. As part of the new project I was creating, I coded the airplane, whereas, in the original project, it was not the case. Each object on the screen originated from a different file, and it took me a while to figure out where each one was stored. How was it called, and what should I do if I wish to replace them with new ones?
+
+Link to  the modified code with new interactions - aka the "new" project code as well as the pseudocode:
+
+https://editor.p5js.org/zw2754/sketches/6yKBRaSAt
+
+Video of the new project:
+
+Screenshot of the new/modified code
+
+Summary of the major changes(codes) I've made to the new project:
+
+I have changed the background music by uploading my favorite music to the Sketch assets and then calling it afterwards
+I wrote new code to create an airplane to replace the original train object and then allowed it to move with my mouse so I could control it anywhere I wanted to go
+In order to match my theme, I change the frame size and speed of the mov
+
+Creative Code Reflecting and Learning
+
+Throughout the dissect/remix/re-create code process. Learning happens through constantly trying, exploring, analyzing what you observe, and reflecting on the steps you have tried. It is about continuously making connections between the previous assumptions and the real-time findings. It is also about not worrying about messing things up. Another important aspect for me that I found quite view-changing is that I was in the Lab the whole time while I was working on the Creative Code project, and through constant interactions and information exchanging process with my peers, with the help of our wonderful TAs, coding became less “intimidating” for me. Each discovery or "a-ha" moment I made while analyzing progress delighted me! This feeling of excitement makes the whole learning experience more fun and valuable for me!You can use cards to write more extensively about something
+
+

@@ -1,0 +1,16 @@
+ORIGINAL CODE
+choose a "Pattern Creator" code to explore and remix. Here is the link: Code: https://showcase.p5js.org/#/2022-All/pattern-creator/
+
+TINKERING WITH THE CODE
+1- I read line by line to understand the code and its functions;
+2 - For the functions that I couldn't understand, especially the ones that used Cos and Sen calculations, I changed the number to observe changes.
+3 - After tinkering, I realized that the elements that made each pattern unique were the Fix and Color. So these images have the same fix and color numbers but differ from other properties, highlighted in yellow.
+ChatGPT
+Before the Lab Class, I was reluctant to use ChatGPT due to my difficulty with coding. I was concerned that I would use the tool to do my coding assignments. On the contrary, the A.I. platform helped me translate to p5.Js language what I wanted to do on the code, but I didn't know how to write it.
+Remix Code
+1 - my first test was to change the fixed pattern numbers by setting up the initial pattern with my birthday date;
+2 - as a coincidence, the createPattern(120, 5.1, 988) created a pattern that resembled a prism dispersing light into color from Pink Floyd's album: the Dark Side of the Moon. Due to this, I decided to add music to my remix code. It took me an eternity to get it done. Although I learned how to do it at Codepen, at P5,  my "coding grammar" seemed useless. The music function is triggered by clicking on the mouse and running the function mousePressed().
+3- I tried to make the pattern spin but failed. Once I wrote the code, the pattern start point changed from one drawing to another, and it did not spin. To give this sense of motion, I set up a timer to run the function createpattern ( ) by itself after 17s.
+4 - Lastly, I wanted the automatic creation of patterns to have a slower pace between them, but I could not find the function that runs this. Without success, I tried delay ( ), but it exclusively related to sound, not patterns.
+As a learning reflection, this was a challenging assignment. I have been in contact with coding for five months now, and still, it is not natural for me. Besides, I learn too little, which takes too long. Additionally, CHATGPT made coding more inclusive to me once it helped me translate my thoughts or commands to p5.js , leaving me with the logic functional coding part.
+Remix Code Link:

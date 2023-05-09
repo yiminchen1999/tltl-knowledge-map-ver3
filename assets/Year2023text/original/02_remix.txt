@@ -1,0 +1,12 @@
+Original Code: https://p5play.org
+https://editor.p5js.org/quinton-ashley/sketches/szN_XdV5O
+
+Trial and error:
+I initially started with saving the code on my desktop and updating it with notepad, however it was difficult to see the effect of my changes. I experimented with different projects from the libraries, and then finally found one that linked directly to CodePen. I was able to make a few adjustments like removing the black background, which allowed me to see the trails of the boxes across the screen. I was able to change the directions in which they moved and adjust the speed by updating the velocity
+
+Pseudocode
+
+I was having difficulty changing the background, so I then switched over to the js5 editor and started to work there.  I also changed the size of the canvas to make it larger. I then found additional code that I could add to change shapes and colors of the "sprites" so I experimented with the dots, polygon and star shape. Each one reacted differently - the polygon had a "collide" and "bounce" reaction, whereas the star held the sprites inside of its borders
+
+The code remix was quite challenging when I was getting started and trying to figure out how to use the libraries. I had difficulty changing the background of the game, as I initially wanted to switch it out to look like a video game background. Since I was unsuccessful with that edit, I continued to work on other aspects like shapes, speed, colors, and behaviors. It was very useful to follow the instructions in the references section.
+

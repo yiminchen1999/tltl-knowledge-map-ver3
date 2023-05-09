@@ -1,0 +1,70 @@
+Prototype 1_Sketches
+
+Idea 1
+
+Three-dimensional reference system
+
+Learning goal:
+Allowing students to better understand geometry figure as well as the Cartesian coordinate system within a 3d environment, through different interactive activities and communication with each other.
+
+Design Goal:
+Form a three-dimensional space that situated learners into the learning space and would capture students movement in order to allowed students physically create a geometric figure.
+
+Creating a vocabulary system/rule, provide them with certain talking rules!!️
+Such as taken out some words(x, y, or z) during the learning activity for learners to realize they cannot form or achieve certain solid figure  without certain conditions. Only allow them to use mathematical terms to communicate with teach other, such as, instead of saying "moving up a bit", students would need to say "Move two coordinate points upward" for them to better understand the mathematical concepts through communication and physical movements.
+
+Spatial thinking
+Embodied cognition route to geometry
+[Still deciding]: Collaborate or individual learning?
+
+What the environment  looks like?
+Attached distance/motion sensors(or using projectors) to cover two sides of the wall and the floor space which are all connected with the display screen.
+
+Potential technological tools(A huge shoutout to the amazing teaching team for providing ideas!!!!!):
+
+1. A distance sensor
+2. xbox connect
+3. Motion sensor
+4. Light or projector?
+
+Potential learning activities for students to complete:
+Activity 1: Providing a target shape on the screen and let the children communicate and create a same one in the space using the coordinates.
+Activity 2: Give them information and certain amount of time that they could explore with their movements to find out the answer(what shape is that coordinates vectors drawing?) Still using the designed communication system.
+Activity 3: They could communicate freely, and create any shape or objects they want based on their imagination and what is meaningful to them(a star, a heart, etc)
+
+"Okay! Wait, on which axis are you referring to?"
+"We need to form a cube! Could you move up two vectors?"
+
+Competitive mode?
+#Explore different possibilities.
+
+Level 1:Collaborate game with two players all on the mat
+Level 2: collaborates game with one instruct other
+
+Ask Leah about the material of the mat
+Why is it important to learn through technology?
+
+What's "powerful" about it?
+
+In this embodied, interactive, and collaborative mathematics-based learning experience, shapes, measurements, spatial relationships, mathematical terms, and theories are explored through physical movements.
+
+Example: absolute coordinate and relative coordinates are examined through embodied and physical movements. Students could visualize and physically feel the differences between the two.
+
+Idea 2
+Two-dimensional Coordinates system
+
+Using sensors/projections to create an interactive mat that lay on the ground (two-dimensional) that would capture students movement in order to allowed students physically create and visualize the directions they are taking.
+Based on the challenges displayed on the screen, students will need to react and move on the interactive mat accordingly!
+
+A one-person interactive learning activity that
+
+1. Support learners to visualize the shape/diagram/pattern their creating
+2. Students could physically engaging in the process of applying mathematics theories
+
+The red line represents students' walking path
+
+Example questions:
+Create a triangle with a total area of 15 square meters
+What is the figure formed by the coordinates (x, x, x)?
+Is the triangle formed by the coordinate point (x, x, x) an equilateral triangle?
+

@@ -1,0 +1,17 @@
+Input: Humidity
+Output: Tilt
+
+First Idea: Gears
+It didn't tilt, just shake
+
+Second Idea: See-saw
+Project
+Everything was done with fittings so we used hot glue only on the magnet.
+
+Code
+We added the clockwise to turn on the fan.
+Higher sail to capture more fan
+when the wind builds up in the sail, the seesaw tilts
+Used a tool to fix the wood into the table.
+
+It was hard this challenge, because my partner and I couldn't find a time to work together. So I created the solution in the morning before meeting her. However, it was nice to see all the parts working together. I already new the Gogoboard and the coding part was pretty simple. I wish we had more time each assignment so I could have a chance to meet my partner in more spots during the week.

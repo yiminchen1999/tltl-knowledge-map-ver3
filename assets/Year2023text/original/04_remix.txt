@@ -1,0 +1,34 @@
+Original code: Follow
+ (with pseudocode)
+
+Biggest learnings from the pseudocode exercise
+1. mouseX, mouseY and translate () can enable users to draw with their mouse
+2. draw() is the key to create interactive graphics and animation
+3. push() and pop() help store and manipulate data in a very specific and organized way.
+
+New design idea 1:
+I wanted to make a snake game/"fish eat fish" type of experience and realized that it would be too difficult
+
+After playing around the code, I realized that frameRate() is a intersting function so I kept it
+
+New design idea 2:
+I got interested in this movement and wanted a drawing effect to show the trail/track of the movement
+
+I did not know how to search for the effect I wanted at first. Luckily, I found this resource in p5.js's teaching section and realized that what I was looking is called "draw with mouse". It scaffolds everything clearly and I got it correct the first time I tried.
+
+New design:  Art tool (and a math learning tool)
+
+Changes made based on the original code
+1. Moved background () from draw() to setup(). In this way, we are able to keep the trail of the movement
+2. Changed the color and weight of the stoke to make it work more like a drawing pen
+3. Added a slider to control the frame rate and a clear button to reset the canvas
+
+A user can adjust the frame rate with the slider.
+When the rate is higher, the lines are denser from before and present a different artistic feeling
+
+I tried changing the color and length of the strokes in the code. Given more time, I will build them as buttons or sliders for users to play with
+
+1.Building connection with other knowledge: coding is a great way to learn math and also concepts of physics. And the learning happens without deliberate teaching
+2.Cultural difference: coming from a humanity background, coding speaks a very different language than what I am used to. Learning code is like learning another language that is rooted in computational thinking. Assimilating another thinking system is hard
+3. Meaning making: I understanding codings based on my previous knowledge. I found draw() hard to understand at first. However, when I discovered what framerate() can does to draw(), I was reminded of animations and everything started to make sense. 
+4. Construction vs direct instruction: As an adult, after getting the power and beauty of coding, I think deliberate teaching or direct instruction will be a more efficient way for me to learn. However, constructionist way of learning coding gave me an understanding of what codes can do and build self-efficacy. I now know how to debug and solve problems on my own.

@@ -1,0 +1,33 @@
+Interview overview
+
+Interviewee: Koko, 10 years old (5th grade)
+
+Protocol: We asked Koko different questions regarding favorite games, hobbies, activities she likes to do at school, favorite place to play, how did she get close to her best friend, the dream toy she wanted, and we also asked her to draw and build and object with LaQ pieces (Japanese Lego). The interview lasted 1 hour and took place at DFI in Teachers College. The place is familiar to the kid because she comes regularly and plays in the 5th floor. We were told that this place represents for her all her toys.
+
+Dream Toy:  Koko knew in advance the toy she wanted, as her father explained her previously the activity. Koko made during the activity a list of toys she wanted. Her first choice is a stuffed horse, because she wants to learn to ride horses. She loves nature and loves to play with her brother with her collection of stuffed animals.
+
+Challenges and overcome
+
+We started the interview asking questions and communicating with Koko trough words. We prepared in advance colorful markers and LaQ pieces game to play with her. At the beginning we posed many questions, as her answers were pretty short. It was hard to keep the conversation going fluently. Suddenly, she asked if she could draw her collection of stuffed animals and babies. From this moment, she started drawing everything she was telling us and it made the interview go more smoothly.
+
+We also found that Koko compared herself with her brother and her friends. She said that they were really smart. How should we address this sensitive topics in the interview? Should our dream toy help her gain more confidence? During the interview we reinforced how talented  and smart she was, celebrating all her beautiful drawings, creations, and dreams.
+
+Brainstorming Process
+
+1) Intuition. First, Koko followed her spontaneous intuition rather than having plan and build; she thinks it doesn’t have to be anything. It reminds us of the main question of Vygotsky (1996):“What facilitates the learning that moves the child from spontaneous concepts to scientific concepts?” (p.16). Hence, the idea of the dream toy that helps Koko to relate her spontaneous concept (or intuition) to scientific concept, in particular, Newtonian world given that most of her previous plays and her wish of the horse toy encompass physical movements. For instance, most of the digital/offline games Koko played consisted of physics concepts such as lever, skateboard, soccer, jump, pulley, etc. Thereby, the challenge of the toy would be to let Koko naturally pick up scientific concepts with her bursting intuition of spontaneous ideas. Additionally, the toy shall be easy to follow. Koko found the “adsr” game joystick not intuitive as each alphabet does not directly indicate anything, which allows us to more focus on self-explanatory heuristics of the toy. However, if it is easy (ex. Potato chip games) Koko found it boring; when it was too challenging she wanted to give up. There shall be appropriate challenging factors, which is not too overwhelming for Koko.
+
+2) Drawing to Express in Multiple Perspectives. Koko kept drawing whenever she tried to explain something or project her ideas. She was good at drawing the same object from multiple perspectives. Koko’s thrust of drawing to externalize her idea might be the key to help Koko connect her intuition to the scientific concepts.
+
+3) Imaginative. There shall be room for Koko to manifest her imagination employing the toy. Koko has been enjoying reading fantasy or graphic novels as she likes immersing into her imaginary world. She’s also been dreaming of riding a horse as she was not able to ride it in the real world. Her imagination is the breakthrough her restricted
+
+4) Culture of the Family. Koko doesn’t have toys: she reads books. Her father told us that as a family they didn’t want their children to have toys. If someone gives her a gift, they try to return it. We don’t know exactly the reason, but we hypothesize that they are conscious of consumerism, materialism, and pollution. Therefore, the toy should be friendly with the environment. Furthermore, the family moves a lot; Koko lived in Japan, California, New York, etc. The toy should not be too big, portable, and easy to disassemble.
+
+Main Takeaways
+
+We decided to build a physical moving toy for Koko. The interaction possibilities allow Koko to integrate her pre-existing stuffed animals and build an imaginary community. The toy would also allow her to play with other friends or family members. We would like her to extract the physics concept while she is playing. These decisions align with the learning goals as the objectives focus on projecting the imagination with embodied movement, promoting the learning process of the Newtonian world with her drawing and manifesting her intuition with the sense of control.
+
+ It was interesting doing user research with a kid because we had to think about different ways to dialogue and communicate that would be different from talking. The color markers, white sheet of papers, drawing table, and LaQ game were the most enriching ways to connect with her world. When we asked something, sometimes she didn’t know the answer and it was challenging to keep the conversation going. It was easier for her and for us to communicate with drawings accompanied with explanations. It could be interesting to propose some prompts that she has to draw, build, etc, and then start chatting and connecting with her.
+
+ In future experiences doing user research, we should talk less and let the conversation go instead of posing so many questions. Next time, we would like to keep building the connection space between students and designers. We would like to offer more hands-on activities in the interview, and to keep thinking of creative ways of expression and dialogue.
+
+ 

@@ -1,0 +1,18 @@
+THE IDEA
+We were at the celebration station. Before us, it will be the board/gesture station. They had to make an object to perform a tilt movement. Once the Gogo Board receives it, it will trigger our design. Because the previous group was finishing their move at the edge of the table, we built a ramp to continue the moving path. First, we thought about doing a tricycle, but stabilizing balance would be a huge problem. So, we decided to use a car pattern design, cut on the laser cut machine, commonly used in robotics learning settings. Following that, we designed the car sides. And to achieve balance and add bossa, we sewed a Paulo Freire doll to conduct our machine.
+
+Coding the GogoBoard
+
+THE CODE
+While we were assembling our ramp and car, we coded our GogoBoards. Following the tilt action, the first GogoBoard would signal the second to trigger the car motor and play music. Once the engines are on, they should turn the wheel clockwise attached to them and move straight ahead until the end of the ramp. The testing was a nightmare. First, we couldn't start the engines together and turn the wheel in the same direction. As a result, Paulo Freire's car was spinning round and round and round. We changed the code, motors, wheels, and car weight and even turned the engines on opposite sides. Nothing seemed to fix. Akio helped us fix the code, although one wheel was faster than the other, which kept the car pending to the right and following through the ramp. The problem was an old glue that was left on the motor that made the wheel turn wrong. Once we got the bond out and set the right speed, the car drove ahead and nailed the ballon!
+
+1 - Inspiration;  2- Sketches
+
+THE SIMPLE MACHINE
+We decided to build a ramp as a simple machine. We used the laser cut for the ramp and sides because we needed precision. And the legs we cut at the wood saw and wood sander machine. However, we were unsure about the ideal angle for the ramp, so we employed an adaptable feature to connect its parts: hinges. Using the hinges was an excellent decision because when we were testing the car walking, the ramp was too tilted, so effortlessly, we adapted the angle by putting the ramps from part higher.
+
+CELEBRATION STATION
+To trigger the celebration, we wanted to pop a balloon. In theory, it seems very easy. Our first idea was to glue spikes at the car and press it against the balloon, but it didn't work. The second idea was to attach the spike to our balloon pole, but it didn't work. Also, we decided to inflate the balloon more so the plastic area was finer (good decision). As a last attempt, we built a pike wall and placed it behind the ballon, and it finally worked! Unfortunately, this solution gave us a new problem: the pole was leaning back. We used some pieces of wood to weigh on the pole bottom and try to balance it. It was not enough! The final solution was to wrap the pole with the ramp's last part legs. Only with all these adjustments could it receive the car force with 
+
+
+

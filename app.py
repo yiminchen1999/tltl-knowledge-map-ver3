@@ -28,36 +28,9 @@ animated_title_style = {
     "margin-left": "2rem",  # Add margin to move the title to the right
 }
 # Load the data
-data = pd.read_excel("assets/2022_student1_10projects_combined.xlsx",
-     engine='openpyxl')
+#data = pd.read_excel("assets/Year2023text/combined/2023_student1_8projects_combined.xlsx",engine='openpyxl')
 
-# Define a dictionary mapping labels to colors
-label_colors = {'positive': 'green', 'negative': 'red', 'neutral': 'grey'}
 
-# Create a new column in the DataFrame containing the color for each label
-data['color'] = data['label'].map(label_colors)
-# Set the plot style
-sns.set_style("ticks")
-sns.set_context("talk")
-
-# Create a figure and axes
-fig, ax = plt.subplots()
-
-# Plot the data as a scatter plot using the colors from the 'color' column
-sns.scatterplot(data=data, x='Name', y='score', hue='label', palette=label_colors)
-
-# Set the axis labels and title
-plt.xlabel('Project Name')
-plt.ylabel('Score')
-plt.title('Sentiment Analysis Results')
-
-# Set the x-axis tick labels
-tick_labels = ['dream1', 'dream2', 'dream3', 'frank', 'lofi', 'omni', 'remix', 'rube', 'testing', 'tool']
-plt.xticks(range(10), tick_labels, rotation=45)
-
-# Set the legend outside the plot and adjust spacing
-plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
-plt.subplots_adjust(right=0.8)
 
 
 
@@ -751,14 +724,10 @@ sidebarpage2 = html.Div(
             className='bg-light text-white'
         ),
         dbc.Row(
-            [html.Div([html.Hr(),html.P('Select a year first',
+            [html.Div([html.Hr(),html.P('See your 2023 SA progress',
                                  style={'margin-top': '8px', 'margin-bottom': '4px'},
                                  className='text-black'),
-                          dcc.Dropdown(id='yeardropdown4', options=[{'label': '2021', 'value': '2021'},
-                                                                    {'label': '2022', 'value': '2022'},
-                                                                    {'label': '2023', 'value': '2023'}],
-                                       multi=False,
-                                       style={'width': '220px', 'color': '#000000'}),],
+                        ],
                           className='p-4') # Add padding to the div
             ],
             style={'height': '60vh', 'margin': '10px', 'display': 'flex'},
@@ -791,7 +760,8 @@ dbc.Row(
 
 
 
-
+data = pd.read_excel("assets/Year2023text/combined/2023_student1_8projects_combined.xlsx",
+     engine='openpyxl')
 
 
 html_graphs2 = html.Div(
@@ -851,7 +821,7 @@ dbc.ModalBody(
                                 className='fs-6 text-center',
                                 style={"font-size": "1.0rem"}),
                             html.Iframe(id='html-iframe-5', srcDoc=initial_html_posi, width='100%', height='600',
-                                        style={'height': '60vh'}),
+                                        style={'height': '50vh'}),
 
                             dbc.Row([dbc.Col([html.Div([
                                 # html.Label('Select a week:', style={'fontSize': '20px'}),
@@ -927,7 +897,7 @@ dbc.ModalBody(
                                 className='fs-6 text-center',
                                 style={"font-size": "1.0rem"}),
                             html.Iframe(id='html-iframe-6', src=initial_html_nega, width='100%', height='600',
-                                        style={'height': '60vh'}),
+                                        style={'height': '50vh'}),
 
                             dbc.Row([dbc.Col([html.Div([
                                 dcc.Slider(
@@ -1007,35 +977,21 @@ html.Div(
                                          style={'display': 'flex', 'justify-content': 'space-between'})
                             ]),
                             html.Div([
-    dcc.Graph(
-        figure={
-            'data': [
-                {'x': data['Name'], 'y': data['score'], 'type': 'scatter', 'mode': 'markers', 'marker': {'color': data['color']}}
-            ],
-            'layout': {
-                'title': 'Sentiment Analysis Results',
-                'xaxis': {'title': 'Project Name', 'tickvals': list(range(10)), 'ticktext': tick_labels, 'tickangle': 45},
-                'yaxis': {'title': 'Score'},
-                'legend': {'orientation': 'h', 'x': 0, 'y': 1.1},
-                'margin': {'l': 50, 'b': 50, 't': 50, 'r': 50}
-            }
-        },
-        id='my-graph'
-    )
-]),
-                            #html.Iframe(id='html-iframe-7', src='assets/samplepic4.png', width='100%', height='600',style={'height': '65vh'}),
+                                dcc.Graph(id='my-graph')
+                            ]),
+
                             dbc.Row([dbc.Col([html.Div([
                                 # html.Label('Select a week:', style={'fontSize': '20px'}),
                                 dcc.Slider(
                                     id='myslider6',
                                     min=1,
-                                    max=10,
+                                    max=12,
                                     value=1,
                                     step=1,
                                     updatemode='drag',
-                                    marks={1: {'label': '1'}, 2: {'label': '2'}, 3: '3', 4: '4', 5: '5', 6: '6', 7: '7',
-                                           8: '8', 9: '9', 10: '10'},
-                                    tooltip={"placement": "bottom", "always_visible": True}, included=False
+                                    marks={1: {'label': 'Eury'}, 2: {'label': 'Sadia'}, 3: {'label': 'Helen'}, 4: {'label': 'Xichen'}, 5: {'label': 'Zhanlan'}, 6: {'label': 'Katie'}, 7: {'label': 'Andrea'},
+                                           8: {'label': 'Ana Maria'}, 9: {'label': 'Heidi'}, 10: {'label': 'Mariana'},11: {'label': 'Inara'},12: {'label': 'Kiki'}},
+                                    included=False
                                 ),
                                 dbc.Label("Student Name", className="text-center w-100 mb-0", width='10%'),
                             ], style={'width': '90%', 'margin': '20px', 'margin-top': '20px',
@@ -1123,7 +1079,7 @@ html.Div(
                                         'layout': {
                                             #'title': 'Sentiment Analysis Results',
                                             'xaxis': {
-                                                'title': 'File Number',
+                                                'title': 'Student Number',
                                                 'tickvals': list(range(1, 13)),
                                                 'ticktext': list(range(1, 13))
                                             },
@@ -1160,7 +1116,7 @@ html.Div(
 
                         ], width={"size": 10})
 
-                ], style={"height": "240vh"}
+                ], style={"height": "220vh"}
             )
 
             ],
@@ -1226,7 +1182,7 @@ page_2_layout = html.Div(
                         dbc.Col(
                             html_graphs2,
                             className='p-4',
-                            style={'border-radius': '30px', 'box-shadow': '4px 4px 8px 0 rgba(0,0,0,0.2)','margin-right': '-130px'}
+                            style={'border-radius': '20px', 'box-shadow': '4px 4px 8px 0 rgba(0,0,0,0.2)','margin-right': '-130px'}
                         ),
                     ],
                     className='mt-4'
@@ -1376,13 +1332,59 @@ html.Div(
             'width': '100%',
             'height': '6vh',
             'display': 'flex',
-            'justify-content': 'center',
+            'justify-content': 'button',
             'align-items': 'center',
             'background': 'linear-gradient(to right, #000000, #fff)'
         }
     ),
     ]
 )
+
+import pandas as pd
+
+#assets/Year2023text/combined/2023_student12_8projects_combined.xlsx
+# Load data
+
+
+import pandas as pd
+
+
+import pandas as pd
+import plotly.graph_objs as go
+
+@app.callback(
+    Output('my-graph', 'figure'),
+    [Input('myslider6', 'value')]
+)
+def update_graph(selected_week):
+    # Get the corresponding file based on the selected week
+    file_name = f'assets/Year2023text/combined/2023_student{selected_week}_8projects_combined.xlsx'
+    # Load the data from the file
+    data = pd.read_excel(file_name,engine='openpyxl')
+    # Define a dictionary mapping labels to colors
+    label_colors = {'positive': 'green', 'negative': 'red', 'neutral': 'rgb(211, 211, 211)'}
+    # Create a new column in the DataFrame containing the color for each label
+    data['color'] = data['label'].map(label_colors)
+    # Create the tick labels for the x-axis
+    tick_labels = ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6', 'Project 7',
+                   'Project 8']
+    # Create the graph figure
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=data['Name'], y=data['score'], mode='markers', marker=dict(color=data['color'], size=15, line=dict(width=1, color='black')),
+                             text=data['label'], hovertemplate="<b>%{text}</b><br><br>Name: %{x}<br>Score: %{y:.2f}<extra></extra>"))
+    fig.update_layout(
+        xaxis=dict(title='<b>Project Name</b>', showgrid=False, tickangle=45, tickfont=dict(size=14),
+                   ticktext=tick_labels),
+        yaxis=dict(title='<b>Score</b>', showgrid=True, gridcolor='rgb(238,238,238)', tickfont=dict(size=14),
+                   zeroline=True, zerolinecolor='rgb(128,128,128)'),
+        legend=dict(title='<b>Sentiment</b>', orientation='h', yanchor='top', xanchor='left', y=1.1, x=0),
+                      #margin=dict(l=50, r=50, t=100, b=50),
+                      plot_bgcolor='rgb(255, 255, 255)',
+                      paper_bgcolor='rgb(255, 255, 255)',
+                      font=dict(size=13, color='grey'))
+    return fig
+
+
 
 # Define the callbacks of year dropdown and weekly dropdown
 @app.callback(

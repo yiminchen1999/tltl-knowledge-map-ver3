@@ -1,0 +1,49 @@
+Powerful idea version 1: 
+Architecture, as a form of media, is casting long lasting influences to the society/community. It showcase the trace of time and can be a point connecting culture, history, personal identity etc.
+
+Assessing artifacts longitudinally
+
+Putting it in context... 
+I wish to implement my design at an environment where the learning experience can be facilitated by a "more knowledgeable other". So I'm considering designing Since my powerful idea is related to time, history, and is geographically specific, I looked into the NYS Common Core Standards for guidelines. These are the "social studies practices, the social science and historical thinking skills that students should develop throughout their K-12 education in order to be prepared for civic participation, college, and careers" listed in the New York State K-12 Social Studies Framework, and I've highlighted the ones that will be cultivated in my design:
+
+1) Gathering, Interpreting and Using Evidence
+2) Chronological Reasoning and Causation
+3) Comparison and Contextualization
+4) Geographic Reasoning
+5) Economics and Economic Systems
+6) Civic Participation
+
+Learning Goal:
+Based on the information above, I summarized my learning goal as:
+Students (age to-be-decided) will create historically accurate representations of how a neighborhood evolves along time.
+Students will understand the importance of assessing artifacts longitudinally, and how a system of architectures & human evolves along time.
+
+I do think this learning goal is a bit too big? (not targeted). And that's why I'm having a hard time identifying what are the specific tasks I wish my learners can complete with my design.
+
+Learning Content:
+I want the learners to explore the below relationship. How are each elements affecting each other?
+
+Learning Activities:
+ I have several options in mind:
+A series of activities that constitute a curriculum in which students will explore the relationship of time - architecture - human. These activities can include:
+selecting and fabricating a "community monument" (an architecture that's meaningful to the local community)
+building a "3D map" of the neighborhood, etc.
+A "make-it-yourself" board game. (comparing to the earlier option, this provides a framework? of how learners will approach the topics). Comparing to a traditional boardgame that we can directly play with, I want to provide the skeleton of a game and invite learners to construct and fill in the details based on the neighborhood they are connected to. (Since I'm exploring the idea of time, it's also interesting to ask the learners to spend time on physically constructing pieces of the game. This is parallel to the idea of the time it takes for construction for the architecture they chose). This kit will include
+instructions on what pieces to make and how to play the game
+material and tools for construction
+ The end product should look like a "3D Map" with a central piece of architecture. Take NYC Chinatown for example:
+
+might be cards, might be miniature architectures... undecided
+central architecture (community monument)
+
+More to consider:
+too many moving parts in the design! Need to prioritize the design details
+Need to clarify learning goals!
+Need literature review and methodological frameworks (such as how architectures are commonly studied. )
+how to provide feedback when learners make mistakes?
+how to represent time
+how accurate are the architectures?
+1. focus on evolution of 1 architecture
+2. city development with changing parameters
+
+

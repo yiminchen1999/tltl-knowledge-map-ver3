@@ -1,0 +1,74 @@
+1. Tool
+
+Processing (p5.js)
+
+2. Technique
+Exploring/Remixing different interactive codes on processing
+to incorporate music theory (chords and scale)
+
+3. Description
+Idea: Music (chords & scale) Interaction. We like the user interaction where we can use keys on the computer as keys on piano to make sound. And we like chords. So we explored how to use keys to play chords.
+Model A:
+- you can write the chord progression of the song you want to play
+- the chords you played are recorded on the bottom
+Model B:
+- you can choose what scale (ex. C,D,E..., major/minor) you want to play
+- each notes and chords you play are visually displayed
+
+4. Image
+
+5. Material & Instructions
+Adding Sound
+Line 1-3, 11-13, 91-93
+adopting "synth" & can manipulate attack/release
+
+Building Chords
+Line 34-93
+using if&else if statement to play note when corresponding key pressed
+
+using different interval via number for each scale
+
+Writing Chords History
+Line 18-22
+using function draw() to write
+
+Recording Notes
+Line 4-6, 25-32, 95-97
+make array and expand it using .push(note)
+
+Step1
+Enable the user to play a scale on the keys and visualize it, i.e. see different shape takes on color when pressing different keys
+
+set amplitude with built-in functions
+new.p5.Envelop()
+setADSR()
+set up note with built-in functions
+new. p5.Oscillator()
+osc.freq()
+osc.amp()
+
+Visualization with built-in functions
+keyIsPressed()
+fill()
+
+Step2
+Enable users to play a chord when press a key
+Add more osc.freq() functions
+
+Step3
+Enable users to change a scale and hear different chords
+set up choice with built-in function
+createSelect()
+
+create array of scales to choose from
+createScale()
+
+Enable users to see the chord name and name of the notes played to assist their learning
+create functions to show note names, evaluate chords and show chord name
+midiToNoteName()
+getChordName()
+
+Passion is the best motivation: I spent hours on this project in a flow state because I really enjoy hearing the sound coming out from the keys on my keyboard
+Learn to get help effectively from ChatGPT: I write a lot of codes with the help of ChatGPT. However, I realized that it is fast to write with ChatGPT only when you have some coding knowledge and can see what codes from ChatGPT are going to work and what are not. Otherwise, ChatGPT might waste even more time.
+Plan instructional strategy ahead: I wanted to put some instructional design into model B. Later, I was reading a music theory book and found the scale and chord progression in model A is helpful for some exercises. However, they are not very useful in many other circumstances. It is important to plan the learning actions students will take in the end before actual development
+

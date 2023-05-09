@@ -1,0 +1,10 @@
+Inspiration
+
+Pseudocode
+
+How chatGPT helped me understand some of the functions that's not in the P5Js documentation: https://docs.google.com/document/d/1eFn8tIhPKjN6LbFnvKq4dM_LRPCFKbp6VwpUPaz8epM/edit?usp=sharing
+
+Remixing
+
+Reflection Card:
+Adding the pseudocode "forced" me to think about what each line means and does in the code. It is especially helpful for constructing logical frameworks.

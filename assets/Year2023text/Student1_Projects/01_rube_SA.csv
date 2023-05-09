@@ -1,0 +1,6 @@
+sentence,label,score
+Circle shaped wood (cut by laser cutter) circumscribe the pipeline. ,neutral,0.7240622639656067
+The number of wood determines the maximum angle of the slant of the pipeline. ,neutral,0.7978760004043579
+"That is, we realized that the number of wood circles and angle of the slant are inversely proportional. ",neutral,0.7408104538917542
+Error 3: Too much water (soaked in the cotton) cause too much friction and thus hinder the water transfer. ,negative,0.8289579749107361
+Error 4: dislocation of the pipeline on the wood plate below. ,negative,0.6636409759521484

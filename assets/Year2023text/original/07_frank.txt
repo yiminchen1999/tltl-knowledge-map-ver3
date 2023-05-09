@@ -1,0 +1,90 @@
+The experience of grabbing a microwave from the street's trash, dissecting it, and repurposing the fan was counter-cultural in different ways. First, I felt empowered opening a technological artifact and using various tools traditionally attributed to man. I was used to thinking about repairing technology as a man's task: the person that always fixed artifacts in my home was a man. Second, repairing instead of using new materials was a way to care for the environment and our technologies. Jackson (2014)  invites us to build a strong relationship with objects and take care of them and proposes an ethics of mutual care and responsibility, called repair-centered ethics paradigm.
+
+The story of a useless microwave found in the street's trash
+
+DISASSEMBLING PHASE: COMPONENTS
+
+Quick notes in the lab of akio's explanation
+
+TOOLS
+
+CORE PART
+Mostly metal, and plastic
+
+Beeper
+Motor
+Magnetron
+Fuse
+Capacitor
+Transformer
+
+Fan and Structure attaching  it
+
+external structure
+
+Base and wall: metal
+Door: Plastic
+
+Walls with ventilation
+
+Base with ventilation
+
+Door
+
+Buttons
+
+attaching parts
+Mostly metal, and plastic
+
+Spring 
+
+Screws
+Metal attachments
+Gears
+
+Video of the process
+
+repurpose and design phase
+
+Once I disassembled the different parts, I observed each element and found the fan an interesting element to start playing and trying things. It reminded me the video at Heliopolis work, where students made a ship with a helix repurposing objects.
+
+First Idea
+
+Attach the fan to a car, an helicopter, a ship, or a character to make it 'fly'
+
+I discarded the idea because it doesn't seem original, but kept it in mind if things would turn out difficult.
+
+Second Idea
+
+Try out the fan, as I forgot to plug in the microwave to test if it was working.
+
+It worked !!!
+
+I decided to put a switch to pick if I wanted to turn it on or off. I peeled cables and isolated cables.
+
+Third idea
+
+I went to a bookstore and saw Newton's Lab: Wind energy game. The helix remind me my fan. I decided to try if my fan could produce energy by blowing.
+
+Unfortunately, it didn't work out well.
+
+I blew and used a hairdryer to make the fan turn faster, but it wasn't producing energy. Megan helped me to use a multimeter to measure the voltage.
+
+Fourth idea
+
+Stick metallic and colorful stars in the helix to see a nice effect. Additionally, hang some small balls that make sound with movement.
+
+I  stuck the stars and the balls with sound, but it didn't make any cool effect. Nevertheless, the stars looked nice and kept them.
+
+Final PRODUCT
+
+electric Fan with switch and decorations to refresh ourselves during summer and put in a desk or nightstand.
+
+I attached the fan to a recycled piece of wood, as I was looking for a non-conductive material. I used the glue gun.
+I added a wood support to put the fan in a table.
+I added some threads, because i had some holes i did trying to attach small balls that make sound with the wind that didn't work out well.
+
+
+
+
+

@@ -1,0 +1,16 @@
+Dream toy: Obstacle course and drone
+
+Prototyping the obstacle course:  He will use the drone to fly around and through the obstacles that we will build on the board.  We will build a board ~3ft high that will have various sticks and hoops for the drone to fly through.  We will use the laser cutter to cut multiple slots in the board to allow him to customize and move the sticks to different locations to create his own obstacles at different heights around the board. There will be lights on the hoops that can be switched on/off or change colors. There will be a quidditch theme to the hoops to align with the Harry Potter theme.
+
+We will drill holes into the sticks to allow him to connect pipe cleaners to create different shapes with.
+
+Process of creating a switch that can change the color of the LED lights. One side turns on the red lights and the other side turns on the green lights. These will be added to the loops on the obstacle course and he will be able to control the lights by using the switch.
+
+Prototype Testing: we added different materials and objects to test whether the drone would fly with added weight, or different shapes, and how this affected control and maneuvering around objects.
+
+3D printed objected to test weight -- this would help us decide if we wanted to 3D print a case to add around the drone
+
+Popsicle sticks and pipecleaners - to test if drone would still fly with control -- this was to test an idea about adding a feature to allow him to create different pipecleaner shapes on top of the drone to create his own case
+
+Obstacle course testing
+
