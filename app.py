@@ -421,17 +421,15 @@ dbc.Row(
 dbc.Modal(
     [
         dbc.ModalHeader("Animated GIF"),
-        dbc.ModalBody(
-            html.Img(id="gif-player", src="")
-        ),
+        dbc.ModalBody(html.Img(id="gif-player",style={'width': '100%', 'height': '100%'})),
         dbc.ModalFooter(
             dbc.Button("Close", id="close-button3", className="ml-auto")
         )
     ],
     id="gif-modal",
-    centered=True,
+    #centered=True,
     size="lg",
-    style={"max-width": "200%", "max-height": "200vh"}
+    style={'width': '100%',  'height': '1000px',  'overflow': 'hidden'}
 ),
     ]
 )
