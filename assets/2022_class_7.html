@@ -8,7 +8,7 @@
             
         
 <center>
-<h1></h1>
+<h1>Class Knowledge Map Week 7</h1>
 </center>
 
 <!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
@@ -27,7 +27,7 @@
 
 
         <center>
-          <h1></h1>
+          <h1>Class Knowledge Map Week 7</h1>
         </center>
         <style type="text/css">
 
@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#f6993f", "id": 19, "label": "motor", "shape": "dot", "size": 6, "title": "student1"}, {"color": "#f6993f", "id": 21, "label": "electron", "shape": "dot", "size": 6, "title": "student1"}, {"color": "#f6993f", "id": 22, "label": "electr", "shape": "dot", "size": 6, "title": "student1"}, {"color": "#4dc0b5", "id": 71, "label": "fit", "shape": "dot", "size": 6, "title": "student1"}, {"color": "#4dc0b5", "id": 67, "label": "interview", "shape": "dot", "size": 6, "title": "student3"}]);
-                  edges = new vis.DataSet([{"from": 19, "hidden": true, "to": 21}, {"from": 19, "hidden": true, "to": 22}, {"from": 21, "hidden": true, "to": 22}, {"from": 71, "hidden": true, "to": 67}]);
+                  nodes = new vis.DataSet([{"color": "#f6993f", "id": 30, "label": "electronics", "shape": "dot", "size": 6, "title": "Student1"}, {"color": "#4dc0b5", "id": 34, "label": "fitting", "shape": "dot", "size": 6, "title": "Student1"}, {"color": "#f6993f", "id": 60, "label": "motor", "shape": "dot", "size": 6, "title": "Student1"}, {"color": "#4dc0b5", "id": 95, "label": "user interview", "shape": "dot", "size": 6, "title": "Student3"}]);
+                  edges = new vis.DataSet([{"from": 30, "hidden": true, "to": 60}, {"from": 34, "hidden": true, "to": 95}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
@@ -121,7 +121,7 @@
     "physics": {
         "enabled": true,
         "repulsion": {
-            "centralGravity": 0.9,
+            "centralGravity": 0.8,
             "damping": 0.09,
             "nodeDistance": 100,
             "springConstant": 0.05,

@@ -13,7 +13,7 @@ import pandas as pd
 file_names_2021 = ['Y2021_Student_01','Y2021_Student_02','Y2021_Student_03','Y2021_Student_04','Y2021_Student_05','Y2021_Student_06','Y2021_Student_07']
 year2021_df = []
 for i in range(len(file_names_2021)):
-    temp_df = pd.read_csv("/Users/stephanielin/Desktop/TLTLab/Y2021/"+file_names_2021[i]+".csv",index_col=0)
+    temp_df = pd.read_csv("assets/Y2021/"+file_names_2021[i]+".csv",index_col=0)
     year2021_df.append(temp_df)
 
 student_names_2021 = ['Student1','Student2','Student3','Student4','Student5','Student6','Student7']
@@ -21,7 +21,7 @@ student_names_2021 = ['Student1','Student2','Student3','Student4','Student5','St
 file_names_2022 = ['Y2022_Student_01','Y2022_Student_02','Y2022_Student_03','Y2022_Student_04','Y2022_Student_05','Y2022_Student_06','Y2022_Student_07','Y2022_Student_08','Y2022_Student_09','Y2022_Student_10','Y2022_Student_11','Y2022_Student_12']
 year2022_df = []
 for i in range(len(file_names_2022)):
-    temp_df = pd.read_csv("/Users/stephanielin/Desktop/TLTLab/Y2022/"+file_names_2022[i]+".csv",index_col=0)
+    temp_df = pd.read_csv("assets/Y2022/"+file_names_2022[i]+".csv",index_col=0)
     year2022_df.append(temp_df)
 
 student_names_2022 = ['Student1','Student2','Student3','Student4','Student5','Student6','Student7','Student8','Student9','Student10','Student11','Student12']
@@ -29,15 +29,15 @@ student_names_2022 = ['Student1','Student2','Student3','Student4','Student5','St
 file_names_2023 = ['Y2023_Student_01','Y2023_Student_02','Y2023_Student_03','Y2023_Student_04','Y2023_Student_05','Y2023_Student_06','Y2023_Student_07','Y2023_Student_08','Y2023_Student_09','Y2023_Student_10','Y2023_Student_11','Y2023_Student_12']
 year2023_df = []
 for i in range(len(file_names_2023)):
-    temp_df = pd.read_csv("/Users/stephanielin/Desktop/TLTLab/Y2023/"+file_names_2023[i]+".csv",index_col=0)
+    temp_df = pd.read_csv("assets/Y2023/"+file_names_2023[i]+".csv",index_col=0)
     year2023_df.append(temp_df)
 
 student_names_2023 = ['Eury','Sadia','Helen','Xichen','Zhanlan','Katie','Andrea','Ana Maria','Heidi','Mariana','Inara','Kiki']
 
-keywords = pd.read_csv("/Users/stephanielin/Desktop/TLTLab/dictionary 5.0 (final with subcategory).csv")["display concept"].tolist()
+keywords = pd.read_csv("dictionary 5.0 (final with subcategory).csv")["display concept"].tolist()
 
 # the number shows which category the keyword belongs to
-keywords_group = pd.read_csv("/Users/stephanielin/Desktop/TLTLab/dictionary 5.0 (final with subcategory).csv")["category"].to_numpy()
+keywords_group = pd.read_csv("dictionary 5.0 (final with subcategory).csv")["category"].to_numpy()
 
 # create color for each category
 category_color = []
@@ -107,15 +107,13 @@ class_map_2022[4].show("social_network.html")
 
 class_map_2023[1].show("social_network.html")
 
-# class_map_2023[1].set_options("""
-#     var_options = {
-#         "nodes": {
-#             "font": {
-#                 "face": "Helvetica",
-#                 "size": 12,
-#                 "color": "#000000"
-#             }
-#         }
-#     }
-# """)
+
+for i, class_map in enumerate(globals()[f"class_map_2023"]):
+    class_map.show(f"assets/2023_class_{i+1}.html")
+for i, class_map in enumerate(globals()[f"class_map_2022"]):
+    class_map.show(f"assets/2022_class_{i+1}.html")
+for i, class_map in enumerate(globals()[f"class_map_2021"]):
+    class_map.show(f"assets/2021_class_{i+1}.html")
+
+
 
