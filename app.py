@@ -290,7 +290,7 @@ html.Div(
 ),
 dbc.Modal(
     [
-        dbc.ModalHeader("Information about Individual Key Concepts (weekly)"),
+        dbc.ModalHeader("Info about Individual Weekly Map"),
         dbc.ModalBody(
             [
                 html.Ul(
@@ -301,9 +301,9 @@ dbc.Modal(
                     ]
                 ),
                 #html.Br(),
-                html.P("What can I do with the weekly knowledge map?"),
-                html.P("1.Identify the specific concepts that you have applied during the week.",style={'color': 'darkgrey'}),
-                html.P("2.By reviewing the nodes and categories on the map, you can reflect on the knowledge areas that you have engaged with and assess your level of understanding and application.", style={'color': 'darkgrey'})
+                html.P("  What can I do with the weekly knowledge map?"),
+                html.P("    1.  Identify the specific concepts that you have applied during the week.",style={'color': 'darkgrey'}),
+                html.P("    2.  By reviewing the nodes and categories on the map, you can reflect on the knowledge areas that you have engaged with and assess your level of understanding and application.", style={'color': 'darkgrey'})
             ]
         ),
         dbc.ModalFooter(html.Button('Close', id='close-button', className='btn btn-secondary'))
@@ -315,7 +315,7 @@ dbc.Modal(
                             html.P('Identify which concepts I’ve applied this week',
                              className='fs-6 text-center',
                         style={"font-size": "1.0rem"}),
-                            html.Iframe(id='html-iframe', srcDoc=initial_html, width='100%', height='1400',
+                            html.Iframe(id='html-iframe', srcDoc=initial_html, width='100%', height='600',
                                         style={'height': '60vh'}),
 
                             dbc.Row([dbc.Col([html.Div([
@@ -364,25 +364,37 @@ html.Div(
     style={'display': 'flex'}
 ),
 
-                            dbc.Modal(
-                                [
-                                    dbc.ModalHeader("Information about Individual Key Concepts (aggregated)"),
-                                    dbc.ModalBody(
-                                        "1.Knowledge keywords mentioned in reflections up to a certain week;"),
-                                    dbc.ModalBody(" 2.Within the same category, darker shades indicate their earlier occurrence;"),
-                                    dbc.ModalBody(" 3.The color of the node corresponds to a specific knowledge category;"),
-                                    dbc.ModalBody("4.Clicking on a node reveals the week in which the keyword was first mentioned;"),
-                                    dbc.ModalBody("5.Size of the node reflects the frequency of its occurrence;"),
-                                    dbc.ModalFooter(
-                                        html.Button('Close', id='close-button2', className='btn btn-secondary'))
-                                ],
-                                id="info-modal2",
-                                centered=True
-                            ),
+
+
+dbc.Modal(
+    [
+        dbc.ModalHeader("Info about Individual Aggregate Map"),
+        dbc.ModalBody(
+            [
+                html.Ul(
+                    [
+                        html.Li("Knowledge keywords mentioned in reflections up to a certain week", style={'color': 'darkgrey'}),
+                        html.Li("The color of the node corresponds to a specific knowledge category", style={'color': 'darkgrey'}),
+                        html.Li("Within the same category, darker shades indicate their earlier occurrence", style={'color': 'darkgrey'}),
+                        html.Li("Clicking on a node reveals the week in which the keyword was first mentioned", style={'color': 'darkgrey'}),
+                        html.Li("Size of the node reflects the frequency of its occurrence", style={'color': 'darkgrey'}),
+                    ]
+                ),
+                #html.Br(),
+                html.P("  What can I do with the aggregate knowledge map?"),
+                html.P("    1.  You can visualize your personal learning journey by identifying which concepts you have applied and how frequently you have engaged with them over time.",style={'color': 'darkgrey'}),
+                html.P("    2.  It can help you identify patterns in your learning and identify topics that you may want to explore further.", style={'color': 'darkgrey'})
+            ]
+        ),
+        dbc.ModalFooter(html.Button('Close', id='close-button2', className='btn btn-secondary'))
+    ],
+    id="info-modal2",
+    centered=True
+),
                             html.P('Examine how my knowledge concepts evolve over time',
                                    className='fs-6 text-center',
                                    style={"font-size": "1.0rem"}),
-                            html.Iframe(id='html-iframe-2', srcDoc=initial_html_aggregate, width='110%', height='600',
+                            html.Iframe(id='html-iframe-2', srcDoc=initial_html_aggregate, width='100%', height='600',
                                         style={'height': '60vh'}),
 
                             dbc.Row([dbc.Col([html.Div([
@@ -501,17 +513,33 @@ dbc.Col(
 ),
 
 
-                            dbc.Modal(
-                                [
-                                    dbc.ModalHeader("Collective Knowledge in the Class (weekly)"),
-                                    dbc.ModalBody(
-                                        "All knowledge keywords mentioned by all students in a class in their reflections for a particular week;The color of the node corresponds to a specific knowledge category ;Clicking on a node reveals the names of the students who mentioned the keyword;Size of the node reflects the number of students who mentioned it"),
-                                    dbc.ModalFooter(
-                                        html.Button('Close', id='close-button4', className='btn btn-secondary'))
-                                ],
-                                id="info-modal4",
-                                centered=True
-                            ),
+
+
+dbc.Modal(
+    [
+        dbc.ModalHeader("Info about Class Collective Map"),
+        dbc.ModalBody(
+            [
+                html.Ul(
+                    [
+                        html.Li("All knowledge keywords mentioned by all students in a class in their reflections for a particular week", style={'color': 'darkgrey'}),
+                        html.Li("The color of the node corresponds to a specific knowledge category ", style={'color': 'darkgrey'}),
+                        html.Li("Clicking on a node reveals the names of the students who mentioned the keyword", style={'color': 'darkgrey'}),
+                        html.Li("Size of the node reflects the number of students who mentioned it", style={'color': 'darkgrey'}),
+
+                    ]
+                ),
+                #html.Br(),
+                html.P("  What can I do with the Class Collective Map?"),
+                html.P("    1.  You can see what concepts your classmates have applied.",style={'color': 'darkgrey'}),
+                html.P("    2.  It can serve as a resource for collaboration, discussion, and peer learning.", style={'color': 'darkgrey'})
+            ]
+        ),
+        dbc.ModalFooter(html.Button('Close', id='close-button4', className='btn btn-secondary'))
+    ],
+    id="info-modal4",
+    centered=True
+),
 
 html.Div(
                                 html.P('See what concepts other students have applied',
@@ -655,7 +683,7 @@ def play_gif(n_clicks,yeardropdown,mydropdown):
         return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
 
     else:
-        return ""
+        return "It only shows animation for year 2023! "
 
 
 
@@ -786,7 +814,7 @@ html_graphs2 = html.Div(
                                         'i',
                                         id='info-button6',
                                         className='badge rounded-pill bg-primary',
-                                        style={'display': 'inline-block','font-size': '0.95rem', "margin-left": "10px"}
+                                        style={'font-size': '0.95rem', "margin-left": "10px"}
                                     ),
                                 ],
                                 className='d-flex align-items-center',
@@ -795,11 +823,22 @@ html_graphs2 = html.Div(
                             dbc.Modal(
                                 [
                                     dbc.ModalHeader("Info about Class Positive Sentiment Collective Map"),
-                                    dbc.ModalBody(
-                                        " * All knowledge keywords mentioned by all students in a class in their reflections with a positive sentiment for a particular week;"
-                                        "* The color of the node corresponds to a specific knowledge category ;Clicking on a node reveals the names of the students who mentioned the keyword ;Size of the node reflects the number of students who mentioned it"),
-                                    dbc.ModalBody("* Clicking on a node reveals the names of the students who mentioned the keyword"),
-                                    dbc.ModalBody("* Size of the node reflects the number of students who mentioned it"),
+dbc.ModalBody(
+            [
+                html.Ul(
+                    [
+                        html.Li("All knowledge keywords mentioned by all students in a class in their reflections with a positive sentiment for a particular week", style={'color': 'darkgrey'}),
+                        html.Li("The color of the node corresponds to a specific knowledge category", style={'color': 'darkgrey'}),
+                        html.Li("Clicking on a node reveals the names of the students who mentioned the keyword ", style={'color': 'darkgrey'}),
+                        html.Li("Size of the node reflects the number of students who mentioned it", style={'color': 'darkgrey'}),
+                    ]
+                ),
+                #html.Br(),
+                html.P("  What can I do with the Class Positive Sentiment Collective Map?"),
+                html.P("    1.  Identify the knowledge categories and specific knowledge keywords that have elicited positive sentiment from the students in the class.",style={'color': 'darkgrey'}),
+                html.P("    2.  Gain insights into what concepts are resonating with the students in the class and incorporate them into future lesson plans or discussions.", style={'color': 'darkgrey'})
+            ]
+        ),
                                     dbc.ModalFooter(
                                         html.Button('Close', id='close-button6', className='btn btn-secondary'))
                                 ],
@@ -812,7 +851,7 @@ html_graphs2 = html.Div(
                                 className='fs-6 text-center',
                                 style={"font-size": "1.0rem"}),
                             html.Iframe(id='html-iframe-5', srcDoc=initial_html_posi, width='100%', height='600',
-                                        style={'height': '50vh'}),
+                                        style={'height': '60vh'}),
 
                             dbc.Row([dbc.Col([html.Div([
                                 # html.Label('Select a week:', style={'fontSize': '20px'}),
@@ -860,7 +899,22 @@ html_graphs2 = html.Div(
                                 [
                                     dbc.ModalHeader("Info about Class Negative Sentiment Collective Map"),
                                     dbc.ModalBody(
-                                        " All knowledge keywords mentioned by all students in a class in their reflections with a negative sentiment for a particular week;The color of the node corresponds to a specific knowledge category ;Clicking on a node reveals the names of the students who mentioned the keyword ;Size of the node reflects the number of students who mentioned it"),
+                                    [
+                                    html.Ul(
+                                     [
+                        html.Li("All knowledge keywords mentioned by all students in a class in their reflections with a negative sentiment for a particular week", style={'color': 'darkgrey'}),
+                        html.Li("The color of the node corresponds to a specific knowledge category", style={'color': 'darkgrey'}),
+                        html.Li("Clicking on a node reveals the names of the students who mentioned the keyword ", style={'color': 'darkgrey'}),
+                        html.Li("Size of the node reflects the number of students who mentioned it", style={'color': 'darkgrey'}),
+                                     ]
+                                             ),
+                #html.Br(),
+                html.P("  What can I do with the class negative sentiment map?"),
+                html.P("    1.  Identify which knowledge students may be struggling with or finding challenging.",style={'color': 'darkgrey'}),
+                html.P("    2.  Adjust teaching methods accordingly or provide additional support to help students overcome difficulties.", style={'color': 'darkgrey'})
+            ]
+        ),
+
                                     dbc.ModalFooter(
                                         html.Button('Close', id='close-button7', className='btn btn-secondary'))
                                 ],
@@ -873,7 +927,7 @@ html_graphs2 = html.Div(
                                 className='fs-6 text-center',
                                 style={"font-size": "1.0rem"}),
                             html.Iframe(id='html-iframe-6', src=initial_html_nega, width='100%', height='600',
-                                        style={'height': '50vh'}),
+                                        style={'height': '60vh'}),
 
                             dbc.Row([dbc.Col([html.Div([
                                 dcc.Slider(
@@ -907,7 +961,7 @@ html_graphs2 = html.Div(
                             #]),
 
  html.Div([
-                                html.Div([html.Div('Sentiment Analysis of one student on all projects', id='title',
+                                html.Div([html.Div('Students Sentiment Analysis Map', id='title',
                                                    className='fs-4 text-center font-weight-bold title-text',
                                                    style={'fontWeight': 'bold', 'cursor': 'pointer'}),
                                           html.Button('i', id='info-button9', className='badge rounded-pill bg-primary',
@@ -916,9 +970,24 @@ html_graphs2 = html.Div(
                                          className='d-flex text-center justify-content-center align-items-center'),
  dbc.Modal(
                                 [
-                                    dbc.ModalHeader("Info about Sentiment Analysis of one student on all projects"),
-                                    dbc.ModalBody(
-                                        "Display sentiment analysis of one student on all projects in a class;Each dot on the map represents a sentence that contains knowledge keyword(s);Red indicates negative sentiment;Green indicates positive sentiment;Grey indicates neutral sentiment"),
+                                    dbc.ModalHeader("Info about Students Sentiment Analysis Map"),
+dbc.ModalBody(
+            [
+                html.Ul(
+                    [
+                        html.Li("Display sentiment analysis of one student’s projects over the semester", style={'color': 'darkgrey'}),
+                        html.Li("Each dot on the map represents a sentence that contains knowledge keyword(s)", style={'color': 'darkgrey'}),
+                        html.Li("Red indicates negative sentiment", style={'color': 'darkgrey'}),
+                        html.Li("Green indicates positive sentiment", style={'color': 'darkgrey'}),
+                        html.Li("Grey indicates neutral sentiment", style={'color': 'darkgrey'}),
+                    ]
+                ),
+                #html.Br(),
+                html.P("  What can I do with the student sentiment analysis map?"),
+                html.P("    1.  Gain insight into the a student’s overall attitudes towards different projects throughout the semester.",style={'color': 'darkgrey'}),
+                html.P("    2.  Identify projects where the student may be struggling or excelling and where further feedback or guidance is needed.", style={'color': 'darkgrey'})
+            ]
+        ),
                                     dbc.ModalFooter(
                                         html.Button('Close', id='close-button9', className='btn btn-secondary'))
                                 ],
@@ -980,7 +1049,7 @@ html.Div(
                     dbc.Col(
                         [
                             html.Div([
-                                html.Div([html.Div('Sentiment Analysis of all student on one projects', id='title',
+                                html.Div([html.Div('Projects Sentiment Analysis Map', id='title',
                                                    className='fs-4 text-center font-weight-bold title-text',
                                                    style={'fontWeight': 'bold', 'cursor': 'pointer'}),
                                           html.Button('i', id='info-button8', className='badge rounded-pill bg-primary',
@@ -989,9 +1058,37 @@ html.Div(
                                          className='d-flex text-center justify-content-center align-items-center'),
  dbc.Modal(
                                 [
-                                    dbc.ModalHeader("Info about Sentiment Analysis of all student on one projects"),
+                                    dbc.ModalHeader("Info about Projects Sentiment Analysis Map"),
                                     dbc.ModalBody(
-                                        "Display sentiment analysis of a project for all students in a class;Each dot on the map represents a sentence that contains knowledge keyword(s);Red indicates negative sentiment;Green indicates positive sentiment;Grey indicates neutral sentiment"),
+                                        [
+                                            html.Ul(
+                                                [
+                                                    html.Li(
+                                                        "Display sentiment analysis of a project for all students in a class",
+                                                        style={'color': 'darkgrey'}),
+                                                    html.Li(
+                                                        "Each dot on the map represents a sentence that contains knowledge keyword(s)",
+                                                        style={'color': 'darkgrey'}),
+                                                    html.Li(
+                                                        "Red indicates negative sentiment",
+                                                        style={'color': 'darkgrey'}),
+                                                    html.Li(
+                                                        "Green indicates positive sentiment",
+                                                        style={'color': 'darkgrey'}),
+                                                    html.Li("Grey indicates neutral sentiment",
+                                                            style={'color': 'darkgrey'}),
+                                                ]
+                                            ),
+                                            # html.Br(),
+                                            html.P("  What can I do with the project sentiment analysis map?"),
+                                            html.P(
+                                                "    1.  Identify common positive and negative sentiment trends in a project across all students.",
+                                                style={'color': 'darkgrey'}),
+                                            html.P(
+                                                "    2.  Communicate with students who exhibit a relatively higher amount of negative sentiment to offer them assistance.",
+                                                style={'color': 'darkgrey'})
+                                        ]
+                                    ),
                                     dbc.ModalFooter(
                                         html.Button('Close', id='close-button8', className='btn btn-secondary'))
                                 ],
@@ -1129,7 +1226,7 @@ page_2_layout = html.Div(
                         dbc.Col(
                             html_graphs2,
                             className='p-4',
-                            style={'border-radius': '20px', 'box-shadow': '4px 4px 8px 0 rgba(0,0,0,0.2)'}
+                            style={'border-radius': '30px', 'box-shadow': '4px 4px 8px 0 rgba(0,0,0,0.2)','margin-right': '-130px'}
                         ),
                     ],
                     className='mt-4'
