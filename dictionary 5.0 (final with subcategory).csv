@@ -1,0 +1,102 @@
+display concept,category,subcategory
+2d design,1,a
+3d design,1,b
+3d model,1,b
+3d object,1,b
+3d print,1,b
+Carvey - CNC,1,b
+Gravit - 2d design,1,a
+LED light,2,c
+MDF wood,8,i
+TinkerCAD - 3d design,1,b
+actuator,2,c
+aluminum,8,i
+battery,2,c
+brainstorm,5,h
+button,2,c
+cardboard,8,i
+cassett type,3,e
+casting,9,j
+chisel,9,j
+circuit,2,c
+code,4,f
+computational thinking,4,f
+compute,4,f
+cotton,8,i
+debug,5,g
+disassemble,5,g
+dissect,5,g
+drill,9,j
+elastic energy,3,d
+elastic force,3,d
+electronics,2,c
+fabric,8,i
+fidget spinner,3,e
+fiducial marker,4,f
+fitting,5,g
+gear,3,e
+geometry,3,d
+gogo board,2,c
+graphics,4,f
+hammer,9,j
+handheld tool,9,j
+heart beat sensor,2,c
+hot glue gun,9,j
+humid sensor,2,c
+inclined plan,3,e
+iterate,5,h
+laser cut,1,a
+learning goal,5,h
+learning process,5,h
+light sensor,2,c
+light source,2,c
+logic gate,4,f
+magnet,8,i
+measure,3,d
+memory allocation,4,f
+mesh structure,3,e
+metal,8,i
+mobius strip,3,d
+model of learner,5,h
+molding,9,j
+motor,2,c
+number system,3,d
+p5js,4,f
+parchment paper,8,i
+plastic,8,i
+problem-solve,5,h
+prototype,5,g
+proximity sensor,2,c
+pseudocode,4,f
+pulley system,3,e
+ramp,3,e
+recycle,5,g
+redesign,5,h
+reflect,5,h
+remix,4,f
+repair,5,g
+repurpose,5,g
+resin - 3d print,1,b
+rethink,5,h
+rubber,8,i
+screw,9,j
+sensor,2,c
+servo,2,c
+signal broadcast,2,c
+silicon,8,i
+simple machine,3,e
+sketch,5,g
+sound library,4,f
+steel,8,i
+stuck point,5,h
+switch,2,c
+temperature sensor,2,c
+test,5,g
+thermometer,2,c
+trial-and-error,5,h
+user interview,5,h
+vacuum form,1,b
+vinyl cut,1,a
+wheel,3,e
+wood,8,i
+woodshop,9,j
