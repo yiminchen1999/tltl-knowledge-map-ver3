@@ -1210,11 +1210,18 @@ def save_feedback(n_clicks, student_name, feedback_text):
         file_path = f"{student_name}.txt"
         with open(file_path, 'w') as f:
             f.write(feedback_text)
-
         return html.Div('Feedback submitted successfully!', style={'color': 'green'})
-
-
-
+def send_email(feedback_text):
+    sender_email = 'tltlknowledgemap123@gmail.com'
+    sender_password = 'knowledgemap123'
+    receiver_email = 'tltlknowledgemap123@gmail.com'
+    subject = 'New Feedback Received'
+    message = f'The following feedback was received:\n\n{feedback_text}'
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(sender_email, sender_password)
+    server.sendmail(sender_email, receiver_email, f'Subject: {subject}\n\n{message}')
+    server.quit()
 
 
     # create the callback for rendering the different pages
