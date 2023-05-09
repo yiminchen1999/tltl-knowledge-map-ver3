@@ -79,7 +79,7 @@ def weekly_individual_knowledge_map(student_df):
 
     nets = []
     for i in range(student_df.shape[0]):
-        net = Network(notebook=True, heading="Individual Knowledge Map Weekly " + str((i + 1)))
+        net = Network(notebook=True)
         for j, value in enumerate(week_list[i]):
             if value == 1:
                 net.add_node(j, label=keywords[j], size=6, title=categories[keywords_group[j]],color=category_color[j])
