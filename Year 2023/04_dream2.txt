@@ -1,0 +1,36 @@
+Physical Prototype
+
+In the interview, Ziyan expressed a strong fondness of Melody, a classic white rabbit character from the  Japanese characterization company Sanrio. Therefore, I made a 3D model of Melody and we 3D-printed it.
+
+Our initial thought is to build something exactly what Ziyan wants-a hand-sized Melody doll with moving ears, controllable light and sound.
+
+Beyond what the user wants......
+
+Ziyan loves art and design, and has started to explore interactive design, modalities, materials
+
+Ziyan has made stop motion animation with iPad before
+
+However, after a reconsideration of the interview information and the purpose of this project, we think that it might not be the best idea to proceed with this plan. Here are the reasons:
+
+Ziyan wants this doll because she has a exactly same one back at her home in Shanghai.
+Ziyan moves a lot. She will move back to China this June and will not be able to carry items home
+We want to make a toy that actively engage Ziyan with creating and building stuff with technology, instead of just a passive consumer
+
+We revisit the information we gain from the interview. Ziyan is very proficient in using iPad. She is exploring interactive design and she loves to share her work with her friends.
+
+Therefore, we started to think about sharable digital art and technology.
+
+Adding digital affordability
+
+We researched extensively about toys for developing technological competency and computational thinking, such as Cubetto. However, they are either meant for younger kids, or are too explicit on coding, less relevant to design and making art. Ziyan has expressed that she does not have a feeling for constructing blocks or coding, and hates math when she sees it.
+
+We got inspiration from AR designs on Youtube. They are cute, interactive and sharable. Therefore, I used Photoshop, Blender and Spark AR Studio and made a interactive 3D sticker prototype, where a 3D Melody will appear upon detection of smile.
+
+In the end, we want to inspires Ziyan to create her own 2D/3D designs on iPad and share with her friends. We probably will record our making process and design a small manual to introduce her to digital 2D/3D design tools. We are learning and trying out different tools to find one that is easy to use, which children can easily learn and create their own 3-D design
+
+AR design inspirations from Youtube
+
+Our current design
+
+Design for activities: Learn the tools, and the activity is understood. Ideally, with our design, we will naturally introduce the kid to do the activities. Therefore, we need to carefully think through what activities we want her to do and design the toy around these
+Give people what they want - not what they ask for: The kid doesn't necessarily know what she needs, especially when it comes to education. When imagining a dream toy, she is still asking for the things that she used to own and like. However, through her artifacts, we see her passion for designing and sharing interactive designs. Therefore, we want to think of ways to spark that passion

@@ -1,0 +1,80 @@
+Inspirations
+
+Garage Band (music composing tool)
+My singing monsters (music game)
+Chord progression generators
+Hertz, Consonance, Dissonance
+Pitch and color
+
+Prototype overview
+Topic: Learning music composition (Harmony)
+Target learner: 9 year old
+Learning goal:
+Develop the ability to compose harmonies for basic melodies
+Comprehend fundamental concepts such as pitch, note, melody, interval, chord,  harmony, key and scale
+Understand and identify consonance and dissonance, along with their formation principles
+Learning design principle: Learning for doing/designing
+
+Design decisions:
+A software interface to
+See and write notes
+Ask questions and get feedback from a virtual tutor (maybe pre-programmed or an intelligent AI tutor)
+
+Sound will come out of several little physical dolls
+each doll can make one sound at a time
+as one is making a sound, it will turn to the color the note it represents
+
+This experience will contain a scaffolding process to help a learner learn to write chords. Here are the steps and goals for each step
+
+Step 1 Write/Choose a melody
+LX goal
+Understand what is melody, pitch and note
+Be able to generate each pitch by changing the Hertz
+UX goal
+Hear the melody coming out from one little physical doll
+Play with and become familiar with the song writing interface
+Understand and know how to use the tutor
+
+Information the tutor will give if asked:
+Generate a pitch using Hertz
+Pitch and color
+
+Step 2 Write a baseline
+LX goal
+Understand what is interval and harmony
+Understand and identify consonance and dissonance, along with their formation principles
+UX goal
+Hear the melody coming out from two little physical dolls
+Learn how to use the tutor to give feedback on the notes
+
+Information the tutor will give if asked:
+Interval and math ratio
+Pitch and color
+
+Step 3: Write the middle note
+LX goal
+Understand what is chord
+Understand and identify consonance and dissonance, along with their formation principles
+UX goal
+Hear the melody coming out from three little physical dolls
+
+Information the tutor will give if asked:
+Interval and math ratio
+Pitch, color and art work
+
+Step 4: Write the harmony!
+LX goal
+Understand what is chord progression, key, tonic and scale
+Understand and identify consonance and dissonance, along with their formation principles
+UX goal
+Hear the melody coming out from three little physical dolls
+
+Information the tutor will give if asked:
+Generate chord progression
+Key, color and art work
+
+Music composition is about rules but also creativity. I find it really hard to teach something that does not completely go by the rules.
+I can play instruments but I am not an expert in music composition. It is something I want to learn. In the preparation stage, I learnt music theories, checked existing music education applications and composing apps. I have learnt so much about the content in the process. But on the other hand, it is really hard to design for something I am not an expert in
+
+
+

@@ -1,0 +1,37 @@
+Circular Economy in New York City
+
+Reimagine the city
+
+Ideas and inspiration
+
+Tech in the wild: NY Hall of Science
+I was really inspired by the visit at the museum. The station about the distribution of energy in New York City caught my attention. I thought that at the lab maybe I could be able to work on a similar tool.
+
+Circular Economy
+I was interested in working on a project about sustainability in the city. Akio suggested to do some research on Circular Economy. I found an amazing world with lots of discoveries. This 2 graphics sintethyze two main concepts/powerful ideas:
+Circular Economy butterfly diagram
+Regenerative thinking
+
+Atlas book memory
+While I was writing my project to build a map, I remembered the Atlas book that was in my school's library. We loved to see it and decided I wanted to do a similar structure but interactive and with networks.
+
+First Sketches
+
+My idea is to build an artifact that could be set in a Science museum for children, for example the New York Hall of Science. The educational tool would be the map of New York city with small holes everywhere to introduce objects. The user would have small boxes on the side with different components of the Circular Economy Butterfly diagram such as: manufacturers, industries, farming, finite materials, renewables, users, animals, biosphere, etc. Additionally, at the side of the map the user would have cables to connect the objects.
+
+Features:
+-The cables would have at the ends metal; the objects would have at the ends magnets to connect them to the cables and to the map.
+-The holes on the maps would also have a piece of metal.
+-The map would have LEDs that would light on in different colors
+
+The visitor of the museum has to pick components and put each object on a hole to build a circular economy in New York City. The visitor also has to use cables to connect the objects.
+
+Learning objectives:
+Learners will be able to know and understand the meaning and benefits of Circular Economy
+Learners will be able to create connections and networks in the city to build a Circular Economy
+
+New York City (It actually will be the map of the world)
+Thinking ideas to make
+holes in the map like this board that is in the lab.
+
+Renato shared this inspiration on a past student's project to imagine how to connect the objects with the map.

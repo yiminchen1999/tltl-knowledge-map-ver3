@@ -44,14 +44,14 @@ def keyword_sentence_no_print(file_name):
 
 
 # All projects of student 1 of Year_2023_corpus
-for file_name in os.listdir("Year_2023_corpus"):
+for file_name in os.listdir("Y023"):
     if file_name.startswith("01"):
         sentences = keyword_sentence_no_print("Year_2023_corpus/" + file_name)
         res = classifer(sentences)
         df = pd.DataFrame({"sentence": sentences, "label": [x["label"] for x in res],
                            "score": [x["score"] for x in res]})
         save_name = file_name[:-4]
-        df.to_csv("Year_2022_Sentiment_Analysis/Student1_Projects/" + save_name + "_SA.csv", index=False)
+        df.to_csv("Y2023_Sentiment_Analysis/Student1_Projects/" + save_name + "_SA.csv", index=False)
 
 # Year_2021_s1 = keyword_sentence("Year_2021_corpus_01.txt")
 # Year_2021_s2 = keyword_sentence("Year_2021_corpus_02.txt")

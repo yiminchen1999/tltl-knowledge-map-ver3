@@ -1,0 +1,20 @@
+Repair is such an important family culture growing up! My family (similar to many other Chinese families) hardly ever throws away anything. I've witnessed my mom fixing bikes, computers, TV, and almost all other small electronic appliances. I've even heard of my grandparents' stories about fixing the chicken they raised by doing surgeries on them! ”frugalness“ -- the reluctance to spend unnecessary money runs in many families in China as the guiding principle of living.
+
+Break!
+
+I was pleasantly surprised about how intricate a mouse is on the inside. I do think that I easily take good designs for granted without giving it much thought. There are at least eight inputs on the mouse and they are all controlled by such a small integrated circuit!
+
+Counting the interactive components on a mouse... 
+6 clickable buttons,
+1 Scroll wheel, 1 switch, 1wireless connector of some sort, 1 light with optical sensing
+
+Vision Board and initial design...
+
+I started off wishing to copy a design I've seen. However, I found out that since many of the parts are specifically designed to use in a mouse, these parts can be a bit tricky to work with. (Some of them are a bit too small for me) I had to rethink my design to use the big parts in the end.
+
+Failed attempts
+
+Final Product 
+
+Video Link
+

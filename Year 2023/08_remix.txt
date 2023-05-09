@@ -1,0 +1,39 @@
+Original Project Animation
+
+Original Project Link: https://editor.p5js.org/jooprojects/full/Y6T0202my
+
+Original Code: https://editor.p5js.org/jooprojects/sketches/Y6T0202my
+
+Reflection Card: When remixing, it is difficult to think outside the constraints of what is already built. In this, I found it was very similar to the first lab project we did. It also took a lot longer than I expected to come up with a remix idea and then implement it. Because you aren't starting from scratch, you have to figure out how what you want to add fits into existing pieces.
+Because of this, I wasn't able to add the sound component that I wanted, because I couldn't add the sound library, and didn't leave myself enough time to explore other options to add the sound library. It is definitely something I will continue to think about outside of this project. My last creative tech class was sound-based, so I am super interested in how I could integrate past creations.
+Personally, the colors of the initial design didn't resonate with how I feel about love. As I played around with options, I realized that the beginning, when separate, is duller. When you click to 'us together', the moving shapes themselves change color, against a starker background. It feels representative-- love is not a fundamental shift of self, but it makes the little details brighter, more fun.
+
+When remixing, it is difficult to think outside the constraints of what is already built. In this, I found it was very similar to the first lab project we did. It also took a lot longer than I expected to come up with a remix idea and then implement it. Because you aren't starting from scratch, you have to figure out how what you want to add fits into existing pieces.
+Because of this, I wasn't able to add the sound component that I wanted, because I couldn't add the sound library, and didn't leave myself enough time to explore other options to add the sound library. It is definitely something I will continue to think about outside of this project. My last creative tech class was sound-based, so I am super interested in how I could integrate past creations.
+Personally, the colors of the initial design didn't resonate with how I feel about love. As I played around with options, I realized that the beginning, when separate, is duller. When you click to 'us together', the moving shapes themselves change color, against a starker background. It feels representative-- love is not a fundamental shift of self, but it makes the little details brighter, more fun.
+
+It is very visible in commented out code where the creator experimented on their own work and gave me inspiration to pursue my own remixing
+
+Pseudocode:
+https://docs.google.com/document/d/1Kwy9dI7jchvXM-6i0zSzKDrNF05c9FHQtFuoJbqRCfI/edit?usp=sharing
+
+Here is where I learned about user interaction through mouseIsPressed boolean
+
+In redesign, I realized that the frameCount means that the ellipses are moving further apart, which makes the flowers appear bigger, but kind of ruins my heart shape in redesign
+
+I don't understand how the effect of frameCount affects the shape of the flowers, both in placement and creation
+
+Changes to Code:
+1. colors
+2. mouse interaction
+3. quantities
+4. shapes
+5. axis of rotation
+
+changed flower shape
+changed mousePressed action to create heart shapes
+mouse interaction changed colors of flower rather than background
+added change in text/background if key is pressed
+
+Remixed Code: https://docs.google.com/document/d/12gZXxDayhjoh-_lNYIypHPi47-2Sr8pRgyc4JMnNqEA/edit?usp=sharing
+

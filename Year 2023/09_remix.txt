@@ -1,0 +1,20 @@
+Link to original project with pseudocode comments: https://editor.p5js.org/hh2867/sketches/RfEPqAr6A
+
+Link to NEW project with pseudocode comments on what has been reiterated: https://editor.p5js.org/hh2867/sketches/F5u02Xbj_
+
+Summary of what I changed:
+
+I turned the simple foggy forest into a meditation experience with purpose. To do that I did the following:
+I added meditation noises and the user could select their noise by clicking any key
+I added snow fall to make the scene more peaceful
+I added text to make the meditation interactive by clicking on the scene it provided a new prompt
+
+The Snow Fall:
+This involved creating little ellipse and first making it so they would just appear. The next step was to then add a function that made them drop in a randomized location at a certain rate.
+For this I was able to utilize other codes in the p5js gallery by looking at how various people had made rain.
+The Meditation Sounds:
+I first converted youtube sounds to mp3 and then uploaded them into my p5.js editor. After I created a function to load all of my sounds, I then mad a function so that on any key pressed a new sound would play.
+The most challenging aspect of this was getting one sound to stop before the next sound began. I knew what I needed to happen and what the computer needed to be told to make it happen, but it took me a bit to figure out the correct 'if, else' statement to make it happen.
+The Mindful Prompts:
+I found this to be very intuitive. I first created my array of the phrases I wanted to pop up, I then made it so the text would show up under the draw function (I learned how to create a text box so that the text would be centered on the page!), lastly, I added to the function mousePressed so that each time someone clicked it not only changed colors, but the next prompt appeared.
+This portion really taught me how to problem-solve. I wanted to develop a starting prompt, but did not know how to make it disappear when someone clicked; therefore, i created my own solution of making the introduction the first statement in the array. Even if it not exactly how I "wanted" to code it, it still functions

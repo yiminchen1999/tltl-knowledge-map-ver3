@@ -1,0 +1,23 @@
+My first thoughts before disassembling the camera were to:
+1. Maintain the integrity/structure of the camera
+2. Try to salvage and/or utilize the "main" components (lens, screen, buttons, lights)
+3. Ideas of what to recreate ranged from a charger, to getting the screen to turn on,
+to making an aesthetic art piece, to a telescope from the lens
+
+Disassembling Phase:
+I used a screwdriver to easily take apart the camera
+There were a series of different boards inside along with the obvious of lenses, lights, batteries, the screen
+I am unsure what the orange strips were, my one thought is that they function as the "wires" to send signals to the various boards
+Once I saw the hole that the main lens left when it was removed I then had the thought "I could make this a speaker!"
+
+Revision Phase:
+I make Bluetooth speakers with my students, so I knew I had the supplies to make this happen
+I used a Dremel to remove some plastic for a 9V battery to fit inside the case, as well as had to Dremel down the switch to make it fit in the original button hole
+Once I soldered the switch and  glued in the speaker, the last (most challenging) part was to reassemble the case and screw it all back together
+
+Reflection
+I wish I paid closer attention when disassembling the case because the most challenging part was reassembling it. It took me a while to realize I needed to utilize the metal sections I had taken out in order for the screws to hold. It also was difficult to realize which order the pieces clipped back in together.
+I attempted to get the screen to turn on, but was unsuccessful. Ideally, it would have been very interesting to be able to get that to turn on when the speaker turned on.
+
+As I think about the word "repair" I used to associate it with fixing a current object in order to restore its original function. However, after reading Rethinking Repair, I began to understand that repair is beyond just fixing something, but rather the beauty of repair is that it can become something totally new. Originally, I was so focused on "needing" to use the electronics of the camera that I felt stuck, but once I allowed myself to be okay with not using those components I really enjoyed creating something entirely new within its case.
+

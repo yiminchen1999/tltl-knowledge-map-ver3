@@ -1,0 +1,38 @@
+Code Remix:  
+The story of learning to code:
+Live information from my coding learning process
+
+My first idea was to work on a project that had an interactive component between the body of the user and the computer. I tried many hours to download an extension from P5JS library called VIDA. The extension opens the camera and detects movement and plays music. Finally, I couldn't do it because it was too complex and I am a beginner programming. It was worth taking the risk and spending hours in that project, because I discovered a lot of interesting projects we can build in the future with more skills. I started working with another project:
+
+ORIGINAL PROJECT
+
+Pseudo code comments
+
+Video Recording
+
+Visualization
+
+Code
+
+The exercise of writing pseudocode allowed me to review the foundation of coding and trying to fix some of the basic notions. I am still in the phase of understanding what is a variable and how do functions work.
+
+At the beginning, this function and measures scared me. I was afraid of touching it, because I felt I was going to break everything. At the end of my project, I started being more confident and played with it. I still don't understand the whole code, but I was able to play with the speed numbers change and the interval.
+
+REMIX CODE
+
+Pseudo code with changes
+Video Recording
+Visualization
+Code
+
+I decided to start with something simple, so I changed colors with picker color and change the name in the entire code to make it coherent to the reader/programmer. At the beginning this simple task broke the visualization, because I was forgetting to change one missing color. Megan suggested to use COMMAND + F to not forget any piece of code.
+
+I changed some format options, such as: size of the text, fill of the letters, and the text itself.
+
+I tried to play with the mouse and change the shape of it. I couldn't do it, because the mouse turned into strange triangles or shapes. This 25 and 25 numbers indicate something related to the position in the canvas, and I was not able to coding it.
+
+After playing with colors, I wanted to make some numbers change, because in the original version they didn't change and were static. In my opinion, everything changes so it didn't make sense to have something so static. I learned that the percentage inside de framecount is related to the speed and the variable tLeft defines the next number (tLeft adds 75 to the previous number). The sign before the = indicates if this interval is positive or negative.
+
+I wanted to add music to this code remix and Inara helped me. She showed that Chat GPT was a tool that helped her.
+
+Reflection Card: The assignment was challenging for me. At the beginning, I was worried because code is still difficult for me. I felt that when I modify, I was breaking it.  At the end of the task I started feeling more comfortable with the code, and I was able to introduce more important changes. The pseudocode helped me to understand the code, but until the end of my task I was discovering new functions and meanings. Remixing a code helps to have a foundation where you can start programming, because an empty white page can be hard for beginners. When I felt I was breaking the code, asking for help to my peers and teacher assistants was a good way to feel that things were not so complicated: we just needed some tools and tricks. During the process, I just thought about the difficulties to code, so I decided to build a live data visualization of my code learning process.

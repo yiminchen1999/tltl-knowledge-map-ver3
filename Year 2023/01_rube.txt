@@ -1,0 +1,26 @@
+Sketch + Prototype
+
+above: b/f dropping weight via pulley
+below: a/f weight being dropped, lever slants & transfer water
+
+tying string around the weight (finding the center of gravity) to attach it to the pulley in a stable manner.
+
+Circle shaped wood (cut by laser cutter) circumscribe the pipeline.
+The number of wood determines the maximum angle of the slant of the pipeline.
+That is, we realized that the number of wood circles and angle of the slant are inversely proportional.
+
+Error 1: Power and time (ms) misadjustment.
+finding the optimal balance
+
+Error 2: mislocation of the pipeline & the pulley
+Weight of the pulley does not hit the pipeline.
+
+Error 3: Too much water (soaked in the cotton) cause too much friction and thus hinder the water transfer.
+
+Error 4: dislocation of the pipeline on the wood plate below.
+Lever balance issue
+
+Final Above Front Entire Video
+
+Reflection Card: The construction process of the station presented an opportunity for me to expand my knowledge of Newtonian mechanics. Followings are some concept that I encountered while building the station: a) finding the center of gravity through proper string tension, b) water can also cause friction (due to its weight) when it is absorbed into a sponge-like material, c) integration of levers and pulleys, d) finding the optimal balance between power levels and time intervals during the gogoboard coding process.
+Furthermore, working with a partner not only reduced my stress levels, as we provided mutual support and encouragement, but also amplified our collective creativity and problem-solving abilities through the synergistic exchange of ideas.

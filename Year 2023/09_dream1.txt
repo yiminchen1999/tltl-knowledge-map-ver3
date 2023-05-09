@@ -1,0 +1,61 @@
+DinoQuake
+
+Interview: 4.5 yr old COLT!
+
+Intro Questions:
+What games/toys do you currently enjoy at home?
+Legos 
+magnetiles – makes houses out of the magnetiles for the animals and constructs homes for his stuffies (so once he gets Quake probably will make a home in the mountains for him)
+RC tanks that shoot each other 
+
+Do you like any sports or activities?
+Horseback riding - so he wants to have “himself” ride the dino, slide off the tail, maybe have saddle, stirrups, bridal on the dino like a horse
+
+What is your dream toy?
+Dino that moves!
+
+DINO:
+Name = Quake – he makes earthquakes every time he stomps
+
+What is your favorite dino?
+Apatosaurus - green
+
+Why do you like dinos?
+His dad tells him made up bedtime stories so he has a vision of this dino every night doing different things
+
+What parts of the body do you want to move?
+Neck, tail, feet – Tail moves into a slide 
+The person can move around too, not stationary on the dino’s back.
+
+Do you want to move it yourself or with a remote control?
+Controller 
+
+What do you want to learn from this dino?? 
+Wants to learn dino facts – what it eats, what its habitat is, etc.
+Maybe could talk and tell facts about dinos 
+
+Do you want it ready made, or do you want it to come in a kit that you are able to then build it at home? 
+Ready made, play with it right out of the box
+
+Learning Goals
+
+dexterity with using the remote
+facts about dino
+how four legged animals move
+
+Initial Ideas:
+Robot dino with a joystick and buttons
+or Microbit? Tilt for movement and a and b buttons for other actions
+Ask Megan about remote she used
+Motor to move the legs, maybe servo to move neck/tail
+Speaker to recite dino facts
+if time permits, have facts correspond to various parts of the body
+3D print dino in pieces so it can move
+Dinosaur build-kit (not a good idea because child still struggles with assembling objects)
+
+Prep Ideas:
+Ask him to sketch a design – walk around makerspace
+Maybe ask him to act out how he imagines the dino?
+
+
+

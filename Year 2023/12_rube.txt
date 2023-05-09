@@ -1,0 +1,29 @@
+Rube Goldberg:
+Input: Heartbeat
+Output: Broadcast wifi message
+
+Design
+
+The general idea is to divide the whole mechanism into two parts, In the first part, the input of heartbeat will transit into motor movement, which will trigger some kind physical mechanism that push the button. Then, the button will trigger the broadcast mechanism, which will be received by the next group.
+
+The problem is how to design the transmission mechanism. At the beginning we had different ideas, such as designing a car that would transport weight and then would deposit the objects triggering the next button. Finally, we decided to build a pulley with wood, and a box and a gear with the laser cutter machine.
+
+prototype
+
+We cut a piece of wood to make a base and we cut a wood stick. Then, we made a hole in he base to attach the vertical wood stick. We made a hole in the vertical stick to attach the gear. We laser cut 4 circles to build a gear, and a box. Then, we decided to make another hole in the base to attach the motor. We put weight in the box to trigger a button behind the box that sends a wifi message to the next station.
+
+We glued the pieces of the box, and added magnets to make the box heavy.
+
+final station
+
+How we code the two mechanisms with GoGo Code
+
+This is the final version of the box with some flowers as decorations. At the end, we laser cut a heart to decorate the heartbeat sensor.
+
+Check out the station working!
+
+Reflection Card: The assignment was challenging as we are not used to build objects and mechanisms. It can be difficult to imagine mechanism working, to prototype real physics working, and trying the best materials, and weight. We learnt how to shape and work with wood, continue trying laser cutter machine and added physics mechanism. We also enjoyed working as a group, and coordinate actions with other groups to finally build one collective machine with all the class.
+
+Again, this week’s work is a result of collaboration and cooperation. At first, we really struggle over how we can insert a middle link between heartbeat and broadcast because both seem to be so “un”-physical. It is hard to come up with ideas when we first experimented in our dorm with limited tools. However, after we came to the lab, ideas quickly came up with all the tools displayed in front of us. We then decided to use an extra button and the gear to interpolate between the heartbeat.
+
+Another thing we encountered is how to come up with a solid structure that supports the gear. There are two options: a tripod or a disc base. Fortunately, there are similar installations from a previous semester. After considering the level of convenience for both, we finally decide on a disc base, which will allow us to fix layout for other elements like the button and the motor.

@@ -1,0 +1,43 @@
+It was intriguing to see how the notion of "repairing" was articulated as a "timely phenomenon bridging past and future", namely "aftermath", which inherits the layered world and entails continuity of "order, value, and meaning" (Jackson, 2014). In my project, the phone slider and the movable monitor stand were manifested as embodied instructional material of the number system and provided the embodied structure of 2 players game, respectively. I think the original purpose of the embodied design affordance was sustained and transformed throughout the “repair” process and the project entails a portion of the essence of the aftermath–continuity (of order and value) and resilience.
+
+Old Slider Phone
+Employing slider to represent and embody base 2 & base 3 number system to encourage children to concretize number system with sensorimotor movement. ***Just as Wilensky (1991)'s Abstract Meditations on the Concrete and Concrete Implications for Mathematics Education && "Wilensky's Restructuration: "the shift from Roman to Hindu-Arabic numerals" (p.289).
+
+Slider (Coil, wire, plastic)
+
+Attaching knobs to two slider coils
+
+Employing affordance of the phone slider to embody base 2 and 3 number system
+
+Learning binary (base 2) number system
+
+base 2 & base 3 number system
+
+Challenge: I initially had not intuitive moment learning base 2 (binary) system and it was easier for me to learn base 3 than base 2 given that base 3 is similar to base 10 (decimal) system which we use universally. Throughout this process, I realized employing other representation than number would be the easier way to learn the logic of the number system.
+
+Old Dell Monitor
+
+The embodied affordance of the monitor screen (ex. rotating and vertically moving monitor stand neck) provides the 2-players friendly game material structure.
+
+Monitor Stand (screw, spring, rubber, magnet)
+
+Monitor Screen (film, circuit, power supply, sound/color generator, buttons)
+
+Serendipitously I figured out that the surface of the stand  is composed of magnet!
+
+Challenge: As soon as I detached the screen from the stand, the vertical spring went back to the top and didn't stay in the middle!!
+
+Inquiry: I wonder what makes the object to stay vs. go up (monitor stand vs. slider phone)
+
+Gluing colored-buttons on the magnet to attach it on the monitor stand. This way, we can express base 2 or 3 number system using different embodied representation!
+
+Rotating nature of the stand inspired me to build two-player game display
+
+Inquiry: I still cannot figure out what makes the stand neck rotate. I wonder what material let it turn.
+
+Color Baseball Game (Bulls and Cows) with base-X
+
+Video
+
+
+

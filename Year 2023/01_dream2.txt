@@ -1,0 +1,38 @@
+Prototype
+
+Ideas: After receiving the teaching team feedback, we came up with two main ideas. First, we decided to keep promoting Koko's imagination through exploration of colors and sounds. We added circuit playground to the saddle of the horse and enabled Koko to play with it when you put another stuffed animal on top of the horse by pressing a button. Second, we wanted Koko to keep playing with movement. We built two options no control the motor of the carriage: use of a switch or remote control.
+
+A) Horse
+For the final product, we may use smaller, more easily manipulatable light
+
+Koko kept drawing when she was explaining and especially expressed her passion on in art/color. Additionally, she was a super intuitive and imaginative kid. Hence, we employed color manipulation and sound generation via Adafruit to manifest her love of color/imagination with more tangible/concrete source of toy.
+
+We saw Koko during
+the week at DFI and we asked her if she prefered a brown or purple horse: she said she wants a brown and yellow horse. We ordered felt to start working on it.
+
+B) Carriage
+Option 1 : Control the carriage with a switch in Gogo 6
+Option 2 : Control the carriage with a remote control in Gogo 5
+
+While creating the carriage and making the motor work, we observed that the wheels turned in different directions. Akio explained us that the reason of this situation was the polarity: the cables of each wheel were different and we had to introduce some changes in the code the Gogo 5 (one wheel turns clockwise and the other one counter-clockwise). In Gogo 6, the polarity of cables didn't affect the code and the carriage goes forward turning clockwise. (video explanation)
+Additionally, it was very interesting to understand how a remote control works.
+
+Test of the prototype (2nd Interview with Koko)
+
+General Setup
+Prototype
+markers/paper >> let Koko to express freely
+Extra gogoboard
+Horse Diagram
+
+Koko expressed interest on buttons/functions of gogo board; she showed that those are what her dad/brother are good at, so hopefully, this toy can empower her (woman) STEM identity.
+
+Koko was intrigued by the function to manipulate the sound embedded in the Adafruit device, and she was particularly interested in adding a horse "neigh" to the mix. It was clear that she had a strong interest in exploring the possibilities of this feature and was excited to experiment further.
+
+Koko gladly appreciated how she can trace/draw horse's movement! She run to her dad to show the toy and the parent joined us a while. ;) Koko asked if you could chose a softer brown instead of the one we showed her.
+
+Main Takeaways
+
+1. One example of serendipitous appreciation occurred when Koko began treating her remote control as if it were a phone. Since she didn't have a phone of her own, she seemed to relish the opportunity to engage in some playful role-playing with the remote control, even going so far as to  decorate it with stickers after our interview. She asked us to decorate with her the remote control taping stickers she has at DFI on it.
+2. As Koko maneuvered the horse and carriage with her remote control, she also had the opportunity to learn about some interesting physics concepts related to the texture and elevation differences of the floor.
+3. Her dad joined after the interview and brought the idea to put 'rollers' on the horse feet to make it move smoother. It was interesting to co-construct the toy with Koko and also her family.

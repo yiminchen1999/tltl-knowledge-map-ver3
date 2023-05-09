@@ -1,0 +1,33 @@
+Original Code Link
+New Code Link
+Zoom in
+Video
+
+if you press "s" you can save screenshot via code
+
+Insight
+
+LVN (which I got to know at MIT media lab) is a AI-powered listening and analytic tool help users see patterns across conversation, identify theme, and highlight voices around what matters most in the community.
+
+Getting data from LVN, I extracted the keywords in NY and Education that happened in Manhattan which is my current community and put them into the array of my code and so that they could be displayed on the screen.
+
+The orbit rotation also represents the shape of  manhattan
+(which is tilted little right)
+
+Trial & Error
+
+I wanted to add sound to the background
+Akio helped me and we tried to copy the code from the processing website
+it did not work, unfortunately, giving unfathomable errors.
+
+I asked chatGPT. It gave a clever answer.
+However, for some reason which I cannot decipher, it did not run on my computer. I even restarted/rebooted the program.
+
+I even downloaded processing and tried to run it in "local" file.
+However, the more I tried, the weirder error it gave.
+
+Reflection Card:
+1) By writing pseudocode, I was able to comprehend most reasoning behind every graphics. As I could explore "reference" section and apply the logic accordingly , it empowered me with more agency; I  had the "applying"/"acting" experience that actually functions in a customized manner.
+2) During my MIT media lab course, I encountered "LVN" which is the AI-powered tool to see patterns of the conversation in the community (as mentioned in insight part above). Extracting the keywords prompted in NYC education conversation, applied them into my re-mix. This way, I encapsulated my current community (NYC education) into my design and make it personally meaningful. Furthermore, the color change of the background  and the tilted degree of the orbit, too, represents my community (NYC, Manhattan).
+3) The biggest challenges were a) choosing the original code (shouldn't be too difficult but also shouldn't be too simple), b) inserting sound and changing fonts (as in trial & error section)
+

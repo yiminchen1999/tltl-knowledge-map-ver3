@@ -1,0 +1,24 @@
+1. Storytelling & Problem Solving AI Thinking
+
+Learning Goal:
+problem solving
+make AI learning accessible to kids/ppl who are not cs major
+STEPs
+choose historical event (or generated story)
+identify problem (+message)
+come up with your own solution
+solve it with AI on p5
+
+2-a. Creating New Music Sheet (music, math, physics, visual arts +AI?)
+2-b. DATA/KNN Sonification
+
+Learning Goal:
+multiple representations of data
+composition/creation of art
+
+STEPs
+compose music  (into a normal music sheet)
+create new music sheet using coordinate system format
+**learn more about physics/math behind it while you are doing this (x-axis=freq, y-axis=amp, size=duration, octave = *2 the frequency >> can be visualized, etc)
+if you get stuck maybe you can use some sort of AI (ex. GAN, KNN, etc) to help you compose music?????
+it generates art/sound >> what you see&hear are aligned

@@ -1,0 +1,35 @@
+Topic: Family history
+
+Powerful Idea: Being able to live and experience this world as a human being is miracle. Behind our seemingly random existence as an individual at this particular time and place on earth is in fact the result of many, many generations of human endeavor. Our existence are made possible, and meaningful, by the historical heritage that has endowed on us.
+
+Studies has showed that learning about one's family history gives a person more confidence and meaning in life, and motivates and impacts his/her mentality in a positive way -exactly the way I feel after learning the life stories of my parents and other relatives. I feel amazed by how their decisions ripple across the family and help shape my identity, and hearing how they overcome difficulties in in life with courage and perseverance instill in me faith against obstacles and identity crisis. Therefore, I consider learning about one's family history, is a powerful idea and inner strength that one should be aware of.
+
+This is also a process to learn about the macro historical forces that shape the humanity as a whole. We are all part of the history. The large historical forces can be the dominant force in family decision, such as immigration. In this sense, learning about one's family history is learning the profound and subtle interconnectedness of humanity as whole.
+
+Realization: Previously I learned some pieces of my parents and my aunts' life story and always wanted to make them into a integrated story in a aesthetic and interactive form. I want to make an platform where people can record their family history and reflect on it. I am also thinking of incorporating some mechanism that remind them the historical context behind the family stories. So the ideal form will be an interactive map where users can add multimedia content on the routes their family previously have passed through. There can be several different content block to scaffold people on how to think about their family history : 1) What happened: history record(picture, audio, video, doc); 2) Why it happened: factors that lead to the decision (a block to reflect on the influence of macro-historical events, or personal factors that lead to a decision); 3) How things relate: How past decisions of my ancestors affect my life and how my decisions will be affecting future generations (making connection mark on map)
+
+This is the topic that I am most passionate about. The ideal is making a interactive digital map so users can add multimedia pieces easily. However, I feel that it is a bit complicated to build a digital thing as complicated as this. A physical board where users can draw and write down content might be more achievable.
+
+Peer suggestion on class discussion
+
+1. Relate bigger history & personal sotries;
+2. storytelling; from oral, traditional media to digital affordances;
+
+Laws of history formation
+Random discoveries into major historical trends
+
+Connection between personal history and bigger historical events
+
+Cause and effect:
+How past decisions
+
+Topic: Aesthetic & mathematics
+
+Powerful Idea: Aesthetic-ground of fierce debate for philosophers, artists, psychologists & scientists. Both biology and culture act as decisive factors that impact what we perceive as aesthetic. I am interested in what has changed in transitioning from analog (paintings, sculpture, drama, concert…) to digital (2D/3D design, animation, film, digital music…) representation of aesthetic objects.
+
+On one hand, the aesthetic affordances are different, lending more weight to some perceptual characteristics such as movement and interaction among balance, color, pattern, scale, shape, visual weight, etc. On the other hand, social media makes the force of social opinion unprecedented in unifying people’s aesthetic perception.
+
+I want to explore what’s constant despite these changes in aesthetic affordances. Many have underlying mathematic and numeric assumptions and rules, such as linear perspective, the analysis of symmetry, and mathematical objects such as polyhedra and the Möbius strip.
+
+Realization: Physical toolkit for children to try out different ways to construct and combine materials. (Tentatively on video, 2D design, wchich constitutes of layer, positioning, scaling, 
+

@@ -1,0 +1,55 @@
+Object being disassembled: Dell Docking Station
+
+Reason classified as "trash": one cable stopped working, and the cable itself is more expensive than buying a brand new docker. Plus, it used too much energy for it's minimal use.
+
+Step 1: Disassembly
+
+Printed circuit boards
+Screws (multiple sizes)
+Adhesive foot
+Exterior wire
+Casings
+Plastic cable holders
+Halogen-free fast cable
+Metallic structures 
+Not pictured: base rubber surface 
+
+Step 2: Planning
+
+Part 1-
+Goal Redesign: Pencil holder with cute face
+To the left: initial sketch idea
+Materials used:
+salt container (label removed)
+base rubber surface surrounds container
+bottle caps (as eyes)
+magnets (for holding up caps)
+plastic cable holder (as eraser cup)
+flat wire (as smile)
+Issues with first design:
+The cardboard of the salt container was too thick to use magnets
+Difficulties sticking objects to rubber surface
+
+Part 2-
+To the left: reworked sketch idea
+Materials added:
+tape (to adhere objects to container)
+salt pourer (as nose)
+twist tie (new smile)
+smaller plastic cable holder (for holding screws)
+Issue resolution:
+Tape/sticky putty used for sticking objects
+Added features:
+Eraser cup is now for USBs
+New cup for screws
+Nose added to face
+Handle added to drag holder around
+New issues:
+Handle is insecurely attached (wire/rubber material not compatible)
+
+Step 3: Final Product
+Face
+Handle
+In Use
+
+Reflection Card: Interestingly enough, the disassembly part was easier than the redesign section. I think often in the current education system, there is not a lot of room to flex creative muscles, which means mine are out of practice. I also had to deviate from my initial idea of creating something that counteracted how much energy the original object has wasted, but my lack of knowledge made that task difficult. As someone who will continue to work in tech, I really resonated with the article as ways to explore mitigating the environmental effects of the objects we use and create. It is incredibly frustrating to see the short lifespan of the technology we use nowadays. Ultimately, I was saddened that I wasn't able to incorporate more parts from the original object in my redesign, even though I did use scrap parts from around my room.

@@ -1,0 +1,44 @@
+How to incorporate technological tool:
+
+Klotski: wood, laser cut or engraved
+Tangrams: 3d printed pieces, 2d constructed boards, 3d wood base for board, velcro
+Sculpture: clay
+Pom pom pets: gather materials from lab, construct accessories using circuit ? paper?
+History cards: 2d illustration design, print, laminate
+Sound when opening the box: gogo board
+Snitch: construct using lab materials, sewing it using sewing machine
+
+Powerful Responses from User-testing Interview
+
+"Everything is more fun when its physical; I felt every activity is less engaging when conducting virtually because you never know who is the host..."
+
+Ideas before Interview #2:
+
+There are four sections in this game box, each corresponding to one of the Harry Potter houses. This game includes puzzles, art, history, and a surprise element.
+
+Initial design of the history card-game: planning on doing a word scramble as something to solve while learning historical facts
+
+Changes Based on Interview:
+
+Keeping the Harry Potter focus/theme/designs! She loved that idea!
+
+We are going to change the cards to get rid of the word scramble and instead redesign it as a 2 player game, where one player guesses the historical figure
+
+An example of how the box could look; we hope to including some code/electronic/mechanism elements into the design - when the box opens it will make a sound by connecting it to a gogo board.
+
+Art aspects: we chose air dry clay over play dough because she has found play dough does not always dry fully, so it does not hold as well. We will create pom pet kits using materials we can find in the lab. 
+We will also sew/create the snitch from the lab materials!
+
+This is an example of her solving the Klotski puzzles. We will construct ones with numbers as she prefers, instead of the picture and number types shown here
+
+Four things that we mainly focus on our user-testing process was:
+
+1. How she feels(spoken and unspoken)
+2. Whats her first reactions
+3. How does it meet her expectations
+4. How she response
+5. Does she feel its something fun to interact with?
+
+
+
+

@@ -1,0 +1,73 @@
+Product: recreate the chita fabric
+
+Chita fabric is a colorful cotton textile that has become an iconic symbol of Brazilian culture. Its origins can be traced back to India, but it was in Brazil where it found its true expression, becoming widely used in traditional clothing, crafts and decorations. The vibrant patterns and hues of chita fabric embody the lively spirit of Brazil, celebrating its diversity and cultural heritage. From the colorful dresses of Carnival to the intricately embroidered tablecloths found in Brazilian homes, chita fabric remains an important part of Brazilian identity and a reflection of the country's rich history and artistic expression.
+
+First Tool: Sewing Machine
+
+We chose the Brother Sewing SE600 Sewing and Embroidery Machine to analyze the embroidery function. We decided to explore this part because we had already explored the sewing function when we designed the Dream Toy. Therefore, we chose Chita, a Brazilian fabric with floral designs, to vectorize and convert for machine embroidery and create a "new type of Chita." 
+Initially, the challenge would be arranging the embroidery pieces to create a new Chita fabric with a 3D touch experience. We needed to assemble and arrange the embroideries with a size of 5''6, which is limited by the machine. However, we faced many challenges, primarily due to the need for appropriate materials for the complete operation of the sewing machine, such as needing the appropriate software to convert the image for the machine to read and embroider thread. 
+This board presents the set-up process to start using the Brother Sewing SE600, which involves inserting the needle, threading the bobbin and needle, and then trying to use the embroidery function, troubleshooting, and its results. For all these reasons, we decided to move forward with the idea of using the Carvey machine.
+
+Setting up the machine
+
+Stretch the fabric on the hoop. First, the fabric should be ironed or without a wrinkle. Second, it is good practice to pull the fabric in cross movements to be stretched equally. After finishing, touch the fabric as a drum. The sound of the fabric stressed it would resemble a percussion instrument's sound.
+
+Troubleshooting
+
+We tested different types of fabric to try doing the embroidering work. After many attempts, we hypothesize that the thread was inappropriate for the machine movements, which caused the thread to tangle.
+
+Tangled thread and its troubleshooting
+
+Materials to Embroider
+
+1- During our experiences with the sewing machine, we missed an iron to stretch the fabric, so its wrinkles do not affect the machine's movements during embroidery or sewing in the right place.
+2 - Use an embroidery thread to embroider 
+3- Use the software Stichpad (free) to convert the file format to the machine ones. The embroidery is not Apple-friendly, so as an alternative, it can be used the SewArt Software on a PC, but it costs $75.
+All these instructions were informed to us by the ThingSpace Studio team at the Arts and Humanities department, which has courses on sewing machine use.
+
+Embroidery that worked
+Embroidery pattern that the machine uses cartesian movements to embroider. Because its movement resembles the sewing lines' movement, the machine could embroider without tangling the thread or ripping out the fabric as before.
+
+Embroidery after finished. Notice that the loose thread represents the path the machine takes to get from one spot of embroidering to the next. These loose parts should be cut to get to the final result.
+
+Embroidery back side.
+
+Embroidery front side final result.
+
+Second Tool: Carvey
+
+Inspiration
+
+Caroline Harari is a Brazilian artist known for her innovative approach to ceramics, which involves incorporating lace-like prints from renda into her pieces. Her work is characterized by a delicate balance of tradition and modernity, as she draws on the rich cultural heritage of Brazil while also pushing the boundaries of what is possible in ceramic art.
+
+Harari's prints from renda bring a unique texture and intricacy to her ceramics, transforming each piece into a work of art. She uses a combination of handcrafted and industrial techniques to create her pieces, which range from bowls and plates to larger sculptural works. The lace-like patterns in her prints evoke the rich history of Brazilian lace-making, which has been practiced in the country since colonial times.
+
+Through her work, Harari aims to preserve and celebrate the cultural traditions of Brazil while also pushing the boundaries of what is possible in ceramic art. Her innovative use of prints from renda has garnered international acclaim and cemented her place as one of Brazil's most exciting and innovative artists.
+
+Brazilian xilogravura is a traditional form of printmaking that has been practiced in the country for centuries. Its origins can be traced back to the 16th century, when Portuguese colonizers brought the technique to Brazil. Xilogravura involves carving a design into a block of wood, which is then inked and pressed onto paper or fabric. What sets Brazilian xilogravura apart is its vivid colors and dynamic, expressive style. Many xilogravuras depict scenes from everyday life, as well as religious and cultural traditions, such as carnival and folk music. Today, xilogravura remains an important art form in Brazil, celebrated for its unique style and ability to capture the essence of Brazilian culture.
+
+The Carvey machine was instrumentally used to carve intricate designs into the wood, then transferred onto the fabric to create vibrant prints like traditional Brazilian chita fabric. The Carvey machine allows greater accuracy and precision in creating complex patterns and designs and speeds up production.
+
+To create the prints, we first selected a chita image from the internet and converted it from color to black and white in Inkscape before vectorizing it. Creating the negative was challenging as we initially struggled to grasp that there were only two colors, black and white space. Fortunately, we reached out to a friend who is familiar with Illustrator and she was able to help us. With her guidance, we were able to create the negative image and move forward with the printing process.
+
+1. Creating the positive and negative stamp
+
+2.Test
+
+3.Xilogravura Printing
+
+Third Tool: Woodshop
+
+The cutting of the passe-partout
+
+We decided to do frames with a 45º angle cut to form a square. It was one of the most complex parts of our design. We used a wood filler to fix the imperfections and sanded and painted the frames. To attach all the parts, we used a nail gun.
+
+Reflection Card:
+
+We faced some initial difficulties when trying to use the sewing machine because it didn't have the right software or thread. We spent a whole morning just trying to get it to work. However, we eventually decided to use the technique of xilogravura to bring the culture of Northeastern Brazil into our piece. We were thrilled to represent this part of Brazil and connect with our roots. The project was challenging because it had many stages with a lot of details to consider.
+
+Despite the initial setback with the sewing machine, we were determined to find a way to create our piece.. As we worked on the project, we discovered that we enjoyed the process of carving the woodblocks and the tactile experience of printing the designs onto fabric.
+
+In the end, we were proud of what we had accomplished. Our piece was not only aesthetically pleasing but also carried a deeper meaning. We had successfully combined our passion for art with our love for our culture. This project taught us that sometimes the best ideas come from unexpected challenges, and that it's important to stay true to ourselves and our values.
+
+
