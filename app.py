@@ -722,7 +722,7 @@ sidebarpage2 = html.Div(
             className='bg-light text-white'
         ),
         dbc.Row(
-            [html.Div([html.Hr(),html.P('See your 2023 SA progress',
+            [html.Div([html.Hr(),html.P('See your 2023 SA progress by students',
                                  style={'margin-top': '8px', 'margin-bottom': '4px'},
                                  className='text-black'),
                         ],
@@ -738,15 +738,11 @@ dbc.Row(
             className='bg-light text-white'
         ),
         dbc.Row(
-            [html.Div([html.Hr(),html.P('Select a year first',
+            [html.Div([html.Hr(),html.P('See your 2023 SA progress by projects',
                                  style={'margin-top': '8px', 'margin-bottom': '4px'},
                                  className='text-black'),
-                          dcc.Dropdown(id='yeardropdown5', options=[{'label': '2021', 'value': '2021'},
-                                                                    {'label': '2022', 'value': '2022'},
-                                                                    {'label': '2023', 'value': '2023'}],
-                                       multi=False,
-                                       style={'width': '220px', 'color': '#000000'}),],
-                          className='p-4') # Add padding to the div
+                        ],
+                          className='p-4')
             ],
             style={'height': '70vh', 'margin': '10px', 'display': 'flex'},
             className='bg-white rounded shadow-sm' #  white background, rounded corners, and shadow
@@ -1062,47 +1058,21 @@ html.Div(
                                          style={'display': 'flex', 'justify-content': 'space-between'})
                             ]),
                             html.Div([
-                                dcc.Graph(
-                                    id='sentiment-analysis-graph',
-                                    figure={
-                                        'data': [
-                                            {
-                                                'x': data1['file_number'],
-                                                'y': data1['score'],
-                                                'type': 'scatter',
-                                                'mode': 'markers',
-                                                'marker': {'color': data1['color']}
-                                            }
-                                        ],
-                                        'layout': {
-                                            #'title': 'Sentiment Analysis Results',
-                                            'xaxis': {
-                                                'title': 'Student Number',
-                                                'tickvals': list(range(1, 13)),
-                                                'ticktext': list(range(1, 13))
-                                            },
-                                            'yaxis': {'title': 'Score'},
-                                            'legend': {'orientation': 'h', 'x': 0, 'y': 1.1},
-                                            'margin': {'l': 50, 'b': 50, 't': 50, 'r': 50}
-                                        }
-                                    }
-                                )
+                                dcc.Graph(id='my-graph2')
                             ]),
-
-
                             dbc.Row([dbc.Col([html.Div([
                                 # html.Label('Select a week:', style={'fontSize': '20px'}),
                                 dcc.Slider(
                                     id='myslider7',
                                     min=1,
-                                    max=9,
+                                    max=8,
                                     value=1,
                                     step=1,
                                     updatemode='drag',
-                                    marks={1: {'label': 'dream1'}, 2: {'label': 'dream2'}, 3: {'label': 'dream3'},
-                                           4: {'label': 'frank'}, 5: {'label': 'lofi'}, 6: {'label': 'omni'},
-                                           7: {'label': 'remix'},
-                                           8: {'label': 'rube'}, 9: {'label': 'testing'}},
+                                    marks={1: {'label': 'dream1'}, 2: {'label': 'dream2'},
+                                           3: {'label': 'frank'}, 4: {'label': 'lofi'}, 5: {'label': 'omni'},
+                                           6: {'label': 'remix'},
+                                           7: {'label': 'rube'}, 8: {'label': 'tool'}},
                                      included=False
                                 ),
                                 dbc.Label("Project Name", className="text-center w-100 mb-0", width='10%'),
@@ -1366,6 +1336,7 @@ def update_graph(selected_week):
     # Create the tick labels for the x-axis
     tick_labels = ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6', 'Project 7',
                    'Project 8']
+
     # Create the graph figure
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=data['Name'], y=data['score'], mode='markers', marker=dict(color=data['color'], size=15, line=dict(width=1, color='black')),
@@ -1380,6 +1351,41 @@ def update_graph(selected_week):
                       plot_bgcolor='rgb(255, 255, 255)',
                       paper_bgcolor='rgb(255, 255, 255)',
                       font=dict(size=13, color='grey'))
+    return fig
+
+@app.callback(
+    Output('my-graph2', 'figure'),
+    [Input('myslider7', 'value')]
+)
+
+def update_graph(project):
+    # Get the corresponding file based on the selected week
+    file_name = f'assets/Year2023text/combined/2023_student_{project}.xlsx'
+    # Load the data from the file
+    data = pd.read_excel(file_name,engine='openpyxl')
+    # Define a dictionary mapping labels to colors
+    label_colors = {'positive': 'green', 'negative': 'red', 'neutral': 'rgb(211, 211, 211)'}
+    # Create a new column in the DataFrame containing the color for each label
+    data['color'] = data['label'].map(label_colors)
+    # Create the tick labels and tick values for the x-axis
+    marks = {1: {'label': 'Eury'}, 2: {'label': 'Sadia'}, 3: {'label': 'Helen'}, 4: {'label': 'Xichen'},
+             5: {'label': 'Zhanlan'}, 6: {'label': 'Katie'}, 7: {'label': 'Andrea'},
+             8: {'label': 'Ana Maria'}, 9: {'label': 'Heidi'}, 10: {'label': 'Mariana'}, 11: {'label': 'Inara'},
+             12: {'label': 'Kiki'}}
+    tick_labels = [marks[i]['label'] for i in range(1, len(marks) + 1)]
+    tick_vals = list(range(1, len(marks) + 1))
+    # Create the graph figure
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=data['student number'], y=data['score'], mode='markers', marker=dict(color=data['color'], size=15, line=dict(width=1, color='black')),
+                             text=data['label'], hovertemplate="<b>%{text}</b><br><br>Name: %{x}<br>Score: %{y:.2f}<extra></extra>"))
+    fig.update_layout(
+        xaxis=dict(title='<b>Student Name</b>', showgrid=False, tickangle=45, tickfont=dict(size=14), ticktext=tick_labels, tickvals=tick_vals),
+        yaxis=dict(title='<b>Score</b>', showgrid=True, gridcolor='rgb(238,238,238)', tickfont=dict(size=14),
+                   zeroline=True, zerolinecolor='rgb(128,128,128)'),
+        legend=dict(title='<b>Sentiment</b>', orientation='h', yanchor='top', xanchor='left', y=1.1, x=0),
+        plot_bgcolor='rgb(255, 255, 255)',
+        paper_bgcolor='rgb(255, 255, 255)',
+        font=dict(size=13, color='grey'))
     return fig
 
 
