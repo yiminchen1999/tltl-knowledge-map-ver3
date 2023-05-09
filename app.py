@@ -2678,18 +2678,10 @@ def update_output(yeardropdown2,myslider4):
         return open('assets/class_positive_map_2022_9.html', 'r').read()
     elif yeardropdown2 == '2022' and myslider4 == 10:
         return open('assets/class_positive_map_2022_10.html', 'r').read()
-
         # 2023
-    if yeardropdown2 == '2023'and myslider4 ==1:
-        return open('assets/class_positive_map_2023_1.html', 'r').read()
-    elif yeardropdown2 == '2023' and myslider4 ==2:
-        return open('assets/class_positive_map_2023_2.html', 'r').read()
-    elif yeardropdown2 == '2023' and myslider4 == 3:
-        return open('assets/class_positive_map_2023_3.html', 'r').read()
-    elif yeardropdown2 == '2023' and myslider4 == 4:
-        return open('assets/class_positive_map_2023_4.html', 'r').read()
-    elif yeardropdown2 == '2023' and myslider4 == 5:
-        return open('assets/class_positive_map_2023_5.html', 'r').read()
+    for i in range(1, 10):
+        if yeardropdown2 == '2023' and myslider4 == i:
+            return open('assets/class_positive_map_2023_' + str(i) + '.html', 'r').read()
 
 
 # Define the callback function for negative
@@ -2741,15 +2733,10 @@ def update_output(yeardropdown2,myslider5):
         return open('assets/class_negative_map_2022_10.html', 'r').read()
 
         # 2023
-    if yeardropdown2 == '2023'and myslider5 ==1:
-        return open('assets/class_negative_map_2023_1.html', 'r').read()
-    elif yeardropdown2 == '2023' and myslider5 ==2:
-        return open('assets/class_negative_map_2023_2.html', 'r').read()
-    elif yeardropdown2 == '2023' and myslider5 == 3:
-        return open('assets/class_negative_map_2023_3.html', 'r').read()
-    elif yeardropdown2 == '2023' and myslider5 == 4:
-        return open('assets/class_negative_map_2023_4.html', 'r').read()
-    elif yeardropdown2 == '2023' and myslider5 == 5:
-        return open('assets/class_negative_map_2023_5.html', 'r').read()
+    for i in range(1, 10):
+        if yeardropdown2 == '2023' and myslider5 == i:
+            return open('assets/class_negative_map_2023_' + str(i) + '.html', 'r').read()
+
+
 if __name__ == "__main__":
     app.run_server(port=8073)
