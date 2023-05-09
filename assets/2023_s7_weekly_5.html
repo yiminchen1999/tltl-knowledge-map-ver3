@@ -8,7 +8,7 @@
             
         
 <center>
-<h1></h1>
+<h1>Individual Knowledge Map Weekly 5</h1>
 </center>
 
 <!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
@@ -27,7 +27,7 @@
 
 
         <center>
-          <h1></h1>
+          <h1>Individual Knowledge Map Weekly 5</h1>
         </center>
         <style type="text/css">
 
@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([]);
-                  edges = new vis.DataSet([]);
+                  nodes = new vis.DataSet([{"color": "#4dc0b5", "id": 13, "label": "brainstorm", "shape": "dot", "size": 6, "title": "think/design"}, {"color": "#4dc0b5", "id": 25, "label": "disassemble", "shape": "dot", "size": 6, "title": "think/design"}, {"color": "#38c172", "id": 38, "label": "graphics", "shape": "dot", "size": 6, "title": "programming"}, {"color": "#4dc0b5", "id": 47, "label": "learning goal", "shape": "dot", "size": 6, "title": "think/design"}, {"color": "#4dc0b5", "id": 48, "label": "learning process", "shape": "dot", "size": 6, "title": "think/design"}, {"color": "#ffed4a", "id": 69, "label": "pulley system", "shape": "dot", "size": 6, "title": "math/physics"}, {"color": "#4dc0b5", "id": 95, "label": "user interview", "shape": "dot", "size": 6, "title": "think/design"}]);
+                  edges = new vis.DataSet([{"from": 13, "to": 25}, {"from": 13, "to": 47}, {"from": 13, "to": 48}, {"from": 13, "to": 95}, {"from": 25, "to": 47}, {"from": 25, "to": 48}, {"from": 25, "to": 95}, {"from": 47, "to": 48}, {"from": 47, "to": 95}, {"from": 48, "to": 95}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });

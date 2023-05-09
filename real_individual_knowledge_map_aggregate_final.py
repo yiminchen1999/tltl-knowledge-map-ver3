@@ -46,26 +46,25 @@ palette_2023 = [['#e3342f', '#e3342f', '#e3342f', '#f7806f', '#f7806f', '#f7806f
 file_names_2021 = ['Y2021_Student_01','Y2021_Student_02','Y2021_Student_03','Y2021_Student_04','Y2021_Student_05','Y2021_Student_06','Y2021_Student_07']
 year2021_df = []
 for i in range(len(file_names_2021)):
-    temp_df = pd.read_csv("/Users/stephanielin/Desktop/TLTLab/Y2021/"+file_names_2021[i]+".csv",index_col=0)
+    temp_df = pd.read_csv("assets/Y2021/"+file_names_2021[i]+".csv",index_col=0)
     year2021_df.append(temp_df)
 
 file_names_2022 = ['Y2022_Student_01','Y2022_Student_02','Y2022_Student_03','Y2022_Student_04','Y2022_Student_05','Y2022_Student_06','Y2022_Student_07','Y2022_Student_08','Y2022_Student_09','Y2022_Student_10','Y2022_Student_11','Y2022_Student_12']
 year2022_df = []
 for i in range(len(file_names_2022)):
-    temp_df = pd.read_csv("/Users/stephanielin/Desktop/TLTLab/Y2022/"+file_names_2022[i]+".csv",index_col=0)
+    temp_df = pd.read_csv("assets/Y2022/"+file_names_2022[i]+".csv",index_col=0)
     year2022_df.append(temp_df)
 
 file_names_2023 = ['Y2023_Student_01','Y2023_Student_02','Y2023_Student_03','Y2023_Student_04','Y2023_Student_05','Y2023_Student_06','Y2023_Student_07','Y2023_Student_08','Y2023_Student_09','Y2023_Student_10','Y2023_Student_11','Y2023_Student_12']
 year2023_df = []
 for i in range(len(file_names_2023)):
-    temp_df = pd.read_csv("/Users/stephanielin/Desktop/TLTLab/Y2023/"+file_names_2023[i]+".csv",index_col=0)
+    temp_df = pd.read_csv("assets/Y2023/"+file_names_2023[i]+".csv",index_col=0)
     year2023_df.append(temp_df)
 
-keywords = pd.read_csv("/Users/stephanielin/Desktop/TLTLab/dictionary 5.0 (final with subcategory).csv")["display concept"].tolist()
+keywords = pd.read_csv("dictionary 5.0 (final with subcategory).csv")["display concept"].tolist()
 
 # the number shows which category the keyword belongs to
-keywords_group = pd.read_csv("/Users/stephanielin/Desktop/TLTLab/dictionary 5.0 (final with subcategory).csv")["category"].to_numpy()
-
+keywords_group = pd.read_csv("dictionary 5.0 (final with subcategory).csv")["category"].to_numpy()
 # def aggregate_individual_knowledge_map(student_df, color_plate):
 #     nets = []
 #     for i in range(student_df.shape[0]):
@@ -148,9 +147,15 @@ indi_aggregate_s10_2023 = aggregate_individual_knowledge_map(year2023_df[9],pale
 indi_aggregate_s11_2023 = aggregate_individual_knowledge_map(year2023_df[10],palette_2023)
 indi_aggregate_s12_2023 = aggregate_individual_knowledge_map(year2023_df[11],palette_2023)
 
-indi_aggregate_s12_2022[9].show("social_network.html")
-
-indi_aggregate_s4_2023[5].show("social_network.html")
+for s in range(1, 13):
+    for i, indi_aggregate in enumerate(globals()[f"indi_aggregate_s{s}_2023"]):
+        indi_aggregate.show(f"assets/2023_s{s}_aggregate_{i+1}.html")
+for s in range(1, 13):
+    for i, indi_aggregate in enumerate(globals()[f"indi_aggregate_s{s}_2022"]):
+        indi_aggregate.show(f"assets/2022_s{s}_aggregate_{i+1}.html")
+for s in range(1, 8):
+    for i, indi_aggregate in enumerate(globals()[f"indi_aggregate_s{s}_2021"]):
+        indi_aggregate.show(f"assets/2021_s{s}_aggregate_{i+1}.html")
 
 
 

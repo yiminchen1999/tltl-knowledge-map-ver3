@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#f6993f", "id": 14, "label": "button", "shape": "dot", "size": 12, "title": "Week1", "x": 77.78174593052023, "y": 77.78174593052022}, {"color": "#4dc0b5", "id": 25, "label": "disassemble", "shape": "dot", "size": 9, "title": "Week1", "x": -110.0, "y": 1.3471114790620885e-14}, {"color": "#4dc0b5", "id": 26, "label": "dissect", "shape": "dot", "size": 6, "title": "Week1", "x": -120.0, "y": 1.469576158976824e-14}, {"color": "#f6993f", "id": 30, "label": "electronics", "shape": "dot", "size": 6, "title": "Week1", "x": 84.8528137423857, "y": 84.85281374238569}, {"color": "#ffed4a", "id": 35, "label": "gear", "shape": "dot", "size": 9, "title": "Week1", "x": 6.735557395310443e-15, "y": 110.0}, {"color": "#9561e2", "id": 52, "label": "magnet", "shape": "dot", "size": 12, "title": "Week1", "x": 77.7817459305202, "y": -77.78174593052024}, {"color": "#ffed4a", "id": 53, "label": "measure", "shape": "dot", "size": 9, "title": "Week1", "x": 7.34788079488412e-15, "y": 120.0}, {"color": "#9561e2", "id": 56, "label": "metal", "shape": "dot", "size": 9, "title": "Week1", "x": 84.85281374238568, "y": -84.85281374238572}, {"color": "#f6993f", "id": 60, "label": "motor", "shape": "dot", "size": 12, "title": "Week1", "x": 91.92388155425118, "y": 91.92388155425117}, {"color": "#9561e2", "id": 64, "label": "plastic", "shape": "dot", "size": 6, "title": "Week1", "x": 91.92388155425115, "y": -91.9238815542512}, {"color": "#4dc0b5", "id": 71, "label": "recycle", "shape": "dot", "size": 6, "title": "Week1", "x": -130.0, "y": 1.592040838891559e-14}, {"color": "#4dc0b5", "id": 75, "label": "repair", "shape": "dot", "size": 6, "title": "Week1", "x": -140.0, "y": 1.7145055188062946e-14}, {"color": "#4dc0b5", "id": 76, "label": "repurpose", "shape": "dot", "size": 6, "title": "Week1", "x": -150.0, "y": 1.8369701987210297e-14}, {"color": "#f66d9b", "id": 80, "label": "screw", "shape": "dot", "size": 6, "title": "Week1", "x": 110.0, "y": -2.694222958124177e-14}, {"color": "#f6993f", "id": 90, "label": "switch", "shape": "dot", "size": 9, "title": "Week1", "x": 98.99494936611666, "y": 98.99494936611664}, {"color": "#4dc0b5", "id": 92, "label": "test", "shape": "dot", "size": 12, "title": "Week1", "x": -160.0, "y": 1.9594348786357652e-14}, {"color": "#9561e2", "id": 99, "label": "wood", "shape": "dot", "size": 9, "title": "Week1", "x": 98.99494936611663, "y": -98.99494936611667}, {"color": "#e3342f", "id": 3, "label": "3d object", "shape": "dot", "size": 6, "title": "Week2", "x": 110.0, "y": 0.0}, {"color": "#9561e2", "id": 8, "label": "MDF wood", "shape": "dot", "size": 6, "title": "Week2", "x": 106.0660171779821, "y": -106.06601717798215}, {"color": "#9561e2", "id": 15, "label": "cardboard", "shape": "dot", "size": 6, "title": "Week2", "x": 113.13708498984758, "y": -113.13708498984764}, {"color": "#38c172", "id": 22, "label": "compute", "shape": "dot", "size": 9, "title": "Week2", "x": -77.78174593052022, "y": 77.78174593052023}, {"color": "#4dc0b5", "id": 45, "label": "iterate", "shape": "dot", "size": 6, "title": "Week2", "x": -170.0, "y": 2.0818995585505004e-14}, {"color": "#e3342f", "id": 46, "label": "laser cut", "shape": "dot", "size": 9, "title": "Week2", "x": 120.0, "y": 0.0}, {"color": "#4dc0b5", "id": 66, "label": "prototype", "shape": "dot", "size": 12, "title": "Week2", "x": -180.0, "y": 2.2043642384652358e-14}, {"color": "#4dc0b5", "id": 73, "label": "reflect", "shape": "dot", "size": 12, "title": "Week2", "x": -190.0, "y": 2.326828918379971e-14}, {"color": "#38c172", "id": 20, "label": "code", "shape": "dot", "size": 12, "title": "Week3", "x": -84.85281374238569, "y": 84.8528137423857}, {"color": "#38c172", "id": 38, "label": "graphics", "shape": "dot", "size": 12, "title": "Week3", "x": -98.99494936611664, "y": 98.99494936611666}, {"color": "#4dc0b5", "id": 48, "label": "learning process", "shape": "dot", "size": 9, "title": "Week3", "x": -210.0, "y": 2.5717582782094416e-14}, {"color": "#38c172", "id": 62, "label": "p5js", "shape": "dot", "size": 6, "title": "Week3", "x": -106.06601717798212, "y": 106.06601717798213}, {"color": "#38c172", "id": 68, "label": "pseudocode", "shape": "dot", "size": 6, "title": "Week3", "x": -113.1370849898476, "y": 113.13708498984761}, {"color": "#38c172", "id": 74, "label": "remix", "shape": "dot", "size": 6, "title": "Week3", "x": -120.20815280171307, "y": 120.20815280171308}, {"color": "#fa9dbb", "id": 17, "label": "casting", "shape": "dot", "size": 6, "title": "Week4", "x": 120.0, "y": -2.939152317953648e-14}, {"color": "#fac97f", "id": 37, "label": "gogo board", "shape": "dot", "size": 9, "title": "Week4", "x": 113.13708498984761, "y": 113.1370849898476}, {"color": "#fff88a", "id": 69, "label": "pulley system", "shape": "dot", "size": 9, "title": "Week4", "x": 9.184850993605149e-15, "y": 150.0}, {"color": "#fac97f", "id": 81, "label": "sensor", "shape": "dot", "size": 6, "title": "Week4", "x": 127.27922061357856, "y": 127.27922061357854}, {"color": "#fac97f", "id": 83, "label": "signal broadcast", "shape": "dot", "size": 6, "title": "Week4", "x": 134.35028842544403, "y": 134.350288425444}, {"color": "#91d0d9", "id": 13, "label": "brainstorm", "shape": "dot", "size": 6, "title": "Week5", "x": -250.0, "y": 3.061616997868383e-14}, {"color": "#91d0d9", "id": 47, "label": "learning goal", "shape": "dot", "size": 6, "title": "Week5", "x": -270.0, "y": 3.3065463576978534e-14}, {"color": "#91d0d9", "id": 95, "label": "user interview", "shape": "dot", "size": 9, "title": "Week5", "x": -290.0, "y": 3.5514757175273243e-14}, {"color": "#fac97f", "id": 19, "label": "circuit", "shape": "dot", "size": 6, "title": "Week6", "x": 148.49242404917499, "y": 148.49242404917496}, {"color": "#fff88a", "id": 98, "label": "wheel", "shape": "dot", "size": 6, "title": "Week6", "x": 1.0409497792752502e-14, "y": 170.0}, {"color": "#c4dcf4", "id": 34, "label": "fitting", "shape": "dot", "size": 6, "title": "Week8", "x": -330.0, "y": 4.0413344371862656e-14}, {"color": "#c4dcf4", "id": 86, "label": "sketch", "shape": "dot", "size": 6, "title": "Week8", "x": -340.0, "y": 4.163799117101001e-14}]);
+                  edges = new vis.DataSet([{"from": 14, "hidden": true, "to": 30}, {"from": 14, "hidden": true, "to": 60}, {"from": 14, "hidden": true, "to": 90}, {"from": 14, "hidden": true, "to": 37}, {"from": 14, "hidden": true, "to": 81}, {"from": 14, "hidden": true, "to": 83}, {"from": 14, "hidden": true, "to": 19}, {"from": 25, "hidden": true, "to": 26}, {"from": 25, "hidden": true, "to": 71}, {"from": 25, "hidden": true, "to": 75}, {"from": 25, "hidden": true, "to": 76}, {"from": 25, "hidden": true, "to": 92}, {"from": 25, "hidden": true, "to": 45}, {"from": 25, "hidden": true, "to": 66}, {"from": 25, "hidden": true, "to": 73}, {"from": 25, "hidden": true, "to": 48}, {"from": 25, "hidden": true, "to": 13}, {"from": 25, "hidden": true, "to": 47}, {"from": 25, "hidden": true, "to": 95}, {"from": 25, "hidden": true, "to": 34}, {"from": 25, "hidden": true, "to": 86}, {"from": 26, "hidden": true, "to": 71}, {"from": 26, "hidden": true, "to": 75}, {"from": 26, "hidden": true, "to": 76}, {"from": 26, "hidden": true, "to": 92}, {"from": 26, "hidden": true, "to": 45}, {"from": 26, "hidden": true, "to": 66}, {"from": 26, "hidden": true, "to": 73}, {"from": 26, "hidden": true, "to": 48}, {"from": 26, "hidden": true, "to": 13}, {"from": 26, "hidden": true, "to": 47}, {"from": 26, "hidden": true, "to": 95}, {"from": 26, "hidden": true, "to": 34}, {"from": 26, "hidden": true, "to": 86}, {"from": 30, "hidden": true, "to": 60}, {"from": 30, "hidden": true, "to": 90}, {"from": 30, "hidden": true, "to": 37}, {"from": 30, "hidden": true, "to": 81}, {"from": 30, "hidden": true, "to": 83}, {"from": 30, "hidden": true, "to": 19}, {"from": 35, "hidden": true, "to": 53}, {"from": 35, "hidden": true, "to": 69}, {"from": 35, "hidden": true, "to": 98}, {"from": 52, "hidden": true, "to": 56}, {"from": 52, "hidden": true, "to": 64}, {"from": 52, "hidden": true, "to": 99}, {"from": 52, "hidden": true, "to": 8}, {"from": 52, "hidden": true, "to": 15}, {"from": 53, "hidden": true, "to": 69}, {"from": 53, "hidden": true, "to": 98}, {"from": 56, "hidden": true, "to": 64}, {"from": 56, "hidden": true, "to": 99}, {"from": 56, "hidden": true, "to": 8}, {"from": 56, "hidden": true, "to": 15}, {"from": 60, "hidden": true, "to": 90}, {"from": 60, "hidden": true, "to": 37}, {"from": 60, "hidden": true, "to": 81}, {"from": 60, "hidden": true, "to": 83}, {"from": 60, "hidden": true, "to": 19}, {"from": 64, "hidden": true, "to": 99}, {"from": 64, "hidden": true, "to": 8}, {"from": 64, "hidden": true, "to": 15}, {"from": 71, "hidden": true, "to": 75}, {"from": 71, "hidden": true, "to": 76}, {"from": 71, "hidden": true, "to": 92}, {"from": 71, "hidden": true, "to": 45}, {"from": 71, "hidden": true, "to": 66}, {"from": 71, "hidden": true, "to": 73}, {"from": 71, "hidden": true, "to": 48}, {"from": 71, "hidden": true, "to": 13}, {"from": 71, "hidden": true, "to": 47}, {"from": 71, "hidden": true, "to": 95}, {"from": 71, "hidden": true, "to": 34}, {"from": 71, "hidden": true, "to": 86}, {"from": 75, "hidden": true, "to": 76}, {"from": 75, "hidden": true, "to": 92}, {"from": 75, "hidden": true, "to": 45}, {"from": 75, "hidden": true, "to": 66}, {"from": 75, "hidden": true, "to": 73}, {"from": 75, "hidden": true, "to": 48}, {"from": 75, "hidden": true, "to": 13}, {"from": 75, "hidden": true, "to": 47}, {"from": 75, "hidden": true, "to": 95}, {"from": 75, "hidden": true, "to": 34}, {"from": 75, "hidden": true, "to": 86}, {"from": 76, "hidden": true, "to": 92}, {"from": 76, "hidden": true, "to": 45}, {"from": 76, "hidden": true, "to": 66}, {"from": 76, "hidden": true, "to": 73}, {"from": 76, "hidden": true, "to": 48}, {"from": 76, "hidden": true, "to": 13}, {"from": 76, "hidden": true, "to": 47}, {"from": 76, "hidden": true, "to": 95}, {"from": 76, "hidden": true, "to": 34}, {"from": 76, "hidden": true, "to": 86}, {"from": 80, "hidden": true, "to": 17}, {"from": 90, "hidden": true, "to": 37}, {"from": 90, "hidden": true, "to": 81}, {"from": 90, "hidden": true, "to": 83}, {"from": 90, "hidden": true, "to": 19}, {"from": 92, "hidden": true, "to": 45}, {"from": 92, "hidden": true, "to": 66}, {"from": 92, "hidden": true, "to": 73}, {"from": 92, "hidden": true, "to": 48}, {"from": 92, "hidden": true, "to": 13}, {"from": 92, "hidden": true, "to": 47}, {"from": 92, "hidden": true, "to": 95}, {"from": 92, "hidden": true, "to": 34}, {"from": 92, "hidden": true, "to": 86}, {"from": 99, "hidden": true, "to": 8}, {"from": 99, "hidden": true, "to": 15}, {"from": 3, "hidden": true, "to": 46}, {"from": 8, "hidden": true, "to": 15}, {"from": 22, "hidden": true, "to": 20}, {"from": 22, "hidden": true, "to": 38}, {"from": 22, "hidden": true, "to": 62}, {"from": 22, "hidden": true, "to": 68}, {"from": 22, "hidden": true, "to": 74}, {"from": 45, "hidden": true, "to": 66}, {"from": 45, "hidden": true, "to": 73}, {"from": 45, "hidden": true, "to": 48}, {"from": 45, "hidden": true, "to": 13}, {"from": 45, "hidden": true, "to": 47}, {"from": 45, "hidden": true, "to": 95}, {"from": 45, "hidden": true, "to": 34}, {"from": 45, "hidden": true, "to": 86}, {"from": 66, "hidden": true, "to": 73}, {"from": 66, "hidden": true, "to": 48}, {"from": 66, "hidden": true, "to": 13}, {"from": 66, "hidden": true, "to": 47}, {"from": 66, "hidden": true, "to": 95}, {"from": 66, "hidden": true, "to": 34}, {"from": 66, "hidden": true, "to": 86}, {"from": 73, "hidden": true, "to": 48}, {"from": 73, "hidden": true, "to": 13}, {"from": 73, "hidden": true, "to": 47}, {"from": 73, "hidden": true, "to": 95}, {"from": 73, "hidden": true, "to": 34}, {"from": 73, "hidden": true, "to": 86}, {"from": 20, "hidden": true, "to": 38}, {"from": 20, "hidden": true, "to": 62}, {"from": 20, "hidden": true, "to": 68}, {"from": 20, "hidden": true, "to": 74}, {"from": 38, "hidden": true, "to": 62}, {"from": 38, "hidden": true, "to": 68}, {"from": 38, "hidden": true, "to": 74}, {"from": 48, "hidden": true, "to": 13}, {"from": 48, "hidden": true, "to": 47}, {"from": 48, "hidden": true, "to": 95}, {"from": 48, "hidden": true, "to": 34}, {"from": 48, "hidden": true, "to": 86}, {"from": 62, "hidden": true, "to": 68}, {"from": 62, "hidden": true, "to": 74}, {"from": 68, "hidden": true, "to": 74}, {"from": 37, "hidden": true, "to": 81}, {"from": 37, "hidden": true, "to": 83}, {"from": 37, "hidden": true, "to": 19}, {"from": 69, "hidden": true, "to": 98}, {"from": 81, "hidden": true, "to": 83}, {"from": 81, "hidden": true, "to": 19}, {"from": 83, "hidden": true, "to": 19}, {"from": 13, "hidden": true, "to": 47}, {"from": 13, "hidden": true, "to": 95}, {"from": 13, "hidden": true, "to": 34}, {"from": 13, "hidden": true, "to": 86}, {"from": 47, "hidden": true, "to": 95}, {"from": 47, "hidden": true, "to": 34}, {"from": 47, "hidden": true, "to": 86}, {"from": 95, "hidden": true, "to": 34}, {"from": 95, "hidden": true, "to": 86}, {"from": 34, "hidden": true, "to": 86}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "repulsion": {
+            "centralGravity": 0.8,
+            "damping": 0.09,
+            "nodeDistance": 100,
+            "springConstant": 0.05,
+            "springLength": 50
+        },
+        "solver": "repulsion",
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
