@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#38c172", "id": 45, "label": "comput", "shape": "dot", "size": 6, "title": "Student3"}, {"color": "#4dc0b5", "id": 65, "label": "debug", "shape": "dot", "size": 6, "title": "Student3"}, {"color": "#f6993f", "id": 21, "label": "electron", "shape": "dot", "size": 6, "title": "Student4"}, {"color": "#f6993f", "id": 22, "label": "electr", "shape": "dot", "size": 6, "title": "Student4"}]);
-                  edges = new vis.DataSet([{"from": 21, "hidden": true, "to": 22}]);
+                  nodes = new vis.DataSet([{"color": "#38c172", "id": 22, "label": "compute", "shape": "dot", "size": 6, "title": "Student3"}, {"color": "#4dc0b5", "id": 24, "label": "debug", "shape": "dot", "size": 6, "title": "Student3"}, {"color": "#f6993f", "id": 30, "label": "electronics", "shape": "dot", "size": 6, "title": "Student4"}]);
+                  edges = new vis.DataSet([]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
@@ -121,7 +121,7 @@
     "physics": {
         "enabled": true,
         "repulsion": {
-            "centralGravity": 0.9,
+            "centralGravity": 0.8,
             "damping": 0.09,
             "nodeDistance": 100,
             "springConstant": 0.05,

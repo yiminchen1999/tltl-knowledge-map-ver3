@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#38c172", "id": 43, "label": "code", "shape": "dot", "size": 15, "title": "Eury, Sadia, Katie, Andrea"}, {"color": "#38c172", "id": 45, "label": "comput", "shape": "dot", "size": 6, "title": "Eury"}, {"color": "#f6993f", "id": 25, "label": "switch", "shape": "dot", "size": 6, "title": "Sadia"}, {"color": "#38c172", "id": 54, "label": "p5js", "shape": "dot", "size": 12, "title": "Sadia, Katie, Ana Maria"}, {"color": "#38c172", "id": 55, "label": "p5", "shape": "dot", "size": 12, "title": "Sadia, Katie, Ana Maria"}, {"color": "#4dc0b5", "id": 60, "label": "sketch", "shape": "dot", "size": 9, "title": "Sadia, Ana Maria"}, {"color": "#ffed4a", "id": 38, "label": "measur", "shape": "dot", "size": 6, "title": "Andrea"}, {"color": "#38c172", "id": 52, "label": "visual", "shape": "dot", "size": 6, "title": "Andrea"}, {"color": "#38c172", "id": 44, "label": "remix", "shape": "dot", "size": 6, "title": "Ana Maria"}, {"color": "#4dc0b5", "id": 62, "label": "reflect", "shape": "dot", "size": 6, "title": "Inara"}]);
-                  edges = new vis.DataSet([{"from": 43, "hidden": true, "to": 45}, {"from": 43, "hidden": true, "to": 54}, {"from": 43, "hidden": true, "to": 55}, {"from": 43, "hidden": true, "to": 52}, {"from": 43, "hidden": true, "to": 44}, {"from": 45, "hidden": true, "to": 54}, {"from": 45, "hidden": true, "to": 55}, {"from": 45, "hidden": true, "to": 52}, {"from": 45, "hidden": true, "to": 44}, {"from": 54, "hidden": true, "to": 55}, {"from": 54, "hidden": true, "to": 52}, {"from": 54, "hidden": true, "to": 44}, {"from": 55, "hidden": true, "to": 52}, {"from": 55, "hidden": true, "to": 44}, {"from": 60, "hidden": true, "to": 62}, {"from": 52, "hidden": true, "to": 44}]);
+                  nodes = new vis.DataSet([{"color": "#38c172", "id": 20, "label": "code", "shape": "dot", "size": 15, "title": "Eury, Sadia, Katie, Andrea"}, {"color": "#38c172", "id": 22, "label": "compute", "shape": "dot", "size": 6, "title": "Eury"}, {"color": "#38c172", "id": 62, "label": "p5js", "shape": "dot", "size": 12, "title": "Sadia, Katie, Ana Maria"}, {"color": "#4dc0b5", "id": 86, "label": "sketch", "shape": "dot", "size": 9, "title": "Sadia, Ana Maria"}, {"color": "#f6993f", "id": 90, "label": "switch", "shape": "dot", "size": 6, "title": "Sadia"}, {"color": "#ffed4a", "id": 53, "label": "measure", "shape": "dot", "size": 6, "title": "Andrea"}, {"color": "#38c172", "id": 74, "label": "remix", "shape": "dot", "size": 6, "title": "Ana Maria"}, {"color": "#38c172", "id": 87, "label": "sound library", "shape": "dot", "size": 6, "title": "Ana Maria"}, {"color": "#4dc0b5", "id": 73, "label": "reflect", "shape": "dot", "size": 6, "title": "Inara"}]);
+                  edges = new vis.DataSet([{"from": 20, "hidden": true, "to": 22}, {"from": 20, "hidden": true, "to": 62}, {"from": 20, "hidden": true, "to": 74}, {"from": 20, "hidden": true, "to": 87}, {"from": 22, "hidden": true, "to": 62}, {"from": 22, "hidden": true, "to": 74}, {"from": 22, "hidden": true, "to": 87}, {"from": 62, "hidden": true, "to": 74}, {"from": 62, "hidden": true, "to": 87}, {"from": 86, "hidden": true, "to": 73}, {"from": 74, "hidden": true, "to": 87}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
@@ -121,7 +121,7 @@
     "physics": {
         "enabled": true,
         "repulsion": {
-            "centralGravity": 0.9,
+            "centralGravity": 0.8,
             "damping": 0.09,
             "nodeDistance": 100,
             "springConstant": 0.05,
