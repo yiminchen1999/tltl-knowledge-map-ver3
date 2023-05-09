@@ -2696,43 +2696,13 @@ def update_output(yeardropdown2,myslider4):
 def update_output(yeardropdown2,myslider5):
     # Define the HTML content to display based on the dropdown menu
     #2021
-    if yeardropdown2 == '2021' and myslider5 ==1:
-        return open('assets/class_negative_map_2021_1.html', 'r').read()
-    elif yeardropdown2 == '2021' and myslider5 ==2:
-        return open('assets/class_negative_map_2021_2.html', 'r').read()
-    elif yeardropdown2 == '2021' and myslider5 == 3:
-        return open('assets/class_negative_map_2021_3.html', 'r').read()
-    elif yeardropdown2 == '2021' and myslider5 == 4:
-        return open('assets/class_negative_map_2021_4.html', 'r').read()
-    elif yeardropdown2 == '2021' and myslider5 == 5:
-        return open('assets/class_negative_map_2021_5.html', 'r').read()
-    elif yeardropdown2 == '2021' and myslider5 == 6:
-        return open('assets/class_negative_map_2021_6.html', 'r').read()
-    elif yeardropdown2 == '2021' and myslider5 == 7:
-        return open('assets/class_negative_map_2021_7.html', 'r').read()
-    elif yeardropdown2 == '2021' and myslider5 == 8:
-        return open('assets/class_negative_map_2021_8.html', 'r').read()
+    for i in range(1, 8):
+        if yeardropdown2 == '2021' and myslider5 == i:
+            return open('assets/class_negative_map_2023_' + str(i) + '.html', 'r').read()
     #2022
-    if yeardropdown2 == '2022'and myslider5 ==1:
-        return open('assets/class_negative_map_2022_1.html', 'r').read()
-    elif yeardropdown2 == '2022' and myslider5 ==2:
-        return open('assets/class_negative_map_2022_2.html', 'r').read()
-    elif yeardropdown2 == '2022' and myslider5 == 3:
-        return open('assets/class_negative_map_2022_3.html', 'r').read()
-    elif yeardropdown2 == '2022' and myslider5 == 4:
-        return open('assets/class_negative_map_2022_4.html', 'r').read()
-    elif yeardropdown2 == '2022' and myslider5 == 5:
-        return open('assets/class_negative_map_2022_5.html', 'r').read()
-    elif yeardropdown2 == '2022' and myslider5 == 6:
-        return open('assets/class_negative_map_2022_6.html', 'r').read()
-    elif yeardropdown2 == '2022' and myslider5 == 7:
-        return open('assets/class_negative_map_2022_7.html', 'r').read()
-    elif yeardropdown2 == '2022' and myslider5 == 8:
-        return open('assets/class_negative_map_2022_8.html', 'r').read()
-    elif yeardropdown2 == '2022' and myslider5 == 9:
-        return open('assets/class_negative_map_2022_9.html', 'r').read()
-    elif yeardropdown2 == '2022' and myslider5 == 10:
-        return open('assets/class_negative_map_2022_10.html', 'r').read()
+    for i in range(1, 10):
+        if yeardropdown2 == '2022' and myslider5 == i:
+            return open('assets/class_negative_map_2022_' + str(i) + '.html', 'r').read()
 
         # 2023
     for i in range(1, 10):
