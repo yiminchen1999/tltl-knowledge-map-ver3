@@ -1179,6 +1179,8 @@ page_3_layout = dbc.Container([
 
 
 import os
+import smtplib
+from email.message import EmailMessage
 
 @app.callback(
     Output('teacher-letter-text', 'children'),
@@ -1210,19 +1212,28 @@ def save_feedback(n_clicks, student_name, feedback_text):
         file_path = f"{student_name}.txt"
         with open(file_path, 'w') as f:
             f.write(feedback_text)
+        send_email(feedback_text)  # call send_email() function here
         return html.Div('Feedback submitted successfully!', style={'color': 'green'})
+
 def send_email(feedback_text):
     sender_email = 'tltlknowledgemap123@gmail.com'
     sender_password = 'knowledgemap123'
     receiver_email = 'tltlknowledgemap123@gmail.com'
     subject = 'New Feedback Received'
     message = f'The following feedback was received:\n\n{feedback_text}'
-    server = smtplib.SMTP('smtp.gmail.com', 587)
-    server.starttls()
-    server.login(sender_email, sender_password)
-    server.sendmail(sender_email, receiver_email, f'Subject: {subject}\n\n{message}')
-    server.quit()
 
+        # create an EmailMessage object and set its properties
+    msg = EmailMessage()
+    msg.set_content(message)
+    msg['Subject'] = subject
+    msg['From'] = sender_email
+    msg['To'] = receiver_email
+
+        # send the email using SMTP server
+    with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
+        smtp.starttls()
+        smtp.login(sender_email, sender_password)
+        smtp.send_message(msg)
 
     # create the callback for rendering the different pages
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
