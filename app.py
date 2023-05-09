@@ -1332,12 +1332,55 @@ def render_page_content(pathname):
     else:
         return html.Div(page_1_layout)
 
+
+
+
+@app.callback(
+    dash.dependencies.Output('popup', 'displayed'),
+    [dash.dependencies.Input('popup', 'submit_n_clicks')]
+)
+def display_popup(n):
+    if n is None:
+        return True
+    else:
+        return False
+
+
 # define the app layout
 app.layout = html.Div(
     [
+        dcc.ConfirmDialog(
+            id='popup',
+            message='Thank you for visiting my website, and if you want to view details of each map, just click the information box at the right side!',
+            displayed=False,
+
+        ),
+
+    html.Div(
+        #html.H1('Welcome to my website!', style={'text-align': 'center'}),
+        style={
+            'width': '100%',
+            'height': '6vh',
+            'display': 'flex',
+            'justify-content': 'center',
+            'align-items': 'center',
+            'background': 'linear-gradient(to right, #000000, #fff)'
+        }
+    ),
         dcc.Location(id="url"),
         navbar,
         html.Div(id="page-content"),
+html.Div(
+        #html.H1('Welcome to my website!', style={'text-align': 'center'}),
+        style={
+            'width': '100%',
+            'height': '6vh',
+            'display': 'flex',
+            'justify-content': 'center',
+            'align-items': 'center',
+            'background': 'linear-gradient(to right, #000000, #fff)'
+        }
+    ),
     ]
 )
 
