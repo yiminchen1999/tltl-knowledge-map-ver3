@@ -9,6 +9,7 @@ import base64
 from dash.dependencies import Input, Output, State
 from dash import html
 import dash
+import requests
 import plotly.graph_objs as go
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -31,36 +32,6 @@ animated_title_style = {
 #data = pd.read_excel("assets/Year2023text/combined/2023_student1_8projects_combined.xlsx",engine='openpyxl')
 
 
-
-
-
-# Load the data
-data1 = pd.read_excel("assets/frank_2022_SA_01_combined.xlsx",
-     engine='openpyxl')
-# frank project for 12 students
-# Define a dictionary mapping labels to colors
-label_colors = {'positive': 'green', 'negative': 'red', 'neutral': 'grey'}
-
-# Create a new column in the DataFrame containing the color for each label
-data1['color'] = data1['label'].map(label_colors)
-
-# Set the plot style
-sns.set_style("ticks")
-sns.set_context("talk")
-
-# Create a figure and axes
-fig, ax = plt.subplots()
-
-# Plot the data as a scatter plot using the colors from the 'color' column
-sns.scatterplot(data=data1, x='file_number', y='score', hue='label', palette=label_colors)
-
-# Set the axis labels and title
-# Set the x-axis ticks
-plt.xticks(range(1, 13), range(1, 13))
-
-plt.xlabel('File Number')
-plt.ylabel('Score')
-plt.title('Sentiment Analysis Results')
 
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LUX])
@@ -1456,6 +1427,7 @@ def update_students(year):
    #[Input('mydropdown', 'value')]
     [Input('yeardropdown', 'value'),Input('mydropdown', 'value'),Input('myslider', 'value')]
 )
+
 def update_output(yeardropdown,mydropdown,myslider):
     # Define the HTML content to display based on the dropdown menu
     if yeardropdown=='2021' and mydropdown== 'student 1'and myslider == 1:
@@ -2000,14 +1972,6 @@ def update_output(yeardropdown,mydropdown,myslider):
         return open(file_path, 'r').read()
 
 
-#def update_output(value):
-    # Define the HTML content to display based on the dropdown menu
-    #if value == 'option1':
-        #return open('s1_aggregate_network1.html', 'r').read()
-    #elif value == 'option2':
-        #return open('s2_weekly_network1.html', 'r').read()
-    #elif value == 'option3':
-        #return open('s3_weekly_network1.html', 'r').read(
 
 # Define the callback function for Individual Aggregate Graph
 @app.callback(
@@ -2685,6 +2649,17 @@ def update_output(yeardropdown2,myslider4):
         if yeardropdown2 == '2023' and myslider4 == i:
             return open('assets/class_positive_map_2023_' + str(i) + '.html', 'r').read()
 
+def send_email(feedback_text):
+    sender_email = 'tltlknowledgemap123@gmail.com'
+    sender_password = 'knowledgemap123'
+    receiver_email = 'tltlknowledgemap123@gmail.com'
+    subject = 'New Feedback Received'
+    message = f'The following feedback was received:\n\n{feedback_text}'
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(sender_email, sender_password)
+    server.sendmail(sender_email, receiver_email, f'Subject: {subject}\n\n{message}')
+    server.quit()
 
 # Define the callback function for negative
 @app.callback(
