@@ -64,7 +64,7 @@ for i in keywords_group:
 def class_collective_knowledge_map(class_df, student_names_year):
     nets = []
     for i in range(class_df[0].shape[0]):
-        net = Network(notebook=True, heading="Class Knowledge Map Week " + str(i+1))
+        net = Network(notebook=True)
         student_names = []
         occurence = []
         
@@ -103,9 +103,6 @@ class_map_2021 = class_collective_knowledge_map(year2021_df,student_names_2021)
 class_map_2022 = class_collective_knowledge_map(year2022_df,student_names_2022)
 class_map_2023 = class_collective_knowledge_map(year2023_df,student_names_2023)
 
-class_map_2022[4].show("social_network.html")
-
-class_map_2023[1].show("social_network.html")
 
 
 for i, class_map in enumerate(globals()[f"class_map_2023"]):
