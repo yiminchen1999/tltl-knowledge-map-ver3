@@ -2621,6 +2621,14 @@ def update_output(yeardropdown1,myslider3):
         return open('assets/2023_class_4.html', 'r').read()
     elif yeardropdown1 == '2023' and myslider3 == 5:
         return open('assets/2023_class_5.html', 'r').read()
+    elif yeardropdown1 == '2023' and myslider3 ==6:
+        return open('assets/2023_class_6.html', 'r').read()
+    elif yeardropdown1 == '2023' and myslider3 == 7:
+        return open('assets/2023_class_7.html', 'r').read()
+    elif yeardropdown1 == '2023' and myslider3 == 8:
+        return open('assets/2023_class_8.html', 'r').read()
+    elif yeardropdown1 == '2023' and myslider3 == 9:
+        return open('assets/2023_class_9.html', 'r').read()
 
 
 # Define the callback function for positive
