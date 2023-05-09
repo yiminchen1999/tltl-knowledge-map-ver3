@@ -1976,6 +1976,27 @@ def update_output(yeardropdown,mydropdown,myslider):
         return open('assets/2023_s11_weekly_5.html', 'r').read()
     elif yeardropdown == '2023' and mydropdown == 'Kiki' and myslider == 5:
         return open('assets/2023_s12_weekly_5.html', 'r').read()
+    elif yeardropdown == '2023' and myslider in [6, 7, 8, 9]:
+        # Create a dictionary mapping slider values to file names
+        file_dict = {6: 'weekly_6.html', 7: 'weekly_7.html', 8: 'weekly_8.html', 9: 'weekly_9.html'}
+
+        # Create a dictionary mapping dropdown options to folder names
+        folder_dict = {'Eury': 's1', 'Sadia': 's2', 'Helen': 's3', 'Xichen': 's4', 'Zhanlan': 's5',
+                       'Katie': 's6', 'Andrea': 's7', 'Ana Maria': 's8', 'Heidi': 's9', 'Mariana': 's10',
+                       'Inara': 's11', 'Kiki': 's12'}
+
+        # Get the file name based on the slider value
+        file_name = file_dict[myslider]
+
+        # Get the folder name based on the dropdown option
+        folder_name = folder_dict[mydropdown]
+
+        # Construct the full file path
+        file_path = f'assets/2023_{folder_name}_{file_name}'
+
+        # Return the file contents
+        return open(file_path, 'r').read()
+
 
 #def update_output(value):
     # Define the HTML content to display based on the dropdown menu
@@ -2321,6 +2342,26 @@ def update_output(yeardropdown,mydropdown,myslider2):
         return open('assets/2023_s11_aggregate_5.html', 'r').read()
     elif yeardropdown == '2023' and myslider2 == 5 and mydropdown == 'Kiki':
         return open('assets/2023_s12_aggregate_5.html', 'r').read()
+    elif yeardropdown == '2023' and myslider2 in [6, 7, 8, 9]:
+        # Create a dictionary mapping slider values to file names
+        file_dict = {6: 'aggregate_6.html', 7: 'aggregate_7.html', 8: 'aggregate_8.html', 9: 'aggregate_9.html'}
+
+        # Create a dictionary mapping dropdown options to folder names
+        folder_dict = {'Eury': 's1', 'Sadia': 's2', 'Helen': 's3', 'Xichen': 's4', 'Zhanlan': 's5',
+                       'Katie': 's6', 'Andrea': 's7', 'Ana Maria': 's8', 'Heidi': 's9', 'Mariana': 's10',
+                       'Inara': 's11', 'Kiki': 's12'}
+
+        # Get the file name based on the slider value
+        file_name = file_dict[myslider2]
+
+        # Get the folder name based on the dropdown option
+        folder_name = folder_dict[mydropdown]
+
+        # Construct the full file path
+        file_path = f'assets/2023_{folder_name}_{file_name}'
+
+        # Return the file contents
+        return open(file_path, 'r').read()
 
 # 2021:8 weeks ; 2022:10 weeks ; 2023: 5 weeks
 # week 6
