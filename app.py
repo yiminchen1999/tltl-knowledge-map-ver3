@@ -1209,9 +1209,6 @@ page_3_layout = dbc.Container([
 
 import os
 
-
-
-
 @app.callback(
     Output('teacher-letter-text', 'children'),
     Input('student-dropdown', 'value'))
@@ -1220,12 +1217,12 @@ def display_student_feedback(name):
         file_path = f"{name}.txt"
         if os.path.exists(file_path):
             with open(file_path, 'r') as f:
-                feedback = f.read()
+                feedback = f.read().splitlines()
         else:
-            feedback = f"No feedback found for {name}."
+            feedback = [f"No feedback found for {name}."]
     else:
-        feedback = "Select a student to view their feedback."
-    return html.P(feedback)
+        feedback = ["Select a student to view their feedback."]
+    return [html.P(paragraph) for paragraph in feedback]
 
 @app.callback(
     Output('output-container', 'children'),
@@ -1239,11 +1236,16 @@ def save_feedback(n_clicks, student_name, feedback_text):
         if not feedback_text:
             return html.Div('Feedback cannot be empty.', style={'color': 'red'})
 
-        file_path = f"feedback.txt"
+        file_path = f"{student_name}.txt"
         with open(file_path, 'w') as f:
             f.write(feedback_text)
 
         return html.Div('Feedback submitted successfully!', style={'color': 'green'})
+
+
+
+
+
     # create the callback for rendering the different pages
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
