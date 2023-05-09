@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#f6993f", "id": 24, "label": "temperatur", "shape": "dot", "size": 6, "title": "Student2"}, {"color": "#f6993f", "id": 16, "label": "sensor", "shape": "dot", "size": 9, "title": "Student5, Student8"}, {"color": "#4dc0b5", "id": 64, "label": "rethink", "shape": "dot", "size": 9, "title": "Student5, Student8"}, {"color": "#4dc0b5", "id": 76, "label": "iter", "shape": "dot", "size": 9, "title": "Student5, Student8"}, {"color": "#3490dc", "id": 87, "label": "wheel", "shape": "dot", "size": 15, "title": "Student5, Student8, Student9, Student12"}, {"color": "#f66d9b", "id": 117, "label": "hot glue", "shape": "dot", "size": 9, "title": "Student5, Student8"}]);
-                  edges = new vis.DataSet([{"from": 24, "hidden": true, "to": 16}, {"from": 64, "hidden": true, "to": 76}]);
+                  nodes = new vis.DataSet([{"color": "#4dc0b5", "id": 48, "label": "learning process", "shape": "dot", "size": 9, "title": "Student5, Student8"}, {"color": "#4dc0b5", "id": 78, "label": "rethink", "shape": "dot", "size": 9, "title": "Student5, Student8"}, {"color": "#f6993f", "id": 81, "label": "sensor", "shape": "dot", "size": 9, "title": "Student5, Student8"}, {"color": "#ffed4a", "id": 98, "label": "wheel", "shape": "dot", "size": 15, "title": "Student5, Student8, Student9, Student12"}]);
+                  edges = new vis.DataSet([{"from": 48, "hidden": true, "to": 78}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
@@ -121,7 +121,7 @@
     "physics": {
         "enabled": true,
         "repulsion": {
-            "centralGravity": 0.9,
+            "centralGravity": 0.8,
             "damping": 0.09,
             "nodeDistance": 100,
             "springConstant": 0.05,

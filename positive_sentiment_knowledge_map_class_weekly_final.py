@@ -10,14 +10,14 @@ Original file is located at
 from pyvis.network import Network
 import pandas as pd
 
-path = "/Users/stephanielin/Desktop/TLTLab/"
 
-keywords = pd.read_csv(path + "dictionary 5.0.csv")["display concept"].tolist()
+
+keywords = pd.read_csv("dictionary 5.0 (final with subcategory).csv")["display concept"].tolist()
 
 positive_file_names_2021 = ['Student1_Positive_SA','Student2_Positive_SA','Student3_Positive_SA','Student4_Positive_SA','Student5_Positive_SA','Student6_Positive_SA','Student7_Positive_SA']
 year2021_df = []
 for i in range(len(positive_file_names_2021)):
-    temp_df = pd.read_csv(path + "Sentiment_Map/Positive_Map/2021/"+positive_file_names_2021[i]+".csv",index_col=0)
+    temp_df = pd.read_csv("assets/Positive_Map/2021/"+positive_file_names_2021[i]+".csv",index_col=0)
     temp_df.reset_index(drop=True, inplace=True)
     year2021_df.append(temp_df)
 
@@ -26,7 +26,7 @@ student_names_2021 = ['Student1','Student2','Student3','Student4','Student5','St
 positive_file_names_2022 = ['Student1_Positive_SA','Student2_Positive_SA','Student3_Positive_SA','Student4_Positive_SA','Student5_Positive_SA','Student6_Positive_SA','Student7_Positive_SA','Student8_Positive_SA','Student9_Positive_SA','Student10_Positive_SA','Student11_Positive_SA','Student12_Positive_SA']
 year2022_df = []
 for i in range(len(positive_file_names_2022)):
-    temp_df = pd.read_csv(path + "Sentiment_Map/Positive_Map/2022/"+positive_file_names_2022[i]+".csv",index_col=0)
+    temp_df = pd.read_csv("assets/Positive_Map/2022/"+positive_file_names_2022[i]+".csv",index_col=0)
     temp_df.reset_index(drop=True, inplace=True)
     year2022_df.append(temp_df)
 
@@ -35,14 +35,14 @@ student_names_2022 = ['Student1','Student2','Student3','Student4','Student5','St
 positive_file_names_2023 = ['Student1_Positive_SA','Student2_Positive_SA','Student3_Positive_SA','Student4_Positive_SA','Student5_Positive_SA','Student6_Positive_SA','Student7_Positive_SA','Student8_Positive_SA','Student9_Positive_SA','Student10_Positive_SA','Student11_Positive_SA','Student12_Positive_SA']
 year2023_df = []
 for i in range(len(positive_file_names_2023)):
-    temp_df = pd.read_csv(path + "Sentiment_Map/Positive_Map/2023/"+positive_file_names_2023[i]+".csv",index_col=0)
+    temp_df = pd.read_csv("assets/Positive_Map/2023/"+positive_file_names_2023[i]+".csv",index_col=0)
     temp_df.reset_index(drop=True, inplace=True)
     year2023_df.append(temp_df)
 
 student_names_2023 = ['Eury','Sadia','Helen','Xichen','Zhanlan','Katie','Andrea','Ana Maria','Heidi','Mariana','Inara','Kiki']
 
 # the number shows which category the keyword belongs to
-keywords_group = pd.read_csv(path + "dictionary 5.0 (final with subcategory).csv")["category"].to_numpy()
+keywords_group = pd.read_csv("dictionary 5.0 (final with subcategory).csv")["category"].to_numpy()
 
 category_color = []
 for i in keywords_group:
@@ -68,7 +68,7 @@ for i in keywords_group:
 def class_collective_positive_sensitive_map(class_df, student_names_year):
     nets = []
     for i in range(class_df[0].shape[0]):
-        net = Network(notebook=True, heading="Class Positive Sentiment Map Week " + str(i+1))
+        net = Network(notebook=True)
         student_names = []
         occurence = []
         
@@ -107,7 +107,13 @@ class_positive_map_2021 = class_collective_positive_sensitive_map(year2021_df,st
 class_positive_map_2022 = class_collective_positive_sensitive_map(year2022_df,student_names_2022)
 class_positive_map_2023 = class_collective_positive_sensitive_map(year2023_df,student_names_2023)
 
-class_positive_map_2023[3].show("social_network.html")
+for i, class_positive_map_2023 in enumerate(globals()[f"class_positive_map_2023"]):
+    class_positive_map_2023.show(f"assets/class_positive_map_2023_{i+1}.html")
+for i, class_positive_map_2022 in enumerate(globals()[f"class_positive_map_2022"]):
+    class_positive_map_2022.show(f"assets/class_positive_map_2022_{i+1}.html")
+for i, class_positive_map_2021 in enumerate(globals()[f"class_positive_map_2021"]):
+    class_positive_map_2021.show(f"assets/class_positive_map_2021_{i+1}.html")
+
 
 
 

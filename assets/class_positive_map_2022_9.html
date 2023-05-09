@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#e3342f", "id": 0, "label": "laser", "shape": "dot", "size": 9, "title": "Student1, Student10"}, {"color": "#9561e2", "id": 95, "label": "cardboard", "shape": "dot", "size": 9, "title": "Student1, Student10"}, {"color": "#e3342f", "id": 6, "label": "resin", "shape": "dot", "size": 9, "title": "Student5, Student6"}, {"color": "#e3342f", "id": 7, "label": "vacuum", "shape": "dot", "size": 9, "title": "Student5, Student6"}, {"color": "#4dc0b5", "id": 62, "label": "reflect", "shape": "dot", "size": 9, "title": "Student5, Student6"}, {"color": "#9561e2", "id": 99, "label": "plastic", "shape": "dot", "size": 9, "title": "Student5, Student6"}, {"color": "#f66d9b", "id": 109, "label": "cast", "shape": "dot", "size": 9, "title": "Student5, Student6"}]);
-                  edges = new vis.DataSet([{"from": 0, "hidden": true, "to": 6}, {"from": 0, "hidden": true, "to": 7}, {"from": 95, "hidden": true, "to": 99}, {"from": 6, "hidden": true, "to": 7}]);
+                  nodes = new vis.DataSet([{"color": "#9561e2", "id": 15, "label": "cardboard", "shape": "dot", "size": 9, "title": "Student1, Student10"}, {"color": "#e3342f", "id": 46, "label": "laser cut", "shape": "dot", "size": 9, "title": "Student1, Student10"}, {"color": "#f66d9b", "id": 17, "label": "casting", "shape": "dot", "size": 9, "title": "Student5, Student6"}, {"color": "#9561e2", "id": 64, "label": "plastic", "shape": "dot", "size": 9, "title": "Student5, Student6"}, {"color": "#4dc0b5", "id": 73, "label": "reflect", "shape": "dot", "size": 9, "title": "Student5, Student6"}, {"color": "#e3342f", "id": 96, "label": "vacuum form", "shape": "dot", "size": 9, "title": "Student5, Student6"}]);
+                  edges = new vis.DataSet([{"from": 15, "hidden": true, "to": 64}, {"from": 46, "hidden": true, "to": 96}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
@@ -121,7 +121,7 @@
     "physics": {
         "enabled": true,
         "repulsion": {
-            "centralGravity": 0.9,
+            "centralGravity": 0.8,
             "damping": 0.09,
             "nodeDistance": 100,
             "springConstant": 0.05,

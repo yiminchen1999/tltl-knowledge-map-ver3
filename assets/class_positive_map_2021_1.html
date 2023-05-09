@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#f6993f", "id": 25, "label": "switch", "shape": "dot", "size": 6, "title": "Student1"}, {"color": "#4dc0b5", "id": 68, "label": "repair", "shape": "dot", "size": 15, "title": "Student1, Student2, Student4, Student5"}, {"color": "#4dc0b5", "id": 70, "label": "repurpos", "shape": "dot", "size": 6, "title": "Student1"}, {"color": "#4dc0b5", "id": 71, "label": "fit", "shape": "dot", "size": 6, "title": "Student1"}, {"color": "#4dc0b5", "id": 75, "label": "mainten", "shape": "dot", "size": 12, "title": "Student1, Student2, Student5"}, {"color": "#e3342f", "id": 7, "label": "vacuum", "shape": "dot", "size": 6, "title": "Student2"}, {"color": "#38c172", "id": 53, "label": "logic", "shape": "dot", "size": 6, "title": "Student5"}, {"color": "#4dc0b5", "id": 62, "label": "reflect", "shape": "dot", "size": 6, "title": "Student5"}, {"color": "#9561e2", "id": 102, "label": "fabric", "shape": "dot", "size": 6, "title": "Student5"}]);
-                  edges = new vis.DataSet([{"from": 68, "hidden": true, "to": 70}, {"from": 68, "hidden": true, "to": 71}, {"from": 68, "hidden": true, "to": 75}, {"from": 68, "hidden": true, "to": 62}, {"from": 70, "hidden": true, "to": 71}, {"from": 70, "hidden": true, "to": 75}, {"from": 70, "hidden": true, "to": 62}, {"from": 71, "hidden": true, "to": 75}, {"from": 71, "hidden": true, "to": 62}, {"from": 75, "hidden": true, "to": 62}]);
+                  nodes = new vis.DataSet([{"color": "#4dc0b5", "id": 75, "label": "repair", "shape": "dot", "size": 15, "title": "Student1, Student2, Student4, Student5"}, {"color": "#4dc0b5", "id": 76, "label": "repurpose", "shape": "dot", "size": 6, "title": "Student1"}, {"color": "#f6993f", "id": 90, "label": "switch", "shape": "dot", "size": 6, "title": "Student1"}, {"color": "#9561e2", "id": 31, "label": "fabric", "shape": "dot", "size": 6, "title": "Student5"}, {"color": "#4dc0b5", "id": 73, "label": "reflect", "shape": "dot", "size": 6, "title": "Student5"}]);
+                  edges = new vis.DataSet([{"from": 75, "hidden": true, "to": 76}, {"from": 75, "hidden": true, "to": 73}, {"from": 76, "hidden": true, "to": 73}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
@@ -121,7 +121,7 @@
     "physics": {
         "enabled": true,
         "repulsion": {
-            "centralGravity": 0.9,
+            "centralGravity": 0.8,
             "damping": 0.09,
             "nodeDistance": 100,
             "springConstant": 0.05,
