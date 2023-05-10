@@ -113,9 +113,25 @@ category_colors = {
 }
 
 
+button_style = {
+    'width': '60px',
+    'height': '60px',
+    'border-radius': '0',
+    'border-top': '30px solid transparent',
+    'border-bottom': '30px solid transparent',
+    'border-right': '50px solid #343a40',
+    'box-shadow': '0px 2px 10px rgba(0, 0, 0, 0.25)',
+    'background-color': '#343a40',
+    'color': 'white',
+    'font-size': '1.2rem',
+    'display': 'flex',
+    'justify-content': 'center',
+    'align-items': 'center',
+    'cursor': 'pointer'
+}
 
-# create the button component
-button = html.Button('Toggle Legend', id='toggle-button', className='btn btn-secondary')
+play_icon = html.I(className="bi bi-play-fill")
+
 # Define the Sidebar
 sidebar = html.Div(
     [
@@ -293,7 +309,7 @@ html.Div(
         html.P(
             'Aggregate Knowledge Map',
             className='fs-5 text-center font-weight-bold',
-            style={"font-size": "2.5rem", "font-weight": "bold", "margin-right": "-40px", "flex": "1"}
+            style={"font-size": "2.5rem", "font-weight": "bold", "margin-right": "-90px", "flex": "1"}
         ),
         html.Button(
             'i',
@@ -301,6 +317,12 @@ html.Div(
             className='badge rounded-pill bg-primary',
             style={ 'font-size': '0.95rem',"margin-left": "10px"}
         ),
+   html.Button(
+                "play",
+                id="button-1",
+    className="btn-outline-secondary",
+    style={"border-radius": "60px","margin-left": "10px"}
+)
     ],
     className='d-flex align-items-center',
     style={'display': 'flex'}
@@ -357,38 +379,8 @@ dbc.Modal(
                                 dbc.Label("Week", className="text-center w-100 mb-0", width='10%'),
 
 dbc.Container(
-    [
-dbc.Row(
-    [
-        dbc.Col(),
-        dbc.Col(
-            dbc.Button(
-                html.Span(
-                    [html.I(className="bi bi-play"), html.Span(" Play", className="ms-2")],
-                    className="d-flex align-items-center"
-                ),
-                id="button-1",
-                color="primary",
-                className="btn-lg px-4 py-2  border-0",
-                style={
-                    "font-size": "16px",
-                    "font-weight": "bold",
-                    "letter-spacing": "1px",
-                    "text-transform": "uppercase",
-                    "box-shadow": "none",
-                    "background-color": "#F8F9FA",
-                    "color": "#212529"
-                }
-            ),
 
-            width="auto",
-            style={"display": "flex", "justify-content": "center"},
-        ),
-        dbc.Col(),
-    ],
-    className="mb-3",
-)
-        ,
+
 dbc.Modal(
     [
         dbc.ModalHeader("",id="final-window"),
@@ -401,8 +393,8 @@ dbc.Modal(
     #centered=True,
     size="lg",
     style={'width': '100%',  'height': '1000px',  'overflow': 'hidden'}
-),
-    ]
+)
+
 )
 
 
