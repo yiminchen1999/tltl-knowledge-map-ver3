@@ -234,7 +234,7 @@ html.Div(
         html.P(
             'Weekly Knowledge Map',
             className='fs-5 text-center font-weight-bold',
-            style={"font-size": "2.5rem", "font-weight": "bold", "margin-right": "-40px", "flex": "1"}
+            style={"font-size": "2.5rem", "font-weight": "bold", "margin-right": "-10px", "flex": "1"}
         ),
         html.Button(
             'i',
@@ -801,7 +801,7 @@ dbc.ModalBody(
                                 'Identify the knowledge categories and specific keywords that have elicited positive sentiment from students',
                                 className='fs-6 text-center',
                                 style={"font-size": "1.0rem"}),
-                            html.Iframe(id='html-iframe-5', srcDoc=initial_html_posi, width='100%', height='600',
+                            html.Iframe(id='html-iframe-5', srcDoc="", width='100%', height='600',
                                         style={'height': '50vh'}),
 
                             dbc.Row([dbc.Col([html.Div([
@@ -877,7 +877,7 @@ dbc.ModalBody(
                                 'Identify the knowledge categories and specific keywords that have elicited negative sentiment from students',
                                 className='fs-6 text-center',
                                 style={"font-size": "1.0rem"}),
-                            html.Iframe(id='html-iframe-6', src=initial_html_nega, width='100%', height='600',
+                            html.Iframe(id='html-iframe-6', src="", width='100%', height='600',
                                         style={'height': '50vh'}),
 
                             dbc.Row([dbc.Col([html.Div([
@@ -1293,10 +1293,6 @@ html.Div(
     ]
 )
 
-import pandas as pd
-
-#assets/Year2023text/combined/2023_student12_8projects_combined.xlsx
-# Load data
 
 
 import pandas as pd
@@ -1337,6 +1333,7 @@ def update_graph(selected_week):
                       paper_bgcolor='rgb(255, 255, 255)',
                       font=dict(size=13, color='grey'))
     return fig
+
 
 @app.callback(
     Output('my-graph2', 'figure'),
@@ -1423,13 +1420,6 @@ def update_students(year):
     else:
         options = []
     return options
-
-
-
-
-
-
-
 
 
 
@@ -2523,22 +2513,7 @@ def update_output(yeardropdown,mydropdown,myslider2):
 
 
 
-# Define the callback function for year Graph in total
-#@app.callback(
-    #Output('html-iframe-3', 'srcDoc'),
-    #Input('mydropdown3', 'value')
-    #Input('yeardropdown', 'value')
-    #[Input('yeardropdown', 'value'), Input('mydropdown', 'value'), Input('myslider2', 'value')]
-#)
 
-#def update_output(value):
-    # Define the HTML content to display based on the dropdown menu
-    #if value == '2021':
-        #return open('assets/2021_class_1.html', 'r').read()
-    #elif value == '2022':
-        #return open('assets/2022_class_1.html', 'r').read()
-    #elif value == '2023':
-        #return open('assets/2023_class_1.html', 'r').read()
 
 # Define the callback function for Individual Weekly Graph
 @app.callback(
