@@ -184,7 +184,7 @@ dbc.Card([
             className='bg-light text-white'
         ),
         dbc.Row(
-            [html.Div([html.Hr(),html.P('Select a year first',
+            [html.Div([html.Hr(),html.P('Select a year',
                                  style={'margin-top': '8px', 'margin-bottom': '4px'},
                                  className='text-black'),
                           dcc.Dropdown(id='yeardropdown1', options=[{'label': '2021', 'value': '2021'},
@@ -391,7 +391,7 @@ dbc.Row(
         ,
 dbc.Modal(
     [
-        dbc.ModalHeader("student’s development of knowledge over time"),
+        dbc.ModalHeader("",id="final-window"),
         dbc.ModalBody(html.Img(id="gif-player",style={'width': '100%', 'height': '100%'})),
         dbc.ModalFooter(
             dbc.Button("Close", id="close-button3", className="ml-auto")
@@ -555,61 +555,78 @@ def toggle_modal(n1, n2, is_open):
     return is_open
 
 @app.callback(
-    Output("gif-player", "src"),
-    [Input("button-1", "n_clicks"),Input('yeardropdown', 'value'),Input('mydropdown', 'value')]
+    [Output("gif-player", "src"), Output("final-window", "children")],
+    [Input("button-1", "n_clicks"), Input('yeardropdown', 'value'), Input('mydropdown', 'value')]
 )
-def play_gif(n_clicks,yeardropdown,mydropdown):
+def play_gif(n_clicks, yeardropdown, mydropdown):
     if n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Eury':
         with open("assets/2023_s1_animation_2.0.gif", "rb") as f:
             gif_data = f.read()
-        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+        return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
+               html.P(mydropdown+"’s development of knowledge over time") )
+
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Sadia':
         with open("assets/2023_s2_animation_2.0.gif", "rb") as f:
             gif_data = f.read()
-        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+        return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
+                html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Helen':
         with open("assets/2023_s3_animation_2.0.gif", "rb") as f:
             gif_data = f.read()
-        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+        return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
+                html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Xichen':
         with open("assets/2023_s4_animation_2.0.gif", "rb") as f:
             gif_data = f.read()
-        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+        return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
+                html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Zhanlan':
         with open("assets/2023_s5_animation_2.0.gif", "rb") as f:
             gif_data = f.read()
-        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+        return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
+                html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Katie':
         with open("assets/2023_s6_animation_2.0.gif", "rb") as f:
             gif_data = f.read()
-        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+        return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
+                html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Andrea':
         with open("assets/2023_s7_animation_2.0.gif", "rb") as f:
             gif_data = f.read()
-        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+        return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
+                html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Ana Maria':
         with open("assets/2023_s8_animation_2.0.gif", "rb") as f:
             gif_data = f.read()
-        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+        return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
+                html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Heidi':
         with open("assets/2023_s9_animation_2.0.gif", "rb") as f:
             gif_data = f.read()
-        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+        return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
+                html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Mariana':
         with open("assets/2023_s10_animation_2.0.gif", "rb") as f:
             gif_data = f.read()
-        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+        return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
+                html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Inara':
         with open("assets/2023_s11_animation_2.0.gif", "rb") as f:
             gif_data = f.read()
-        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+        return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
+                html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Kiki':
         with open("assets/2023_s12_animation_2.0.gif", "rb") as f:
             gif_data = f.read()
-        return "data:image/gif;base64," + base64.b64encode(gif_data).decode()
+        return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
+                html.P(mydropdown + "’s development of knowledge over time"))
 
     else:
-        return "It only shows animation for year 2023! "
+        return (
+            None,
+            html.P("Sorry it only shows animation for year 2023!" )
+        )
+
 
 
 
@@ -701,7 +718,7 @@ dbc.Card([
         ),
         dbc.Row(
             [html.Div([html.Hr(),html.P('Only available for 2023 students',
-                                 style={'margin-top': '8px', 'margin-bottom': '4px'},
+                                 style={'font-size': '0.92rem'},
                                  className='text-black'),
                         ],
                           className='p-4') # Add padding to the div
@@ -717,7 +734,7 @@ dbc.Row(
         ),
         dbc.Row(
             [html.Div([html.Hr(),html.P('Only available for 2023 students',
-                                 style={'margin-top': '8px', 'margin-bottom': '4px'},
+                                 style={'font-size': '0.92rem'},
                                  className='text-black'),
                         ],
                           className='p-4')
@@ -1053,7 +1070,7 @@ html.Div(
                                            7: {'label': 'dream3'}, 8: {'label': 'lofi'},9: {'label': 'tool'}},
                                      included=False
                                 ),
-                                dbc.Label("Project Name", className="text-center w-100 mb-0", width='10%'),
+                                #dbc.Label("Project Name", className="text-center w-100 mb-0", width='10%'),
                             ], style={'width': '90%', 'margin': '20px', 'margin-top': '20px',
                                       # 'color': '#000000',
                                       'fontSize': '15px',
