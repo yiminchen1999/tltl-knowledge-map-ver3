@@ -33,7 +33,7 @@ def keyword_sentence_no_print(file_name):
     return keyword_sentences
 
 # Define a list of filenames without extension
-file_names1 = ['dream1_SA', 'dream2_SA', 'frank_SA', 'lofi_SA', 'omni_SA', 'remix_SA','rube_SA', 'tool_SA']
+file_names1 = ['frank_SA', 'omni_SA', 'remix_SA', 'rube_SA', 'dream1_SA', 'dream2_SA','dream3_SA', 'lofi_SA','tool_SA']
 # Create an empty list to store all the DataFrames
 dfs = []
 # All projects of student 1 of Year_2023_corpus
@@ -51,4 +51,4 @@ for file_name in os.listdir("/Users/chenyimin/PycharmProjects/tltl-knowledge-map
 # Concatenate all the DataFrames into a single DataFrame
 combined_df = pd.concat(dfs)
 # Write the combined DataFrame to a new Excel file
-combined_df.to_excel('/Users/chenyimin/PycharmProjects/tltl-knowledge-map-ver3/assets/Year2023text/combined/2023_student_8.xlsx', index=False)
+combined_df.to_excel('/Users/chenyimin/PycharmProjects/tltl-knowledge-map-ver3/assets/Year2023text/combined/2023_student_9.xlsx', index=False)

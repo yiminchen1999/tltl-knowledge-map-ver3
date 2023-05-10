@@ -326,7 +326,7 @@ dbc.Modal(
                 html.P("  What can you do with the aggregate knowledge map?"),
                 html.P("    1.  You can visualize your personal learning journey by identifying which concepts you have applied and how frequently you have engaged with them over time.",style={'color': 'darkgrey'}),
                 html.P("    2.  It can help you identify patterns in your learning and identify topics that you may want to explore further.", style={'color': 'darkgrey'}),
-                html.P("    3. You can click on the play button to see animated images showcasing the development of knowledge over time.",
+                html.P("    3. You can click on the play button to see animated images showcasing the development of knowledge over time in 2023.",
                     style={'color': 'darkgrey'}),
             ]
         ),
@@ -1043,14 +1043,14 @@ html.Div(
                                 dcc.Slider(
                                     id='myslider7',
                                     min=1,
-                                    max=8,
+                                    max=9,
                                     value=1,
                                     step=1,
                                     updatemode='drag',
-                                    marks={1: {'label': 'dream1'}, 2: {'label': 'dream2'},
-                                           3: {'label': 'frank'}, 4: {'label': 'lofi'}, 5: {'label': 'omni'},
-                                           6: {'label': 'remix'},
-                                           7: {'label': 'rube'}, 8: {'label': 'tool'}},
+                                    marks={1: {'label': 'frank'}, 2: {'label': 'omni'},
+                                           3: {'label': 'remix'}, 4: {'label': 'rube'}, 5: {'label': 'dream1'},
+                                           6: {'label': 'dream2'},
+                                           7: {'label': 'dream3'}, 8: {'label': 'lofi'},9: {'label': 'tool'}},
                                      included=False
                                 ),
                                 dbc.Label("Project Name", className="text-center w-100 mb-0", width='10%'),
