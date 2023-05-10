@@ -1,10 +1,13 @@
-Dear Katie,
+<Project summary>
 
 Great job exploring the process of taking apart and repurposing a portable charger. You started by observing and drawing the exterior, and then made predictions about the internal components. As you disassembled the charger, you encountered challenges with the plastic casing and learned the importance of being careful to avoid damaging parts. Once inside, you found a circuit board, battery, and connecting wires.
 
 During the reconstruction phase, you realized the importance of having a plan and the right materials, as you struggled to repurpose the charger with limited resources. You attempted to create a dog toy, but ultimately decided against it due to safety concerns. This exercise helped you reflect on the importance of planning, patience, and critical engagement with technology to create sustainable, repairable products.
 
-You connected your experience to Jackson's (2014) ideas on environmentally friendly technology and shared your family's tradition of repair. Moving forward, you plan to better prepare and continue expanding your knowledge in repairing electronics. Keep up the good work and continue exploring the world of electronics repair!/
+You connected your experience to Jackson's (2014) ideas on environmentally friendly technology and shared your family's tradition of repair. Moving forward, you plan to better prepare and continue expanding your knowledge in repairing electronics. Keep up the good work and continue exploring the world of electronics repair!
+
+
+<Suggestions on collaboration and exploration opportunities>
 
 Great job this week! It's apparent that you've been focusing on button, cardboard, and debugging. These are essential skills and knowledge points that will contribute to your overall understanding of the subject.
 

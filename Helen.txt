@@ -1,10 +1,13 @@
-Dear Helen,
+<Project summary>
 
 Great job reflecting on the "Rethinking Repair" article and applying it to your assignment! You've recognized the importance of repurposing and reusing items, especially in today's fast-paced world with constantly changing technologies and products.
 
 In your final project, you encountered some challenges, such as different sized springs causing the base to be slanted, and the sanitizer bottle being too heavy for the springs. It's impressive how you adapted and found a solution by sewing the springs to a cloth and attaching it to the base. For future projects, you noted the importance of using same-sized springs and a sturdier base to support heavier items.
 
-Keep up the critical thinking and resourcefulness in your future projects!/
+Keep up the critical thinking and resourcefulness in your future projects!
+
+
+<Suggestions on collaboration and exploration opportunities>
 
 Great job this week! You've demonstrated knowledge in casting, debugging, elastic energy, and gears. Keep up the good work!
 

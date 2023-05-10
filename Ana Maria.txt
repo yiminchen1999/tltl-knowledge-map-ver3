@@ -1,10 +1,13 @@
-Dear Ana Maria,
+<Project summary>
 
 Great job on disassembling the Dell Docking Station and exploring creative ways to repurpose its components! Your initial plan to create a pencil holder with a cute face was innovative, but it's understandable that you faced challenges with magnet use and adhering objects to the rubber surface. Your revised design shows adaptability and resourcefulness, incorporating new materials like tape, a salt pourer, and twist tie to resolve the initial issues. It's great to see you also include additional features like a cup for screws and a nose for the face. Although the handle attachment proved to be a challenge, it's a good learning experience.
 
 Your reflection on the project highlights the importance of exercising creativity and considering the environmental impact of technology. It's admirable that you're thinking about these aspects and applying them to your work in tech.
 
-Keep up the good work, and continue exploring ways to repurpose and reduce waste in the future!/
+Keep up the good work, and continue exploring ways to repurpose and reduce waste in the future!
+
+
+<Suggestions on collaboration and exploration opportunities>
 
 Great job this week on focusing on cardboard, circuit, and woodshop. You've shown a strong understanding of these concepts, and I encourage you to continue exploring and applying them.
 

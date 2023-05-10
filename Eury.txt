@@ -1,4 +1,4 @@
-Dear Eury,
+<Project summary>
 
 It's great to see your exploration of the concept of "repairing" and how it connects with the idea of "aftermath." In your project, you've used a phone slider and a movable monitor stand as instructional materials to represent the base 2 and base 3 number systems in an embodied manner. This approach is inspired by Wilensky's work on concretizing abstract concepts.
 
@@ -6,7 +6,10 @@ You've faced some challenges in learning the base 2 (binary) system and found th
 
 Throughout the process, you've encountered some challenges and inquiries, such as understanding the mechanics behind the monitor stand's rotation and the properties that allow an object to stay in place versus moving up. You've also experimented with gluing colored buttons on magnets to attach them to the monitor stand, allowing for more diverse representations of the number systems.
 
-Overall, your project showcases a creative approach to exploring number systems through embodied design and encourages further inquiry into the materials and mechanics involved./
+Overall, your project showcases a creative approach to exploring number systems through embodied design and encourages further inquiry into the materials and mechanics involved.
+
+
+<Suggestions on collaboration and exploration opportunities>
 
 Great job this week on focusing on casting, debugging, and trial-and-error! You've shown an interest in these areas and it's essential to have a strong foundation in these skills.
 

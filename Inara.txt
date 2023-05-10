@@ -1,4 +1,4 @@
-Dear Inara,
+<Project summary>
 
 Thank you for sharing your experience with disassembling an electronic object for the first time. It's great to see how fascinated you were with discovering the internal parts and how it gave you a sense of fulfillment. It's interesting to learn about your background in fixing personal items and how this project helped you explore a new side of repairing and creating.
 
@@ -6,7 +6,10 @@ It's okay that you couldn't identify how all the parts worked; focusing on shape
 
 Your family's culture of avoiding breaking things and your stepson's creativity with repurposing items are thought-provoking points. It's essential to consider the environmental impact and material consumption when repairing or reusing objects.
 
-Keep up the great work! I look forward to hearing more about your future projects and learning experiences./
+Keep up the great work! I look forward to hearing more about your future projects and learning experiences.
+
+
+<Suggestions on collaboration and exploration opportunities>
 
 Great job this week! You did particularly well in the areas of compute, dissect, and woodshop.
 

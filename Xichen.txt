@@ -1,4 +1,4 @@
-Dear Xichen,
+<Project summary>
 
 It's great to see your enthusiasm for dissembling and understanding the intricacies of various components. You've highlighted the importance of perseverance and creativity while working with delicate and complex designs. It's fascinating to see how this process allowed you to connect real-world applications with textbook physics.
 
@@ -6,7 +6,10 @@ Your approach to learning by doing and embracing failure as a means of growth is
 
 You've successfully dissembled a small electric fan for a computer's CPU, identifying and listing its various parts. Your early design ideas centered around the spiritual aspect of circles and the potential uses of copper wire. Ultimately, you created a unique G-shaped wall decoration that appears differently when viewed from various angles.
 
-Keep up the great work and continue exploring the world of design and creativity!/
+Keep up the great work and continue exploring the world of design and creativity!
+
+
+<Suggestions on collaboration and exploration opportunities>
 
 Great job this week on focusing on elastic energy, elastic force, and geometry! It is good to see that you are exploring these concepts and applying them in your learning.
 

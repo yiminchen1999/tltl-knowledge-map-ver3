@@ -1,8 +1,11 @@
-Dear Heidi,
+<Project summary>
 
 Heidi, you started with the goal of maintaining the camera's integrity while salvaging its main components. In the disassembling phase, you were able to identify the various parts, and upon removing the main lens, you decided to convert the camera into a speaker. Drawing from your experience making Bluetooth speakers, you successfully made adjustments to the camera case and assembled the speaker.
 
-You found reassembling the case challenging and wished you'd paid more attention during disassembly. Although you couldn't get the screen to turn on, you learned that repair is not just about restoring the original function, but also about creating something new. Embracing this perspective allowed you to enjoy the process and create a unique speaker within the camera case. Great job exploring new possibilities, Heidi!/
+You found reassembling the case challenging and wished you'd paid more attention during disassembly. Although you couldn't get the screen to turn on, you learned that repair is not just about restoring the original function, but also about creating something new. Embracing this perspective allowed you to enjoy the process and create a unique speaker within the camera case. Great job exploring new possibilities, Heidi!
+
+
+<Suggestions on collaboration and exploration opportunities>
 
 Great job this week! You've done well in focusing on "battery", "button", and "disassemble". Your knowledge matrix shows that you've mentioned these concepts during our class, which is a clear indication of your understanding and engagement.
 

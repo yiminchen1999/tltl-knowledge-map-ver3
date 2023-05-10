@@ -275,7 +275,7 @@ dbc.Modal(
                                 ),
                                 #dbc.Button("Click me!", id="button-1", color="primary", className="ml-2"),
                                 dbc.Label("Week", className="text-center w-100 mb-0", width='10%'),
-                            ], style={'width': '90%', 'margin': '20px', 'margin-top': '20px',
+                            ], style={'width': '95%', 'margin': '20px', 'margin-top': '20px',
                                       'color': '#000000',
                                       'fontSize': '15px',
                                       'padding': '5px'})
@@ -322,10 +322,12 @@ dbc.Modal(
                         html.Li("Size of the node reflects the frequency of its occurrence", style={'color': 'darkgrey'}),
                     ]
                 ),
-                #html.Br(),
+                #html.Br(),3. You can click on the play button to see animated images showcasing the development of knowledge over time.
                 html.P("  What can you do with the aggregate knowledge map?"),
                 html.P("    1.  You can visualize your personal learning journey by identifying which concepts you have applied and how frequently you have engaged with them over time.",style={'color': 'darkgrey'}),
-                html.P("    2.  It can help you identify patterns in your learning and identify topics that you may want to explore further.", style={'color': 'darkgrey'})
+                html.P("    2.  It can help you identify patterns in your learning and identify topics that you may want to explore further.", style={'color': 'darkgrey'}),
+                html.P("    3. You can click on the play button to see animated images showcasing the development of knowledge over time.",
+                    style={'color': 'darkgrey'}),
             ]
         ),
         dbc.ModalFooter(html.Button('Close', id='close-button2', className='btn btn-secondary'))
@@ -404,7 +406,7 @@ dbc.Modal(
 )
 
 
-                            ], style={'width': '90%', 'margin': '20px', 'margin-top': '20px',
+                            ], style={'width': '95%', 'margin': '20px', 'margin-top': '20px',
                                       'color': '#000000',
                                       'fontSize': '15px',
                                       'padding': '5px'})
@@ -422,35 +424,19 @@ dbc.Modal(
                                # style={'text-align': 'right', 'margin-right': '-70px'}
                             #),
 
+
+
+
 dbc.Col(
-                        [  html.Div(
-    [
-        html.P(
-            'All key concepts mentioned in the class',
-            className='text-nowrap bd-highlight',
-            style={
-                'fontWeight': 'bold',
-                'padding-right': '10px',
-                'padding-left': '10px',
-                'display': 'inline-block',
-                'margin': '0'
-            }
-        ),
-        html.Button(
-            'i',
-            id='info-button4',
-            className='badge rounded-pill bg-primary',
-            style={
-                'vertical-align': 'middle',
-                'font-size': '0.95rem',
-                'display': 'inline-block',
-                'margin': '0'
-            }
-        ),
-    ],
-    className='d-flex justify-content-end align-items-center',
-    style={'text-align': 'right', 'margin-right': '-90px'}
-),
+                        [  html.Div([html.Div('Collective Knowledge Map', id='title',
+                                                   className='fs-4 font-weight-bold title-text',
+                                                   style={'fontWeight': 'bold', 'cursor': 'pointer'}),
+                                          html.Button('i', id='info-button4', className='badge rounded-pill bg-primary',
+                                                      style={ 'font-size': '0.8rem',
+                                                             'display': 'inline-block', 'margin': '10px'})],
+                                         className='d-flex justify-content-end align-items-center',
+         style={'margin-right': '-85px'}
+         ),
 
 
 
@@ -666,7 +652,7 @@ sidebarpage2 = html.Div(
         dbc.Row(
             [html.H5('COLLECTIVE SENTIMENT MAP ',
                         style={'margin-top': '12px', 'margin-left': '14px'})],
-            style={"height": "8vh"},
+            style={"height": "5vh"},
             className='bg-light text-white'
         ),
         dbc.Row(
@@ -679,15 +665,38 @@ sidebarpage2 = html.Div(
                                        multi=False,
                                        style={'width': '220px', 'color': '#000000'}
                                        ),
+html.Hr(),
+
+dbc.Card([
+    dbc.CardHeader("Knowledge Categories", className="bg-primary text-white text-center"),
+    dbc.Row([
+        dbc.Col([
+            dbc.ListGroup([
+                html.Li(category.capitalize(),
+                        className="list-group-item",
+                        style={"list-style-type": "none", "background-color": category_colors[category], "font-size": "14px"})
+                for category in list(category_colors)[:4]
+            ], flush=True, className="border-0 shadow-sm list-group-flush")
+        ], md=6.5),
+        dbc.Col([
+            dbc.ListGroup([
+                html.Li(category.capitalize(),
+                        className="list-group-item",
+                        style={"list-style-type": "none", "background-color": category_colors[category], "font-size": "14px"})
+                for category in list(category_colors)[4:]
+            ], flush=True, className="border-0 shadow-sm list-group-flush")
+        ], md=6.5),
+    ],justify="around")
+], className="border-0 shadow-sm mb-4", style={"background-color": "#F0F0F0"}),
                        ],
                           className='p-4')], # Add padding to the div
-            style={'height': '50vh', 'margin': '10px', 'display': 'flex'},
+            style={'height': '63vh', 'margin': '10px', 'display': 'flex'},
             className='bg-white rounded shadow-sm' # Add a white background, rounded corners, and shadow
         ),
-        html.Hr(style={ 'margin': '60px 0'}),
+        html.Hr(style={ 'margin': '30px 0'}),
         dbc.Row(
             [html.H5('SENTIMENT SIGNALS  ACROSS STUDENTS',style={'margin-top': '12px', 'margin-left': '14px'})],
-            style={"height": "15vh"},
+            style={"height": "8vh"},
             className='bg-light text-white'
         ),
         dbc.Row(
@@ -703,7 +712,7 @@ sidebarpage2 = html.Div(
 html.Hr(style={ 'margin': '40px 0'}),
 dbc.Row(
             [html.H5('SENTIMENT SIGNALS ACROSS PROJECTS',style={'margin-top': '12px', 'margin-left': '14px'})],
-            style={"height": "15vh"},
+            style={"height": "8vh"},
             className='bg-light text-white'
         ),
         dbc.Row(
@@ -800,7 +809,7 @@ dbc.ModalBody(
                                     tooltip={"placement": "bottom", "always_visible": True}, included=False
                                 ),
                                 dbc.Label("Week", className="text-center w-100 mb-0", width='10%'),
-                            ], style={'width': '85%', 'margin': '20px', 'margin-top': '20px',
+                            ], style={'width': '95%', 'margin': '20px', 'margin-top': '20px',
                                       # 'color': '#000000',
                                       'fontSize': '15px',
                                       'padding': '5px'})
@@ -875,7 +884,7 @@ dbc.ModalBody(
                                     tooltip={"placement": "bottom", "always_visible": True}, included=False
                                 ),
                                 dbc.Label("Week", className="text-center w-100 mb-0", width='10%'),
-                            ], style={'width': '85%', 'margin': '20px', 'margin-top': '20px',
+                            ], style={'width': '95%', 'margin': '20px', 'margin-top': '20px',
                                       # 'color': '#000000',
                                       'fontSize': '15px',
                                       'padding': '5px'})
