@@ -19,8 +19,6 @@ from email.message import EmailMessage
 
 #import plotly.express as px
 import plotly.tools as tls
-# Define your email and password
-df = pd.read_csv('assets/week_keyword_table_s01_2021.csv',index_col=0)
 animated_title_style = {
     "font-size": "2rem",
     "font-weight": "bold",
@@ -56,11 +54,11 @@ navbar = dbc.Navbar(
         ),
         dbc.Nav(
             [
-                dbc.NavItem(dbc.NavLink("Knowledge Maps/Mainpage", href="/page-1")),
-                dbc.NavItem(dbc.NavLink("Feedback/Message board ", href="/page-3")),
-                dbc.NavItem(dbc.NavLink("Sentiment Analysis", href="/page-2")),
+                dbc.NavItem(dbc.NavLink("KNOWLEDGE MAPPING", href="/page-1")),
+                dbc.NavItem(dbc.NavLink("GPT ASSISTANT", href="/page-3")),
+                dbc.NavItem(dbc.NavLink("SENTIMENT MAPPING", href="/page-2")),
 
-                dbc.NavItem(dbc.NavLink("TLTL Lab Link💡", href="https://tltlab.org/")),
+                dbc.NavItem(dbc.NavLink("ABOUT OUR LAB", href="https://tltlab.org/")),
 
             ],
             className="ml-auto",
@@ -105,13 +103,13 @@ with open('assets/2021_s3_aggregate_1.html', 'r') as f:
 initial_html_class = open('assets/2021_class_1.html', 'r').read()
 
 category_colors = {
-    "dig fab": '#e3342f',
-    "electronic": '#f6993f',
-    "math/physics": '#ffed4a',
-    "programming": '#38c172',
-    "think/design": '#4dc0b5',
-    "materials": '#9561e2',
-    "handtools": '#f66d9b',
+    "Digital Fabrication": '#e3342f',
+    "Electronics": '#f6993f',
+    "Math/ Physics": '#ffed4a',
+    "Programming": '#38c172',
+    "Design/ Think": '#4dc0b5',
+    "Materials": '#9561e2',
+    "Hand Tools": '#f66d9b',
 }
 
 
@@ -138,7 +136,7 @@ sidebar = html.Div(
                                        style={'width': '220px', 'color': '#000000'}
                                        ),
 
-                          html.P('Find your name to see your individual weekly keywords',
+                          html.P('Select a student name',
                                  style={'margin-top': '8px', 'margin-bottom': '4px'},
                                  className='text-black'),
                           dcc.Dropdown(id='mydropdown',
@@ -148,7 +146,7 @@ sidebar = html.Div(
 html.Hr(),
 
 dbc.Card([
-    dbc.CardHeader("Keywords Categories", className="bg-primary text-white text-center"),
+    dbc.CardHeader("Knowledge Categories", className="bg-primary text-white text-center"),
     dbc.Row([
         dbc.Col([
             dbc.ListGroup([
@@ -218,7 +216,7 @@ html_graphs = html.Div(
 html.Div(
     [
         html.P(
-            'Individual Key Concepts (weekly)',
+            'Weekly Knowledge Map',
             className='fs-5 text-center font-weight-bold',
             style={"font-size": "2.5rem", "font-weight": "bold", "margin-right": "-40px", "flex": "1"}
         ),
@@ -234,7 +232,7 @@ html.Div(
 ),
 dbc.Modal(
     [
-        dbc.ModalHeader("Info about Individual Weekly Map"),
+        dbc.ModalHeader("Weekly Knowledge Map"),
         dbc.ModalBody(
             [
                 html.Ul(
@@ -245,7 +243,7 @@ dbc.Modal(
                     ]
                 ),
                 #html.Br(),
-                html.P("  What can I do with the weekly knowledge map?"),
+                html.P("  What can you do with the weekly knowledge map?"),
                 html.P("    1.  Identify the specific concepts that you have applied during the week.",style={'color': 'darkgrey'}),
                 html.P("    2.  By reviewing the nodes and categories on the map, you can reflect on the knowledge areas that you have engaged with and assess your level of understanding and application.", style={'color': 'darkgrey'})
             ]
@@ -256,7 +254,7 @@ dbc.Modal(
     centered=True
 ),
                             #html.Button('i', id='info-button', className='badge rounded-pill bg-primary', style={'vertical-align': 'top'}),
-                            html.P('Identify which concepts I’ve applied this week',
+                            html.P('Key concepts mentioned in a specific week',
                              className='fs-6 text-center',
                         style={"font-size": "1.0rem"}),
                             html.Iframe(id='html-iframe', srcDoc=initial_html, width='100%', height='600',
@@ -277,7 +275,7 @@ dbc.Modal(
                                 ),
                                 #dbc.Button("Click me!", id="button-1", color="primary", className="ml-2"),
                                 dbc.Label("Week", className="text-center w-100 mb-0", width='10%'),
-                            ], style={'width': '85%', 'margin': '20px', 'margin-top': '20px',
+                            ], style={'width': '90%', 'margin': '20px', 'margin-top': '20px',
                                       'color': '#000000',
                                       'fontSize': '15px',
                                       'padding': '5px'})
@@ -293,7 +291,7 @@ dbc.Modal(
 html.Div(
     [
         html.P(
-            'Individual Key Concepts (aggregated)',
+            'Aggregate Knowledge Map',
             className='fs-5 text-center font-weight-bold',
             style={"font-size": "2.5rem", "font-weight": "bold", "margin-right": "-40px", "flex": "1"}
         ),
@@ -312,7 +310,7 @@ html.Div(
 
 dbc.Modal(
     [
-        dbc.ModalHeader("Info about Individual Aggregate Map"),
+        dbc.ModalHeader("Aggregate Knowledge Map"),
         dbc.ModalBody(
             [
                 html.Ul(
@@ -325,7 +323,7 @@ dbc.Modal(
                     ]
                 ),
                 #html.Br(),
-                html.P("  What can I do with the aggregate knowledge map?"),
+                html.P("  What can you do with the aggregate knowledge map?"),
                 html.P("    1.  You can visualize your personal learning journey by identifying which concepts you have applied and how frequently you have engaged with them over time.",style={'color': 'darkgrey'}),
                 html.P("    2.  It can help you identify patterns in your learning and identify topics that you may want to explore further.", style={'color': 'darkgrey'})
             ]
@@ -335,7 +333,7 @@ dbc.Modal(
     id="info-modal2",
     centered=True
 ),
-                            html.P('Examine how my knowledge concepts evolve over time',
+                            html.P('Development of key concepts over time',
                                    className='fs-6 text-center',
                                    style={"font-size": "1.0rem"}),
                             html.Iframe(id='html-iframe-2', srcDoc=initial_html_aggregate, width='100%', height='600',
@@ -391,7 +389,7 @@ dbc.Row(
         ,
 dbc.Modal(
     [
-        dbc.ModalHeader("Animated GIF"),
+        dbc.ModalHeader("student’s development of knowledge over time"),
         dbc.ModalBody(html.Img(id="gif-player",style={'width': '100%', 'height': '100%'})),
         dbc.ModalFooter(
             dbc.Button("Close", id="close-button3", className="ml-auto")
@@ -406,7 +404,7 @@ dbc.Modal(
 )
 
 
-                            ], style={'width': '85%', 'margin': '20px', 'margin-top': '20px',
+                            ], style={'width': '90%', 'margin': '20px', 'margin-top': '20px',
                                       'color': '#000000',
                                       'fontSize': '15px',
                                       'padding': '5px'})
@@ -428,7 +426,7 @@ dbc.Col(
                         [  html.Div(
     [
         html.P(
-            'Collective Knowledge in the Class (weekly)',
+            'All key concepts mentioned in the class',
             className='text-nowrap bd-highlight',
             style={
                 'fontWeight': 'bold',
@@ -459,7 +457,7 @@ dbc.Col(
 
 dbc.Modal(
     [
-        dbc.ModalHeader("Info about Class Collective Map"),
+        dbc.ModalHeader("Collective Knowledge Map"),
         dbc.ModalBody(
             [
                 html.Ul(
@@ -472,7 +470,7 @@ dbc.Modal(
                     ]
                 ),
                 #html.Br(),
-                html.P("  What can I do with the Class Collective Map?"),
+                html.P(" What can you do with the collective knowledge map?"),
                 html.P("    1.  You can see what concepts your classmates have applied.",style={'color': 'darkgrey'}),
                 html.P("    2.  It can serve as a resource for collaboration, discussion, and peer learning.", style={'color': 'darkgrey'})
             ]
@@ -484,7 +482,7 @@ dbc.Modal(
 ),
 
 html.Div(
-                                html.P('See what concepts other students have applied',
+                                html.P('All key concepts mentioned in the class',
                                        className='text-nowrap bd-highlight',
                                        style={'fontWeight': 'bold'}),
 
@@ -666,13 +664,13 @@ dbc.Col(
 sidebarpage2 = html.Div(
     [
         dbc.Row(
-            [html.H5('Class collective sentiment analysis map',
+            [html.H5('COLLECTIVE SENTIMENT MAP ',
                         style={'margin-top': '12px', 'margin-left': '14px'})],
             style={"height": "8vh"},
             className='bg-light text-white'
         ),
         dbc.Row(
-            [html.Div([html.Hr(),html.P('Select a year first',
+            [html.Div([html.Hr(),html.P('Select a year',
                                  style={'margin-top': '8px', 'margin-bottom': '4px'},
                                  className='text-black'),
                           dcc.Dropdown(id='yeardropdown2', options=[{'label': '2021', 'value': '2021'},
@@ -688,12 +686,12 @@ sidebarpage2 = html.Div(
         ),
         html.Hr(style={ 'margin': '60px 0'}),
         dbc.Row(
-            [html.H5('Sentiment Analysis comparison between students on different projects',style={'margin-top': '12px', 'margin-left': '14px'})],
+            [html.H5('SENTIMENT SIGNALS  ACROSS STUDENTS',style={'margin-top': '12px', 'margin-left': '14px'})],
             style={"height": "15vh"},
             className='bg-light text-white'
         ),
         dbc.Row(
-            [html.Div([html.Hr(),html.P('See your 2023 SA progress by students',
+            [html.Div([html.Hr(),html.P('Only available for 2023 students',
                                  style={'margin-top': '8px', 'margin-bottom': '4px'},
                                  className='text-black'),
                         ],
@@ -704,12 +702,12 @@ sidebarpage2 = html.Div(
         ),
 html.Hr(style={ 'margin': '40px 0'}),
 dbc.Row(
-            [html.H5('Sentiment Analysis comparison between projects on different students',style={'margin-top': '12px', 'margin-left': '14px'})],
+            [html.H5('SENTIMENT SIGNALS ACROSS PROJECTS',style={'margin-top': '12px', 'margin-left': '14px'})],
             style={"height": "15vh"},
             className='bg-light text-white'
         ),
         dbc.Row(
-            [html.Div([html.Hr(),html.P('See your 2023 SA progress by projects',
+            [html.Div([html.Hr(),html.P('Only available for 2023 students',
                                  style={'margin-top': '8px', 'margin-bottom': '4px'},
                                  className='text-black'),
                         ],
@@ -740,7 +738,7 @@ html_graphs2 = html.Div(
                             html.Div(
                                 [
                                     html.P(
-                                        'Maps for positive sentiment analysis score',
+                                        'Positive Sentiment in Each Week',
                                         className='fs-5 text-center font-weight-bold',
                                         style={"font-size": "2.5rem", "font-weight": "bold", "margin-right": "-40px",
                                                "flex": "1"}
@@ -757,7 +755,7 @@ html_graphs2 = html.Div(
                             ),
                             dbc.Modal(
                                 [
-                                    dbc.ModalHeader("Info about Class Positive Sentiment Collective Map"),
+                                    dbc.ModalHeader("Positive Sentiment in Each Week"),
 dbc.ModalBody(
             [
                 html.Ul(
@@ -769,7 +767,7 @@ dbc.ModalBody(
                     ]
                 ),
                 #html.Br(),
-                html.P("  What can I do with the Class Positive Sentiment Collective Map?"),
+                html.P("  What can you do with this Map?"),
                 html.P("    1.  Identify the knowledge categories and specific knowledge keywords that have elicited positive sentiment from the students in the class.",style={'color': 'darkgrey'}),
                 html.P("    2.  Gain insights into what concepts are resonating with the students in the class and incorporate them into future lesson plans or discussions.", style={'color': 'darkgrey'})
             ]
@@ -815,7 +813,7 @@ dbc.ModalBody(
                             html.Div(
                                 [
                                     html.P(
-                                        'Maps for negative sentiment analysis score',
+                                        'Negative Sentiment in Each Week ',
                                         className='fs-5 text-center font-weight-bold',
                                         style={"font-size": "2.5rem", "font-weight": "bold", "margin-right": "-40px",
                                                "flex": "1"}
@@ -832,7 +830,7 @@ dbc.ModalBody(
                             ),
                             dbc.Modal(
                                 [
-                                    dbc.ModalHeader("Info about Class Negative Sentiment Collective Map"),
+                                    dbc.ModalHeader("Negative Sentiment in Each Week"),
                                     dbc.ModalBody(
                                     [
                                     html.Ul(
@@ -844,7 +842,7 @@ dbc.ModalBody(
                                      ]
                                              ),
                 #html.Br(),
-                html.P("  What can I do with the class negative sentiment map?"),
+                html.P("  What can you do with this map?"),
                 html.P("    1.  Identify which knowledge students may be struggling with or finding challenging.",style={'color': 'darkgrey'}),
                 html.P("    2.  Adjust teaching methods accordingly or provide additional support to help students overcome difficulties.", style={'color': 'darkgrey'})
             ]
@@ -896,7 +894,7 @@ dbc.ModalBody(
                             #]),
 
  html.Div([
-                                html.Div([html.Div('Students Sentiment Analysis Map', id='title',
+                                html.Div([html.Div('Sentiment Signals Organized by Students', id='title',
                                                    className='fs-4 text-center font-weight-bold title-text',
                                                    style={'fontWeight': 'bold', 'cursor': 'pointer'}),
                                           html.Button('i', id='info-button9', className='badge rounded-pill bg-primary',
@@ -905,7 +903,7 @@ dbc.ModalBody(
                                          className='d-flex text-center justify-content-center align-items-center'),
  dbc.Modal(
                                 [
-                                    dbc.ModalHeader("Info about Students Sentiment Analysis Map"),
+                                    dbc.ModalHeader("Sentiment Signals Organized by Students"),
 dbc.ModalBody(
             [
                 html.Ul(
@@ -918,7 +916,7 @@ dbc.ModalBody(
                     ]
                 ),
                 #html.Br(),
-                html.P("  What can I do with the student sentiment analysis map?"),
+                html.P("  What can you do with this graph?"),
                 html.P("    1.  Gain insight into the a student’s overall attitudes towards different projects throughout the semester.",style={'color': 'darkgrey'}),
                 html.P("    2.  Identify projects where the student may be struggling or excelling and where further feedback or guidance is needed.", style={'color': 'darkgrey'})
             ]
@@ -931,7 +929,7 @@ dbc.ModalBody(
                             ),
 
 html.Div(
-                                html.P('Red indicates negative sentiment;Green indicates positive sentiment;Grey indicates neutral sentiment',
+                                html.P('Sentiment signals of one student’s projects over the semester',
                                        className='text-nowrap bd-highlight',
                                        style={'fontWeight': 'bold'}),
 
@@ -958,7 +956,7 @@ html.Div(
                                            8: {'label': 'Ana Maria'}, 9: {'label': 'Heidi'}, 10: {'label': 'Mariana'},11: {'label': 'Inara'},12: {'label': 'Kiki'}},
                                     included=False
                                 ),
-                                dbc.Label("Student Name", className="text-center w-100 mb-0", width='10%'),
+                                #dbc.Label("Student Name", className="text-center w-100 mb-0", width='10%'),
                             ], style={'width': '90%', 'margin': '20px', 'margin-top': '20px',
                                       # 'color': '#000000',
                                       'fontSize': '15px',
@@ -970,7 +968,7 @@ html.Div(
                     dbc.Col(
                         [
                             html.Div([
-                                html.Div([html.Div('Projects Sentiment Analysis Map', id='title',
+                                html.Div([html.Div('Sentiment Signals Organized by Projects', id='title',
                                                    className='fs-4 text-center font-weight-bold title-text',
                                                    style={'fontWeight': 'bold', 'cursor': 'pointer'}),
                                           html.Button('i', id='info-button8', className='badge rounded-pill bg-primary',
@@ -979,7 +977,7 @@ html.Div(
                                          className='d-flex text-center justify-content-center align-items-center'),
  dbc.Modal(
                                 [
-                                    dbc.ModalHeader("Info about Projects Sentiment Analysis Map"),
+                                    dbc.ModalHeader("Sentiment Signals Organized by Projects"),
                                     dbc.ModalBody(
                                         [
                                             html.Ul(
@@ -1001,7 +999,7 @@ html.Div(
                                                 ]
                                             ),
                                             # html.Br(),
-                                            html.P("  What can I do with the project sentiment analysis map?"),
+                                            html.P("  What can you do with this graph?"),
                                             html.P(
                                                 "    1.  Identify common positive and negative sentiment trends in a project across all students.",
                                                 style={'color': 'darkgrey'}),
@@ -1018,7 +1016,7 @@ html.Div(
                             ),
 
 html.Div(
-                                html.P('Red indicates negative sentiment;Green indicates positive sentiment;Grey indicates neutral sentiment',
+                                html.P('Sentiment signals of a project for all students in the class',
                                        className='text-nowrap bd-highlight',
                                        style={'fontWeight': 'bold'}),
 
@@ -1139,11 +1137,11 @@ from email.message import EmailMessage
 
 page_3_layout = dbc.Container([
     dbc.Row([
-        dbc.Col(html.H1('Feedback Page'), className="mt-3 mb-5")
+        dbc.Col(html.H1('GPT ASSISTANT'), className="mt-3 mb-5")
     ]),
     dbc.Row([
         dbc.Col([
-            dbc.Label("Select who you are"),
+            dbc.Label("Select a student name"),
             dcc.Dropdown(
                 id='student-dropdown',
                 options=[
@@ -1166,7 +1164,7 @@ page_3_layout = dbc.Container([
             html.Div(id='teacher-letter-text', className="mt-3")
         ], width=6, className="mx-auto"),
         dbc.Col([
-            html.P('Please provide your feedback below:', className="mb-2"),
+            html.P('If you have any feedback for the GPT Assistant, please type it below:', className="mb-2"),
             dcc.Textarea(id='feedback-input', value='', placeholder='Type your feedback here...',
                          style={'width': '100%', 'height': 200, 'resize': 'vertical'}, className="mb-3"),
             dbc.Button('Submit', id='submit-button', color='primary', className="mb-3")
@@ -1208,11 +1206,6 @@ def save_feedback(n_clicks, student_name, feedback_text):
             return html.Div('Please select a student name.', style={'color': 'red'})
         if not feedback_text:
             return html.Div('Feedback cannot be empty.', style={'color': 'red'})
-
-        file_path = f"{student_name}.txt"
-        with open(file_path, 'w') as f:
-            f.write(feedback_text)
-
 
         return html.Div('Feedback submitted successfully!', style={'color': 'green'})
 
@@ -1316,7 +1309,7 @@ def update_graph(selected_week):
     fig.add_trace(go.Scatter(x=data['Name'], y=data['score'], mode='markers', marker=dict(color=data['color'], size=15, line=dict(width=1, color='black')),
                              text=data['label'], hovertemplate="<b>%{text}</b><br><br>Name: %{x}<br>Score: %{y:.2f}<extra></extra>"))
     fig.update_layout(
-        xaxis=dict(title='<b>Project Name</b>', showgrid=False, tickangle=45, tickfont=dict(size=14),
+        xaxis=dict(showgrid=False, tickangle=45, tickfont=dict(size=14),
                    ticktext=tick_labels),
         yaxis=dict(title='<b>Score</b>', showgrid=True, gridcolor='rgb(238,238,238)', tickfont=dict(size=14),
                    zeroline=True, zerolinecolor='rgb(128,128,128)'),
@@ -1353,7 +1346,7 @@ def update_graph(project):
     fig.add_trace(go.Scatter(x=data['student number'], y=data['score'], mode='markers', marker=dict(color=data['color'], size=15, line=dict(width=1, color='black')),
                              text=data['label'], hovertemplate="<b>%{text}</b><br><br>Name: %{x}<br>Score: %{y:.2f}<extra></extra>"))
     fig.update_layout(
-        xaxis=dict(title='<b>Student Name</b>', showgrid=False, tickangle=45, tickfont=dict(size=14), ticktext=tick_labels, tickvals=tick_vals),
+        xaxis=dict(showgrid=False, tickangle=45, tickfont=dict(size=14), ticktext=tick_labels, tickvals=tick_vals),
         yaxis=dict(title='<b>Score</b>', showgrid=True, gridcolor='rgb(238,238,238)', tickfont=dict(size=14),
                    zeroline=True, zerolinecolor='rgb(128,128,128)'),
         legend=dict(title='<b>Sentiment</b>', orientation='h', yanchor='top', xanchor='left', y=1.1, x=0),
