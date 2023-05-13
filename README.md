@@ -3,7 +3,7 @@
 * You can view the finished app on (https://tltl-knowledge-map-ver3.herokuapp.com/).
 * This is the most updated one and I also attach the web link for former versions.
 * [The initial web app link](https://tltl-knowledge-map-initial.herokuapp.com/)
-* [The demo (v2) web app link](https://tltl-knowledgemap-demo.herokuapp.com/)
+* [The demo (v2) web app link](https://tltl-knowledgemap-ver2.herokuapp.com/)
 
 ### Additional Reading
 * Plotly’s [Dash deployment guide](https://dash.plotly.com/deployment)
