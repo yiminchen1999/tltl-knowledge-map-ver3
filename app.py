@@ -43,7 +43,7 @@ navbar_style = {
 navbar = dbc.Navbar(
     [
         html.A(
-            "Knowledge Maps for Making",
+            "VISUALIZE LEARNING IN MAKING",
             className="navbar-brand text-black",
             style={
                 "font-size": "2.5rem",
@@ -535,7 +535,7 @@ def toggle_modal(n1, n2, is_open):
 
 # Set the path to the GIF file relative to the base directory
 #gif_path = os.path.join(base_dir, "assets/animation_1.gif")
-
+import imageio
 @app.callback(
     Output("gif-modal", "is_open"),
     [Input("button-1", "n_clicks"), Input("close-button3", "n_clicks")],
@@ -616,7 +616,7 @@ def play_gif(n_clicks, yeardropdown, mydropdown):
     else:
         return (
             None,
-            html.P("Sorry it only shows animation for year 2023!" )
+            html.P("Sorry, the animated view is only available for students in the year of 2023." )
         )
 
 
@@ -709,7 +709,7 @@ dbc.Card([
             className='bg-light text-white'
         ),
         dbc.Row(
-            [html.Div([html.Hr(),html.P('Only available for 2023 students',
+            [html.Div([html.Hr(),html.P('Only available for students in the year of 2023',
                                  style={'font-size': '0.92rem'},
                                  className='text-black'),
                         ],
@@ -725,7 +725,7 @@ dbc.Row(
             className='bg-light text-white'
         ),
         dbc.Row(
-            [html.Div([html.Hr(),html.P('Only available for 2023 students',
+            [html.Div([html.Hr(),html.P('Only available for students in the year of 2023',
                                  style={'font-size': '0.92rem'},
                                  className='text-black'),
                         ],
@@ -1260,7 +1260,7 @@ app.layout = html.Div(
     [
         dcc.ConfirmDialog(
             id='popup',
-            message='Thank you for visiting my website, and if you want to view details of each map, just click the information box at the right side!',
+            message='Thank you for visiting our Visualize Learning in Making dashboard. If you want to learn more about a chart, please click on the information icon on the upper right corner of the chart.',
             displayed=False,
 
         ),
@@ -2673,4 +2673,4 @@ def update_output(yeardropdown2,myslider5):
 
 
 if __name__ == "__main__":
-    app.run_server(port=8073)
+    app.run_server(port=8072)
