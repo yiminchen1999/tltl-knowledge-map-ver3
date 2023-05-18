@@ -535,7 +535,7 @@ def toggle_modal(n1, n2, is_open):
 
 # Set the path to the GIF file relative to the base directory
 #gif_path = os.path.join(base_dir, "assets/animation_1.gif")
-import imageio
+
 @app.callback(
     Output("gif-modal", "is_open"),
     [Input("button-1", "n_clicks"), Input("close-button3", "n_clicks")],
@@ -558,12 +558,12 @@ def play_gif(n_clicks, yeardropdown, mydropdown):
                html.P(mydropdown+"’s development of knowledge over time") )
 
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Sadia':
-        with open("assets/2023_s2_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s2_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Helen':
-        with open("assets/2023_s3_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s3_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
