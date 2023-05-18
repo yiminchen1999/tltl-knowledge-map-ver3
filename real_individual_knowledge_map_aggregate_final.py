@@ -70,7 +70,7 @@ keywords_group = pd.read_csv("dictionary 5.0 (final with subcategory).csv")["cat
 #     for i in range(student_df.shape[0]):
 #         net = Network(notebook=True, heading="Individual Knowledge Map Aggregate Week " + str(i+1))
 #         occurence = student_df.iloc[:(i+1)].sum()
-#         for n in range(i+1): 
+#         for n in range(i+1):
 #             for j, value in enumerate(student_df.iloc[n]):
 #                 if value == 1:
 #                     category_number = keywords_group[j]-1
