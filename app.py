@@ -536,44 +536,44 @@ def toggle_modal(n1, n2, is_open):
 # Set the path to the GIF file relative to the base directory
 #gif_path = os.path.join(base_dir, "assets/animation_1.gif")
 
-from PIL import Image
+#from PIL import Image
 
-for i in range(1, 13):
-    gif_path = f"assets/2023_s{i}_animation_2.0.gif"
-    gif = Image.open(gif_path)
+#for i in range(1, 13):
+    #gif_path = f"assets/2023_s{i}_animation_2.0.gif"
+    #gif = Image.open(gif_path)
 
-    frame_durations = []
-    try:
-        while True:
-            frame_durations.append(gif.info['duration'])
-            gif.seek(gif.tell() + 1)
-    except EOFError:
-        pass
+    #frame_durations = []
+    #try:
+        #while True:
+            #frame_durations.append(gif.info['duration'])
+            #gif.seek(gif.tell() + 1)
+    #except EOFError:
+        #pass
 
-    new_speed = 0.5  # Modify this value to adjust the speed (2 = double speed, 0.5 = half speed)
-    new_frame_durations = [int(duration / new_speed) for duration in frame_durations]
+    #new_speed = 0.5  # Modify this value to adjust the speed (2 = double speed, 0.5 = half speed)
+    #new_frame_durations = [int(duration / new_speed) for duration in frame_durations]
 
-    gif.seek(0)
-    frames = []
-    try:
-        while True:
-            frame = gif.copy()
-            frames.append(frame)
-            gif.seek(gif.tell() + 1)
-    except EOFError:
-        pass
+    #gif.seek(0)
+    #frames = []
+    #try:
+        #while True:
+            #frame = gif.copy()
+            #frames.append(frame)
+            #gif.seek(gif.tell() + 1)
+    #except EOFError:
+        #pass
 
-    gif_path_new = f"assets/2023_s{i}_animation_2.0_adjusted.gif"
-    frames[0].save(
-        gif_path_new,
-        save_all=True,
-        append_images=frames[1:],
-        optimize=False,
-        duration=new_frame_durations,
-        loop=0
-    )
+    #gif_path_new = f"assets/2023_s{i}_animation_2.0_adjusted.gif"
+    #frames[0].save(
+        #gif_path_new,
+        #save_all=True,
+        #append_images=frames[1:],
+        #optimize=False,
+        #duration=new_frame_durations,
+        #loop=0
+   # )
 
-    print(f"Adjusted GIF {gif_path} saved as {gif_path_new} successfully.")
+
 
 
 
