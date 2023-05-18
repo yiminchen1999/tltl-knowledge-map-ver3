@@ -535,6 +535,7 @@ def toggle_modal(n1, n2, is_open):
 
 # Set the path to the GIF file relative to the base directory
 #gif_path = os.path.join(base_dir, "assets/animation_1.gif")
+
 from PIL import Image
 
 for i in range(1, 13):
@@ -549,7 +550,7 @@ for i in range(1, 13):
     except EOFError:
         pass
 
-    new_speed = 2  # Modify this value to adjust the speed (2 = double speed, 0.5 = half speed)
+    new_speed = 0.5  # Modify this value to adjust the speed (2 = double speed, 0.5 = half speed)
     new_frame_durations = [int(duration / new_speed) for duration in frame_durations]
 
     gif.seek(0)
@@ -572,6 +573,8 @@ for i in range(1, 13):
         loop=0
     )
 
+    print(f"Adjusted GIF {gif_path} saved as {gif_path_new} successfully.")
+
 
 
 @app.callback(
@@ -590,63 +593,63 @@ def toggle_modal(n1, n2, is_open):
 )
 def play_gif(n_clicks, yeardropdown, mydropdown):
     if n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Eury':
-        with open("assets/2023_s1_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s1_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                html.P(mydropdown+"’s development of knowledge over time") )
 
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Sadia':
-        with open("assets/2023_s2_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s2_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Helen':
-        with open("assets/2023_s3_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s3_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Xichen':
-        with open("assets/2023_s4_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s4_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Zhanlan':
-        with open("assets/2023_s5_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s5_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Katie':
-        with open("assets/2023_s6_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s6_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Andrea':
-        with open("assets/2023_s7_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s7_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Ana Maria':
-        with open("assets/2023_s8_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s8_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Heidi':
-        with open("assets/2023_s9_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s9_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Mariana':
-        with open("assets/2023_s10_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s10_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Inara':
-        with open("assets/2023_s11_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s11_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
     elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Kiki':
-        with open("assets/2023_s12_animation_2.0.gif", "rb") as f:
+        with open("assets/2023_s12_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
