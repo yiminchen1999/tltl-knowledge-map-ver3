@@ -592,63 +592,63 @@ def toggle_modal(n1, n2, is_open):
     [Input("button-1", "n_clicks"), Input('yeardropdown', 'value'), Input('mydropdown', 'value')]
 )
 def play_gif(n_clicks, yeardropdown, mydropdown):
-    if n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Eury':
+    if n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Amelia':
         with open("assets/2023_s1_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                html.P(mydropdown+"’s development of knowledge over time") )
 
-    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Sadia':
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Emma':
         with open("assets/2023_s2_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
-    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Helen':
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Chloe':
         with open("assets/2023_s3_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
-    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Xichen':
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Mei':
         with open("assets/2023_s4_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
-    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Zhanlan':
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Lee':
         with open("assets/2023_s5_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
-    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Katie':
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Zoey':
         with open("assets/2023_s6_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
-    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Andrea':
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Gabriela':
         with open("assets/2023_s7_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
-    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Ana Maria':
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Larissa':
         with open("assets/2023_s8_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
-    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Heidi':
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Harper':
         with open("assets/2023_s9_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
-    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Mariana':
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Juliana':
         with open("assets/2023_s10_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
-    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Inara':
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Abigail':
         with open("assets/2023_s11_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
                 html.P(mydropdown + "’s development of knowledge over time"))
-    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Kiki':
+    elif n_clicks is not None and yeardropdown == '2023' and mydropdown == 'Evelyn':
         with open("assets/2023_s12_animation_2.0_adjusted.gif", "rb") as f:
             gif_data = f.read()
         return ("data:image/gif;base64," + base64.b64encode(gif_data).decode(),
@@ -1011,8 +1011,8 @@ html.Div(
                                     value=1,
                                     step=1,
                                     updatemode='drag',
-                                    marks={1: {'label': 'Eury'}, 2: {'label': 'Sadia'}, 3: {'label': 'Helen'}, 4: {'label': 'Xichen'}, 5: {'label': 'Zhanlan'}, 6: {'label': 'Katie'}, 7: {'label': 'Andrea'},
-                                           8: {'label': 'Ana Maria'}, 9: {'label': 'Heidi'}, 10: {'label': 'Mariana'},11: {'label': 'Inara'},12: {'label': 'Kiki'}},
+                                    marks={1: {'label': 'Amelia '}, 2: {'label': 'Emma'}, 3: {'label': 'Chloe'}, 4: {'label': 'Mei'}, 5: {'label': 'Lee'}, 6: {'label': 'Zoey'}, 7: {'label': 'Gabriela'},
+                                           8: {'label': 'Larissa'}, 9: {'label': '  Harper'}, 10: {'label': 'Juliana'},11: {'label': 'Abigail'},12: {'label': 'Evelyn'}},
                                     included=False
                                 ),
                                 #dbc.Label("Student Name", className="text-center w-100 mb-0", width='10%'),
@@ -1204,18 +1204,18 @@ page_3_layout = dbc.Container([
             dcc.Dropdown(
                 id='student-dropdown',
                 options=[
-                    {'label': 'Eury', 'value': 'Eury'},
-                    {'label': 'Sadia', 'value': 'Sadia'},
-                    {'label': 'Helen', 'value': 'Helen'},
-                    {'label': 'Xichen', 'value': 'Xichen'},
-                    {'label': 'Zhanlan', 'value': 'Zhanlan'},
-                    {'label': 'Katie', 'value': 'Katie'},
-                    {'label': 'Andrea', 'value': 'Andrea'},
-                    {'label': 'Ana Maria', 'value': 'Ana Maria'},
-                    {'label': 'Heidi', 'value': 'Heidi'},
-                    {'label': 'Mariana', 'value': 'Mariana'},
-                    {'label': 'Inara', 'value': 'Inara'},
-                    {'label': 'Kiki', 'value': 'Kiki'}
+                    {'label': 'Amelia ', 'value': 'Amelia'},
+                    {'label': 'Emma', 'value': 'Emma'},
+                    {'label': 'Chloe', 'value': 'Chloe'},
+                    {'label': 'Mei', 'value': 'Mei'},
+                    {'label': 'Lee', 'value': 'Lee'},
+                    {'label': 'Zoey', 'value': 'Zoey'},
+                    {'label': 'Gabriela', 'value': 'Gabriela'},
+                    {'label': 'Larissa', 'value': 'Larissa'},
+                    {'label': 'Harper', 'value': 'Harper'},
+                    {'label': 'Juliana', 'value': 'Juliana'},
+                    {'label': 'Abigail', 'value': 'Abigail'},
+                    {'label': 'Evelyn', 'value': 'Evelyn'}
                 ],
                 style={'width': '100%'}
             ),
@@ -1391,10 +1391,10 @@ def update_graph(project):
     # Create a new column in the DataFrame containing the color for each label
     data['color'] = data['label'].map(label_colors)
     # Create the tick labels and tick values for the x-axis
-    marks = {1: {'label': 'Eury'}, 2: {'label': 'Sadia'}, 3: {'label': 'Helen'}, 4: {'label': 'Xichen'},
-             5: {'label': 'Zhanlan'}, 6: {'label': 'Katie'}, 7: {'label': 'Andrea'},
-             8: {'label': 'Ana Maria'}, 9: {'label': 'Heidi'}, 10: {'label': 'Mariana'}, 11: {'label': 'Inara'},
-             12: {'label': 'Kiki'}}
+    marks = {1: {'label': 'Amelia'}, 2: {'label': 'Emma'}, 3: {'label': 'chloe'}, 4: {'label': 'Mei'},
+             5: {'label': 'Lee'}, 6: {'label': 'Zoey'}, 7: {'label': 'Gabriela'},
+             8: {'label': 'Larissa'}, 9: {'label': 'Harper'}, 10: {'label': 'Juliana'}, 11: {'label': 'Abigail'},
+             12: {'label': 'Evelyn'}}
     tick_labels = [marks[i]['label'] for i in range(1, len(marks) + 1)]
     tick_vals = list(range(1, len(marks) + 1))
     # Create the graph figure
@@ -1445,21 +1445,19 @@ def update_students(year):
         ]
     elif year == '2023':
         options = [
-            {'label': 'Eury', 'value': 'Eury'},
-            {'label': 'Sadia', 'value': 'Sadia'},
-            {'label': 'Helen', 'value': 'Helen'},
-            {'label': 'Xichen', 'value': 'Xichen'},
-            {'label': 'Zhanlan', 'value': 'Zhanlan'},
-            {'label': 'Katie', 'value': 'Katie'},
-            {'label': 'Andrea', 'value': 'Andrea'},
-            {'label': 'Ana Maria', 'value': 'Ana Maria'},
-            {'label': 'Heidi', 'value': 'Heidi'},
-            {'label': 'Mariana', 'value': 'Mariana'},
-            {'label': 'Inara', 'value': 'Inara'},
-            {'label': 'Kiki', 'value': 'Kiki'}
-        ]
-    else:
-        options = []
+                      {'label': 'Amelia ', 'value': 'Amelia'},
+                      {'label': 'Emma', 'value': 'Emma'},
+                      {'label': 'Chloe', 'value': 'Chloe'},
+                      {'label': 'Mei', 'value': 'Mei'},
+                      {'label': 'Lee', 'value': 'Lee'},
+                      {'label': 'Zoey', 'value': 'Zoey'},
+                      {'label': 'Gabriela', 'value': 'Gabriela'},
+                      {'label': 'Larissa', 'value': 'Larissa'},
+                      {'label': 'Harper', 'value': 'Harper'},
+                      {'label': 'Juliana', 'value': 'Juliana'},
+                      {'label': 'Abigail', 'value': 'Abigail'},
+                      {'label': 'Evelyn', 'value': 'Evelyn'}
+                  ]
     return options
 
 
@@ -1843,164 +1841,14 @@ def update_output(yeardropdown,mydropdown,myslider):
     elif yeardropdown == '2022' and mydropdown == 'Student 12' and myslider == 10:
         return open('assets/2022_s12_weekly_10.html', 'r').read()
 
-
-    if yeardropdown=='2023' and mydropdown== 'Eury'and myslider == 1:
-        return open('assets/2023_s1_weekly_1.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Sadia'and myslider == 1:
-        return open('assets/2023_s2_weekly_1.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Helen'and myslider == 1:
-        return open('assets/2023_s3_weekly_1.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Xichen'and myslider == 1:
-        return open('assets/2023_s4_weekly_1.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Zhanlan'and myslider == 1:
-        return open('assets/2023_s5_weekly_1.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Katie'and myslider == 1:
-        return open('assets/2023_s6_weekly_1.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Andrea'and myslider == 1:
-        return open('assets/2023_s7_weekly_1.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Ana Maria'and myslider == 1:
-        return open('assets/2023_s8_weekly_1.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Heidi'and myslider == 1:
-        return open('assets/2023_s9_weekly_1.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Mariana'and myslider == 1:
-        return open('assets/2023_s10_weekly_1.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Inara'and myslider == 1:
-        return open('assets/2023_s11_weekly_1.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Kiki'and myslider == 1:
-        return open('assets/2023_s12_weekly_1.html', 'r').read()
-
-    elif yeardropdown=='2023' and mydropdown== 'Eury'and myslider == 2:
-        return open('assets/2023_s1_weekly_2.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Sadia'and myslider == 2:
-        return open('assets/2023_s2_weekly_2.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Helen'and myslider == 2:
-        return open('assets/2023_s3_weekly_2.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Xichen'and myslider == 2:
-        return open('assets/2023_s4_weekly_2.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Zhanlan'and myslider == 2:
-        return open('assets/2023_s5_weekly_2.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Katie'and myslider == 2:
-        return open('assets/2023_s6_weekly_2.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Andrea'and myslider == 2:
-        return open('assets/2023_s7_weekly_2.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Ana Maria'and myslider == 2:
-        return open('assets/2023_s8_weekly_2.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Heidi'and myslider == 2:
-        return open('assets/2023_s9_weekly_2.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Mariana'and myslider == 2:
-        return open('assets/2023_s10_weekly_2.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Inara'and myslider == 2:
-        return open('assets/2023_s11_weekly_2.html', 'r').read()
-    elif yeardropdown=='2023' and mydropdown== 'Kiki'and myslider == 2:
-        return open('assets/2023_s12_weekly_2.html', 'r').read()
-
-
-    elif yeardropdown == '2023' and mydropdown == 'Eury' and myslider == 3:
-        return open('assets/2023_s1_weekly_3.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Sadia' and myslider == 3:
-        return open('assets/2023_s2_weekly_3.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Helen' and myslider == 3:
-        return open('assets/2023_s3_weekly_3.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Xichen' and myslider == 3:
-        return open('assets/2023_s4_weekly_3.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Zhanlan' and myslider == 3:
-        return open('assets/2023_s5_weekly_3.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Katie' and myslider == 3:
-        return open('assets/2023_s6_weekly_3.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Andrea' and myslider == 3:
-        return open('assets/2023_s7_weekly_3.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Ana Maria' and myslider == 3:
-        return open('assets/2023_s8_weekly_3.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Heidi' and myslider == 3:
-        return open('assets/2023_s9_weekly_3.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Mariana' and myslider == 3:
-        return open('assets/2023_s10_weekly_3.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Inara' and myslider == 3:
-        return open('assets/2023_s11_weekly_3.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Kiki' and myslider == 3:
-        return open('assets/2023_s12_weekly_3.html', 'r').read()
-
-
-    elif yeardropdown == '2023' and mydropdown == 'Eury' and myslider == 4:
-
-        return open('assets/2023_s1_weekly_4.html', 'r').read()
-
-    elif yeardropdown == '2023' and mydropdown == 'Sadia' and myslider == 4:
-
-        return open('assets/2023_s2_weekly_4.html', 'r').read()
-
-    elif yeardropdown == '2023' and mydropdown == 'Helen' and myslider == 4:
-
-        return open('assets/2023_s3_weekly_4.html', 'r').read()
-
-    elif yeardropdown == '2023' and mydropdown == 'Xichen' and myslider == 4:
-
-        return open('assets/2023_s4_weekly_4.html', 'r').read()
-
-    elif yeardropdown == '2023' and mydropdown == 'Zhanlan' and myslider == 4:
-
-        return open('assets/2023_s5_weekly_4.html', 'r').read()
-
-    elif yeardropdown == '2023' and mydropdown == 'Katie' and myslider == 4:
-
-        return open('assets/2023_s6_weekly_4.html', 'r').read()
-
-    elif yeardropdown == '2023' and mydropdown == 'Andrea' and myslider == 4:
-
-        return open('assets/2023_s7_weekly_4.html', 'r').read()
-
-    elif yeardropdown == '2023' and mydropdown == 'Ana Maria' and myslider == 4:
-
-        return open('assets/2023_s8_weekly_4.html', 'r').read()
-
-    elif yeardropdown == '2023' and mydropdown == 'Heidi' and myslider == 4:
-
-        return open('assets/2023_s9_weekly_4.html', 'r').read()
-
-    elif yeardropdown == '2023' and mydropdown == 'Mariana' and myslider == 4:
-
-        return open('assets/2023_s10_weekly_4.html', 'r').read()
-
-    elif yeardropdown == '2023' and mydropdown == 'Inara' and myslider == 4:
-
-        return open('assets/2023_s11_weekly_4.html', 'r').read()
-
-    elif yeardropdown == '2023' and mydropdown == 'Kiki' and myslider == 4:
-
-        return open('assets/2023_s12_weekly_4.html', 'r').read()
-
-    elif yeardropdown == '2023' and mydropdown == 'Eury' and myslider == 5:
-        return open('assets/2023_s1_weekly_5.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Sadia' and myslider == 5:
-        return open('assets/2023_s2_weekly_5.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Helen' and myslider == 5:
-        return open('assets/2023_s3_weekly_5.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Xichen' and myslider == 5:
-        return open('assets/2023_s4_weekly_5.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Zhanlan' and myslider == 5:
-        return open('assets/2023_s5_weekly_5.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Katie' and myslider == 5:
-        return open('assets/2023_s6_weekly_5.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Andrea' and myslider == 5:
-        return open('assets/2023_s7_weekly_5.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Ana Maria' and myslider == 5:
-        return open('assets/2023_s8_weekly_5.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Heidi' and myslider == 5:
-        return open('assets/2023_s9_weekly_5.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Mariana' and myslider == 5:
-        return open('assets/2023_s10_weekly_5.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Inara' and myslider == 5:
-        return open('assets/2023_s11_weekly_5.html', 'r').read()
-    elif yeardropdown == '2023' and mydropdown == 'Kiki' and myslider == 5:
-        return open('assets/2023_s12_weekly_5.html', 'r').read()
-    elif yeardropdown == '2023' and myslider in [6, 7, 8, 9]:
+    elif yeardropdown == '2023' and myslider in [1,2,3,4,5,6, 7, 8, 9]:
         # Create a dictionary mapping slider values to file names
-        file_dict = {6: 'weekly_6.html', 7: 'weekly_7.html', 8: 'weekly_8.html', 9: 'weekly_9.html'}
+        file_dict = {1: 'weekly_1.html',2: 'weekly_2.html', 3: 'weekly_3.html', 4: 'weekly_4.html', 5: 'weekly_5.html',6: 'weekly_6.html', 7: 'weekly_7.html', 8: 'weekly_8.html', 9: 'weekly_9.html'}
 
         # Create a dictionary mapping dropdown options to folder names
-        folder_dict = {'Eury': 's1', 'Sadia': 's2', 'Helen': 's3', 'Xichen': 's4', 'Zhanlan': 's5',
-                       'Katie': 's6', 'Andrea': 's7', 'Ana Maria': 's8', 'Heidi': 's9', 'Mariana': 's10',
-                       'Inara': 's11', 'Kiki': 's12'}
+        folder_dict = {'Amelia': 's1', 'Emma': 's2', 'Chloe': 's3', 'Mei': 's4', 'Lee': 's5',
+                       'Zoey': 's6', 'Gabriela': 's7', 'Larissa': 's8', 'Harper': 's9', 'Juliana': 's10',
+                       'Abigail': 's11', 'Evelyn': 's12'}
 
         # Get the file name based on the slider value
         file_name = file_dict[myslider]
@@ -2064,30 +1912,6 @@ def update_output(yeardropdown,mydropdown,myslider2):
     elif yeardropdown=='2022' and myslider2==1 and mydropdown == 'Student 12':
         return open('assets/2022_s12_aggregate_1.html', 'r').read()
 
-    elif yeardropdown=='2023' and myslider2==1 and mydropdown == 'Eury':
-        return open('assets/2023_s1_aggregate_1.html', 'r').read()
-    elif yeardropdown=='2023' and myslider2==1 and mydropdown == 'Sadia':
-        return open('assets/2023_s2_aggregate_1.html', 'r').read()
-    elif yeardropdown=='2023' and myslider2==1 and mydropdown == 'Helen':
-        return open('assets/2023_s3_aggregate_1.html', 'r').read()
-    elif yeardropdown=='2023' and myslider2==1 and mydropdown == 'Xichen':
-        return open('assets/2023_s4_aggregate_1.html', 'r').read()
-    elif yeardropdown=='2023' and myslider2==1 and mydropdown == 'Zhanlan':
-        return open('assets/2023_s5_aggregate_1.html', 'r').read()
-    elif yeardropdown=='2023' and myslider2==1 and mydropdown == 'Katie':
-        return open('assets/2023_s6_aggregate_1.html', 'r').read()
-    elif yeardropdown=='2023' and myslider2==1 and mydropdown == 'Andrea':
-        return open('assets/2023_s7_aggregate_1.html', 'r').read()
-    elif yeardropdown=='2023' and myslider2==1 and mydropdown == 'Ana Maria':
-        return open('assets/2023_s8_aggregate_1.html', 'r').read()
-    elif yeardropdown=='2023' and myslider2==1 and mydropdown == 'Heidi':
-        return open('assets/2023_s9_aggregate_1.html', 'r').read()
-    elif yeardropdown=='2023' and myslider2==1 and mydropdown == 'Mariana':
-        return open('assets/2023_s10_aggregate_1.html', 'r').read()
-    elif yeardropdown=='2023' and myslider2==1 and mydropdown == 'Inara':
-        return open('assets/2023_s11_aggregate_1.html', 'r').read()
-    elif yeardropdown=='2023' and myslider2==1 and mydropdown == 'Kiki':
-        return open('assets/2023_s12_aggregate_1.html', 'r').read()
 
     if yeardropdown == '2021' and myslider2 == 2 and mydropdown == 'student 1':
         return open('assets/2021_s1_aggregate_2.html', 'r').read()
@@ -2128,31 +1952,6 @@ def update_output(yeardropdown,mydropdown,myslider2):
         return open('assets/2022_s11_aggregate_2.html', 'r').read()
     elif yeardropdown == '2022' and myslider2 == 2 and mydropdown == 'Student 12':
         return open('assets/2022_s12_aggregate_2.html', 'r').read()
-
-    elif yeardropdown == '2023' and myslider2 == 2 and mydropdown == 'Eury':
-        return open('assets/2023_s1_aggregate_2.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 2 and mydropdown == 'Sadia':
-        return open('assets/2023_s2_aggregate_2.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 2 and mydropdown == 'Helen':
-        return open('assets/2023_s3_aggregate_2.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 2 and mydropdown == 'Xichen':
-        return open('assets/2023_s4_aggregate_2.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 2 and mydropdown == 'Zhanlan':
-        return open('assets/2023_s5_aggregate_2.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 2 and mydropdown == 'Katie':
-        return open('assets/2023_s6_aggregate_2.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 2 and mydropdown == 'Andrea':
-        return open('assets/2023_s7_aggregate_2.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 2 and mydropdown == 'Ana Maria':
-        return open('assets/2023_s8_aggregate_2.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 2 and mydropdown == 'Heidi':
-        return open('assets/2023_s9_aggregate_2.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 2 and mydropdown == 'Mariana':
-        return open('assets/2023_s10_aggregate_2.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 2 and mydropdown == 'Inara':
-        return open('assets/2023_s11_aggregate_2.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 2 and mydropdown == 'Kiki':
-        return open('assets/2023_s12_aggregate_2.html', 'r').read()
     #start here 2021:8 weeks ; 2022:10 weeks ; 2023: 5 weeks
     #week 3
     if yeardropdown == '2021' and myslider2 == 3 and mydropdown == 'student 1':
@@ -2194,31 +1993,6 @@ def update_output(yeardropdown,mydropdown,myslider2):
         return open('assets/2022_s11_aggregate_3.html', 'r').read()
     elif yeardropdown == '2022' and myslider2 == 3 and mydropdown == 'Student 12':
         return open('assets/2022_s12_aggregate_3.html', 'r').read()
-
-    elif yeardropdown == '2023' and myslider2 == 3 and mydropdown == 'Eury':
-        return open('assets/2023_s1_aggregate_3.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 3 and mydropdown == 'Sadia':
-        return open('assets/2023_s2_aggregate_3.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 3 and mydropdown == 'Helen':
-        return open('assets/2023_s3_aggregate_3.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 3 and mydropdown == 'Xichen':
-        return open('assets/2023_s4_aggregate_3.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 3 and mydropdown == 'Zhanlan':
-        return open('assets/2023_s5_aggregate_3.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 3 and mydropdown == 'Katie':
-        return open('assets/2023_s6_aggregate_3.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 3 and mydropdown == 'Andrea':
-        return open('assets/2023_s7_aggregate_3.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 3 and mydropdown == 'Ana Maria':
-        return open('assets/2023_s8_aggregate_3.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 3 and mydropdown == 'Heidi':
-        return open('assets/2023_s9_aggregate_3.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 3 and mydropdown == 'Mariana':
-        return open('assets/2023_s10_aggregate_3.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 3 and mydropdown == 'Inara':
-        return open('assets/2023_s11_aggregate_3.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 3 and mydropdown == 'Kiki':
-        return open('assets/2023_s12_aggregate_3.html', 'r').read()
 # Week 4
 
     if yeardropdown == '2021' and myslider2 == 4 and mydropdown == 'student 1':
@@ -2261,30 +2035,6 @@ def update_output(yeardropdown,mydropdown,myslider2):
     elif yeardropdown == '2022' and myslider2 == 4 and mydropdown == 'Student 12':
         return open('assets/2022_s12_aggregate_4.html', 'r').read()
 
-    elif yeardropdown == '2023' and myslider2 == 4 and mydropdown == 'Eury':
-        return open('assets/2023_s1_aggregate_4.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 4 and mydropdown == 'Sadia':
-        return open('assets/2023_s2_aggregate_4.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 4 and mydropdown == 'Helen':
-        return open('assets/2023_s3_aggregate_4.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 4 and mydropdown == 'Xichen':
-        return open('assets/2023_s4_aggregate_4.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 4 and mydropdown == 'Zhanlan':
-        return open('assets/2023_s5_aggregate_4.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 4 and mydropdown == 'Katie':
-        return open('assets/2023_s6_aggregate_4.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 4 and mydropdown == 'Andrea':
-        return open('assets/2023_s7_aggregate_4.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 4 and mydropdown == 'Ana Maria':
-        return open('assets/2023_s8_aggregate_4.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 4 and mydropdown == 'Heidi':
-        return open('assets/2023_s9_aggregate_4.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 4 and mydropdown == 'Mariana':
-        return open('assets/2023_s10_aggregate_4.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 4 and mydropdown == 'Inara':
-        return open('assets/2023_s11_aggregate_4.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 4 and mydropdown == 'Kiki':
-        return open('assets/2023_s12_aggregate_4.html', 'r').read()
 # 2021:8 weeks ; 2022:10 weeks ; 2023: 5 weeks
 # week 5
     if yeardropdown == '2021' and myslider2 == 5 and mydropdown == 'student 1':
@@ -2327,39 +2077,13 @@ def update_output(yeardropdown,mydropdown,myslider2):
     elif yeardropdown == '2022' and myslider2 == 5 and mydropdown == 'Student 12':
         return open('assets/2022_s12_aggregate_5.html', 'r').read()
 
-    elif yeardropdown == '2023' and myslider2 == 5 and mydropdown == 'Eury':
-        return open('assets/2023_s1_aggregate_5.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 5 and mydropdown == 'Sadia':
-        return open('assets/2023_s2_aggregate_5.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 5 and mydropdown == 'Helen':
-        return open('assets/2023_s3_aggregate_5.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 5 and mydropdown == 'Xichen':
-        return open('assets/2023_s4_aggregate_5.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 5 and mydropdown == 'Zhanlan':
-        return open('assets/2023_s5_aggregate_5.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 5 and mydropdown == 'Katie':
-        return open('assets/2023_s6_aggregate_5.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 5 and mydropdown == 'Andrea':
-        return open('assets/2023_s7_aggregate_5.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 5 and mydropdown == 'Ana Maria':
-        return open('assets/2023_s8_aggregate_5.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 5 and mydropdown == 'Heidi':
-        return open('assets/2023_s9_aggregate_5.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 5 and mydropdown == 'Mariana':
-        return open('assets/2023_s10_aggregate_5.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 5 and mydropdown == 'Inara':
-        return open('assets/2023_s11_aggregate_5.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 == 5 and mydropdown == 'Kiki':
-        return open('assets/2023_s12_aggregate_5.html', 'r').read()
-    elif yeardropdown == '2023' and myslider2 in [6, 7, 8, 9]:
+    elif yeardropdown == '2023' and myslider2 in [1,2,3,4,5,6, 7, 8, 9]:
         # Create a dictionary mapping slider values to file names
-        file_dict = {6: 'aggregate_6.html', 7: 'aggregate_7.html', 8: 'aggregate_8.html', 9: 'aggregate_9.html'}
-
+        file_dict = {1: 'aggregate_1.html',2: 'aggregate_2.html', 3: 'aggregate_3.html', 4: 'aggregate_4.html', 5: 'aggregate_5.html',6: 'aggregate_6.html', 7: 'aggregate_7.html', 8: 'aggregate_8.html', 9: 'aggregate_9.html'}
         # Create a dictionary mapping dropdown options to folder names
-        folder_dict = {'Eury': 's1', 'Sadia': 's2', 'Helen': 's3', 'Xichen': 's4', 'Zhanlan': 's5',
-                       'Katie': 's6', 'Andrea': 's7', 'Ana Maria': 's8', 'Heidi': 's9', 'Mariana': 's10',
-                       'Inara': 's11', 'Kiki': 's12'}
-
+        folder_dict = {'Amelia': 's1', 'Emma': 's2', 'Chloe': 's3', 'Mei': 's4', 'Lee': 's5',
+                       'Zoey': 's6', 'Gabriela': 's7', 'Larissa': 's8', 'Harper': 's9', 'Juliana': 's10',
+                       'Abigail': 's11', 'Evelyn': 's12'}
         # Get the file name based on the slider value
         file_name = file_dict[myslider2]
 
