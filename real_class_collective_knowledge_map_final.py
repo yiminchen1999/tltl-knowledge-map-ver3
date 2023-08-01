@@ -32,7 +32,7 @@ for i in range(len(file_names_2023)):
     temp_df = pd.read_csv("assets/Y2023/"+file_names_2023[i]+".csv",index_col=0)
     year2023_df.append(temp_df)
 
-student_names_2023 = ['Eury','Sadia','Helen','Xichen','Zhanlan','Katie','Andrea','Ana Maria','Heidi','Mariana','Inara','Kiki']
+student_names_2023 = ['Amelia','Emma','Chloe','Mei','Lee','Zoey','Gabriela','Larissa','Harper','Juliana','Abigail','Evelyn']
 
 keywords = pd.read_csv("dictionary 5.0 (final with subcategory).csv")["display concept"].tolist()
 
